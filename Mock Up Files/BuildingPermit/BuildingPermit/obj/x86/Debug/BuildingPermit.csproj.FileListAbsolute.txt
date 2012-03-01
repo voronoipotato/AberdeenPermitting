@@ -78,3 +78,5 @@ C:\Users\John Reasor\Dropbox\CSC 289\CSC289 Shared\Mock Up Files\BuildingPermit\
 C:\Users\John Reasor\Dropbox\CSC 289\CSC289 Shared\Mock Up Files\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
 F:\Dropbox\CSC 289\CSC289 Shared\Mock Up Files\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
 F:\Dropbox\CSC 289\CSC289 Shared\Mock Up Files\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+C:\Users\John\AberdeenPermitting\Mock Up Files\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+C:\Users\John\AberdeenPermitting\Mock Up Files\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
