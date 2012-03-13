@@ -9,11 +9,14 @@ using System.Windows.Forms;
 
 namespace BuildingPermit
 {
+    
     public partial class ContactInfo : Form
     {
         public ContactInfo()
         {
             InitializeComponent();
+            Contact thisContact = new Contact();
+
         }
     }
 }
