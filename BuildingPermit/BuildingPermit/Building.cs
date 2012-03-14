@@ -34,16 +34,14 @@ class Building
     {
         set
         {
-            int Num;
-            bool isNum = int.TryParse(value, out Num);
-
-            if (isNum)
+ 
+            if (isInt(value))
             {
                 myBasementSF = Convert.ToInt16(value);
             }
             else
             {
-                MessageBox.Show("Basement Square Feet must be a number");
+                MessageBox.Show("Basement Square Feet must be a number");             
             }
          }
     }
@@ -57,48 +55,143 @@ class Building
     }
 
     /// <summary>
-    /// garage Sf Property
+    /// get garage Sf Property
     /// </summary>
-    public int garageSF
+    public int getGarageSF
     {
         get { return myGarageSF; }
-        set { myGarageSF = value; }
+       
     }
 
     /// <summary>
-    /// deck SF Property
+    /// set garage Sf Property
     /// </summary>
-    public int deckSF
+    public string setGarageSF
+    {
+
+        set
+        {
+            if (isInt(value))
+            {
+                myGarageSF = Convert.ToInt16(value); 
+            }
+            else
+            {
+                MessageBox.Show("Garage Square Feet must be a number");
+            }
+        }
+    }
+
+    /// <summary>
+    /// get deck SF Property
+    /// </summary>
+    public int getDeckSF
     {
         get { return myDeckSF; }
-        set { myDeckSF = value; }
+       
     }
 
     /// <summary>
-    /// number of stories Property
+    /// set dech Sf Property
     /// </summary>
-    public int numStories
+    public string setDeckSF
+    {
+
+        set
+        {
+            if (isInt(value))
+            {
+                myDeckSF = Convert.ToInt16(value); 
+            }
+            else
+            {
+                MessageBox.Show("Deck Square Feet must be a number");
+            }
+        }
+    }
+
+    /// <summary>
+    /// get number of stories Property
+    /// </summary>
+    public int getNumStories
     {
         get { return myNumStories; }
-        set { myNumStories = value; }
+       
     }
 
     /// <summary>
-    /// porch SF Property
+    /// set number of stories
     /// </summary>
-    public int porchSF
+    public string setNumStories
+    {
+
+        set
+        {
+            if (isInt(value))
+            {
+                myNumStories = Convert.ToInt16(value); 
+            }
+            else
+            {
+                MessageBox.Show("Number of stories must be a number");
+            }
+        }
+    }
+
+    /// <summary>
+    /// get porch SF Property
+    /// </summary>
+    public int getPorchSF
     {
         get { return myPorchSF; }
-        set { myPorchSF = value; }
+      
     }
 
     /// <summary>
-    /// heated SF Property
+    /// set porch Sf Property
     /// </summary>
-    public int heatedSF
+    public string setPorchSF
+    {
+
+        set
+        {
+            if (isInt(value))
+            {
+                myPorchSF = Convert.ToInt16(value); 
+            }
+            else
+            {
+                MessageBox.Show("Porch Square Feet must be a number");
+            }
+        }
+    }
+
+    /// <summary>
+    /// get heated SF Property
+    /// </summary>
+    public int getHeatedSF
     {
         get { return myHeatedSF; }
-        set { myHeatedSF = value; }
+      
+    }
+
+    /// <summary>
+    /// set heated SF Property
+    /// </summary>
+    public string setHeatedSF
+    {
+
+        set
+        {
+            if (isInt(value))
+            {
+                myHeatedSF = Convert.ToInt16(value); 
+            }
+            else
+            {
+                MessageBox.Show("Heated Square Feet must be a number");
+            }
+        }
     }
 
     /// <summary>
@@ -107,17 +200,36 @@ class Building
     public int totalSF
     {
         get { return myTotalSF; }
-        set { myTotalSF = value; }
+        set { myTotalSF = myHeatedSF + myPorchSF + myGarageSF + myBasementSF; }// add total SF from input
     }
 
     /// <summary>
-    /// Estimate Cost Property
+    /// get Estimate Cost Property
     /// Round to two digits and format for dollar amount
     /// </summary>
-    public double estimatedCost
+    public double getEstimatedCost
     {
-        get { return myEstimatedCost; }
-        set { myEstimatedCost = value; }
+       
+        get{return  myEstimatedCost}
+    }
+
+    /// <summary>
+    /// Set Estimating Cost Property
+    /// </summary>
+    public string setEstimatedCost
+    {
+
+        set
+        {
+            if (isDouble(value))
+            {
+                myEstimatedCost = Convert.ToDouble(value); 
+            }
+            else
+            {
+                MessageBox.Show("Estimated cost must be a dollar amount, numbers only");
+            }
+        }
     }
 
     /// <summary>
@@ -137,6 +249,20 @@ class Building
 
     }
 
+
+    private static bool isInt(string value)
+    {
+        int Num;
+
+        return int.TryParse(value, out Num);
+    }
+
+    private static bool isDouble(string value)
+    {
+        double Num;
+
+        return double.TryParse(value, out Num);
+    }
 
 }
 
