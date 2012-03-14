@@ -8,19 +8,11 @@ namespace BuildingPermit
     class Building
     {
 
-       
 
-        public String BuildingType
-        {
-            get { return BuildingType; }
-            set { BuildingType = value; }
-        }
-       
-        public int EstimatedCost
-        {
-            get { return EstimatedCost; }
-            set { EstimatedCost = value; }
-        }
+
+        public String BuildingType { get; set; }
+        public double EstimatedCost { get; set; }
         public int totalSquareFeet { get; set; }
+        
     }
 }
