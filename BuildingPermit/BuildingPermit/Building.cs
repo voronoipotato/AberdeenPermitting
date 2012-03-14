@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 
 class Building
@@ -15,97 +16,122 @@ class Building
     /// <summary>
     /// private variables for building class
     /// </summary>
-    private string strBuildingType;
-    private double dblEstimatedCost;
-    private int intTotalSF;
-    private int intHeatedSF;
-    private int intPorchSF;
-    private int intNumStories;
-    private int intDeckSF;
-    private int intGarageSF;
-    private int intBasementSF;
+    private string myBuildingType;
+    private double myEstimatedCost;
+    private int myTotalSF;
+    private int myHeatedSF;
+    private int myPorchSF;
+    private int myNumStories;
+    private int myDeckSF;
+    private int myGarageSF;
+    private int myBasementSF;
 
+      
     /// <summary>
-    /// basement SF method
+    /// Set basement SF Property
     /// </summary>
-    public int BasementSF
+    public string setBasementSF
     {
-        get { return intBasementSF; }
-        set { intBasementSF = value; }
+        set
+        {
+            int Num;
+            bool isNum = int.TryParse(value, out Num);
+
+            if (isNum)
+            {
+                myBasementSF = Convert.ToInt16(value);
+            }
+            else
+            {
+                MessageBox.Show("Basement Square Feet must be a number");
+            }
+         }
     }
 
     /// <summary>
-    /// garage Sf method
+    /// Get basement SF Property
     /// </summary>
-    public int GarageSF
+    public int getBasementSF
     {
-        get { return intGarageSF; }
-        set { intGarageSF = value; }
+        get { return myBasementSF; }
     }
 
     /// <summary>
-    /// deck SF method
+    /// garage Sf Property
     /// </summary>
-    public int DeckSF
+    public int garageSF
     {
-        get { return intDeckSF; }
-        set { intDeckSF = value; }
+        get { return myGarageSF; }
+        set { myGarageSF = value; }
     }
 
     /// <summary>
-    /// number of stories method
+    /// deck SF Property
     /// </summary>
-    public int NumStories
+    public int deckSF
     {
-        get { return intNumStories; }
-        set { intNumStories = value; }
+        get { return myDeckSF; }
+        set { myDeckSF = value; }
     }
 
     /// <summary>
-    /// porch SF method
+    /// number of stories Property
     /// </summary>
-    public int PorchSF
+    public int numStories
     {
-        get { return intPorchSF; }
-        set { intPorchSF = value; }
+        get { return myNumStories; }
+        set { myNumStories = value; }
     }
 
     /// <summary>
-    /// heated SF method
+    /// porch SF Property
     /// </summary>
-    public int HeatedSF
+    public int porchSF
     {
-        get { return intHeatedSF; }
-        set { intHeatedSF = value; }
+        get { return myPorchSF; }
+        set { myPorchSF = value; }
     }
 
     /// <summary>
-    /// Total SF
+    /// heated SF Property
     /// </summary>
-    public int TotalSF
+    public int heatedSF
     {
-        get { return intTotalSF; }
-        set { intTotalSF = value; }
+        get { return myHeatedSF; }
+        set { myHeatedSF = value; }
     }
 
     /// <summary>
-    /// Estimate Cost Method
+    /// Total SF Property
     /// </summary>
-    public double EstimatedCost
+    public int totalSF
     {
-        get { return dblEstimatedCost; }
-        set { dblEstimatedCost = value; }
+        get { return myTotalSF; }
+        set { myTotalSF = value; }
     }
 
     /// <summary>
-    /// Building Type Method
+    /// Estimate Cost Property
+    /// Round to two digits and format for dollar amount
     /// </summary>
-    public string BuildingType
+    public double estimatedCost
     {
-        get { return strBuildingType; }
-        set { strBuildingType = value; }
+        get { return myEstimatedCost; }
+        set { myEstimatedCost = value; }
     }
 
+    /// <summary>
+    /// Building Type Property
+    /// </summary>
+    public string buildingType
+    {
+        get { return myBuildingType; }
+        set { myBuildingType = value; }
+    }
+
+    /// <summary>
+    /// constructor
+    /// </summary>
     public Building()
     {
 
