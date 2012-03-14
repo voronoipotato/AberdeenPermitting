@@ -1845,6 +1845,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "BuildingPermitTabs";
             this.Text = "Town of Aberdeen Permit Application";
+            this.Load += new System.EventHandler(this.BuildingPermitTabs_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

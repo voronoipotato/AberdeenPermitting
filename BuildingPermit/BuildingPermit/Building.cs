@@ -12,8 +12,6 @@ using System.Text;
 
 class Building
 {
-
-
     /// <summary>
     /// private variables for building class
     /// </summary>
@@ -37,7 +35,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// garage Sf method
     /// </summary>
     public int GarageSF
     {
@@ -46,7 +44,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// deck SF method
     /// </summary>
     public int DeckSF
     {
@@ -55,7 +53,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// number of stories method
     /// </summary>
     public int NumStories
     {
@@ -64,7 +62,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// porch SF method
     /// </summary>
     public int PorchSF
     {
@@ -73,7 +71,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// heated SF method
     /// </summary>
     public int HeatedSF
     {
@@ -82,7 +80,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// Total SF
     /// </summary>
     public int TotalSF
     {
@@ -91,7 +89,7 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// Estimate Cost Method
     /// </summary>
     public double EstimatedCost
     {
@@ -100,12 +98,17 @@ class Building
     }
 
     /// <summary>
-    /// 
+    /// Building Type Method
     /// </summary>
     public string BuildingType
     {
         get { return strBuildingType; }
         set { strBuildingType = value; }
+    }
+
+    public Building()
+    {
+
     }
 
 

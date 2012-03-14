@@ -11,24 +11,15 @@ namespace BuildingPermit
 {
     public partial class BuildingPermitTabs : Form
     {
+
+        private Building building;
+
         public BuildingPermitTabs()
         {
             InitializeComponent();
+        
         }
 
-        private void label37_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }
