@@ -84,3 +84,15 @@ T:\Users\lh173-13\Downloads\Mock Up Files\Interface\BuildingPermit\BuildingPermi
 T:\Users\lh173-13\Downloads\Mock Up Files\Interface\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
 E:\Files\Classwork\CSC289\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
 E:\Files\Classwork\CSC289\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.BuildingPermitTabs.resources
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.FirstPage.resources
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.ContactInfo.resources
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.NameLookup.resources
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.Properties.Resources.resources
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\RdlCompile.cache
+C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\RdlCompile.compiled
