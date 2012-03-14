@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building.cs" />
     <Compile Include="BuildingPermitTabs.cs">
       <SubType>Form</SubType>
     </Compile>
