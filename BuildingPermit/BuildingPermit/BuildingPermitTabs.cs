@@ -17,7 +17,7 @@ namespace BuildingPermit
         public BuildingPermitTabs()
         {
             InitializeComponent();
-        
+
         }
 
 
