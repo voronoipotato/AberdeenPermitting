@@ -26,26 +26,6 @@ class Building
     private int myGarageSF;
     private int myBasementSF;
 
-      
-    /// <summary>
-    /// Set basement SF Property
-    /// </summary>
-    public string setBasementSF
-    {
-        set
-        {
- 
-            if (isInt(value))
-            {
-                myBasementSF = Convert.ToInt16(value);
-            }
-            else
-            {
-                MessageBox.Show("Basement Square Feet must be a number");             
-            }
-         }
-    }
-
     /// <summary>
     /// Get basement SF Property
     /// </summary>
@@ -55,12 +35,32 @@ class Building
     }
 
     /// <summary>
+    /// Set basement SF Property
+    /// </summary>
+    public string setBasementSF
+    {
+        set
+        {
+
+            if (isInt(value))
+            {
+                myBasementSF = Convert.ToInt16(value);
+            }
+            else
+            {
+                MessageBox.Show("Basement Square Feet must be a number");
+            }
+        }
+    }
+
+
+    /// <summary>
     /// get garage Sf Property
     /// </summary>
     public int getGarageSF
     {
         get { return myGarageSF; }
-       
+
     }
 
     /// <summary>
@@ -73,7 +73,7 @@ class Building
         {
             if (isInt(value))
             {
-                myGarageSF = Convert.ToInt16(value); 
+                myGarageSF = Convert.ToInt16(value);
             }
             else
             {
@@ -88,7 +88,7 @@ class Building
     public int getDeckSF
     {
         get { return myDeckSF; }
-       
+
     }
 
     /// <summary>
@@ -101,7 +101,7 @@ class Building
         {
             if (isInt(value))
             {
-                myDeckSF = Convert.ToInt16(value); 
+                myDeckSF = Convert.ToInt16(value);
             }
             else
             {
@@ -116,7 +116,7 @@ class Building
     public int getNumStories
     {
         get { return myNumStories; }
-       
+
     }
 
     /// <summary>
@@ -129,7 +129,7 @@ class Building
         {
             if (isInt(value))
             {
-                myNumStories = Convert.ToInt16(value); 
+                myNumStories = Convert.ToInt16(value);
             }
             else
             {
@@ -144,7 +144,7 @@ class Building
     public int getPorchSF
     {
         get { return myPorchSF; }
-      
+
     }
 
     /// <summary>
@@ -157,7 +157,7 @@ class Building
         {
             if (isInt(value))
             {
-                myPorchSF = Convert.ToInt16(value); 
+                myPorchSF = Convert.ToInt16(value);
             }
             else
             {
@@ -172,7 +172,7 @@ class Building
     public int getHeatedSF
     {
         get { return myHeatedSF; }
-      
+
     }
 
     /// <summary>
@@ -185,7 +185,7 @@ class Building
         {
             if (isInt(value))
             {
-                myHeatedSF = Convert.ToInt16(value); 
+                myHeatedSF = Convert.ToInt16(value);
             }
             else
             {
@@ -209,7 +209,7 @@ class Building
     /// </summary>
     public double getEstimatedCost
     {
-       
+
         get{return  myEstimatedCost}
     }
 
@@ -223,7 +223,7 @@ class Building
         {
             if (isDouble(value))
             {
-                myEstimatedCost = Convert.ToDouble(value); 
+                myEstimatedCost = Convert.ToDouble(value);
             }
             else
             {
