@@ -7,49 +7,74 @@ namespace BuildingPermit
 {
     class Contact
     {
-        //private string companyName, firstName, middleName, lastName 
-        //   ,license, phone, cell, email, buildingLicense, streetName
-        //   ,type, streetName2, city, state;
-        public string companyName
+        private string myCompanyName, myFirstName, myMiddleName, myLastName 
+           ,myLicense, myPhone, myCell, myEmail, myBuildingLicense,myStreetNumber, myStreetName
+           , myType, myStreetName2, myCity, myState, myZip; 
+   
+        public string companyName {
+            get { return myCompanyName; }
+            set { myCompanyName = value; }
+        }
+        public string firstName
         {
-            get;
-            set;
+            get { return myFirstName;}
+            set { myFirstName = value;}
         }
-        public string firstName { get; set; }
-        public string middleName { get; set; }
-        public string lastName { get; set; }
-        public string license { get; set; }
-        public string phone { get; set; } //scrub alpha characters
-        public string cell { get; set; } 
-        public string email { get; set; }
-        public string buildingLicense { get; set; }
-        public int streetNumber { get; set; }
-        public string streetName { get; set; }
-        public string type { get; set; }
-        public string streetName2 { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
-        public int zip { get; set; }
-        /*
-        CompanyName: String         * 
-        Fname: String
-        Mname: String
-        Lname: String
-        License: String
-        PhoneNum: String
-        CellNum: string
-        Email: string
-        BuildingLicense: string
-        StreetNum:string
-        Street:string
-        Type:string
-        Street2:string
-        City: string
-        State: string
-        Zip: int
-         */
-        public Contact( )
-        { 
+        public string middleName
+        {
+            get { return myMiddleName; }
+            set{ myMiddleName = value; }
         }
+         public string lastName
+        {
+            get { return myLastName; }
+            set { myLastName = value;  }
+        }
+         public string liscence {
+             get { return myLicense; }
+             set { myLicense = value; } 
+         }
+         public string phone
+         {
+             get { return myPhone; }
+             set { myPhone = value; } 
+         }
+         public string cell
+         {
+             get { return myCell; }
+             set { myCell = value; } 
+         }
+         public string email
+         {
+             get { return myEmail; }
+             set { myEmail = value; } 
+         }
+         public string buildingLiscence
+         {
+             get { return myBuildingLicense;  }
+             set { myBuildingLicense = value; } 
+         }
+         public string streetNumber {
+             get { return myStreetNumber; }
+             set { myStreetNumber = value; }
+         }
+         public string streetName {
+             get { return myStreetName; }
+             set { myStreetName = value; } 
+         }
+         public string streetName2
+         {
+             get { return myStreetName2; }
+             set { myStreetName2 = value; }
+         }
+         public string city {
+             get { return myCity; }
+             set { myCity = value; } 
+         }
+         public string state
+         {
+             get { return myState; }
+             set { myState = value; } 
+         }
     }
 }
