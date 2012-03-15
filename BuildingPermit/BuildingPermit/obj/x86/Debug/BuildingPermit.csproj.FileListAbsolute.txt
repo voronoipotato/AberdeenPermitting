@@ -84,3 +84,5 @@ T:\Users\lh173-13\Downloads\Mock Up Files\Interface\BuildingPermit\BuildingPermi
 T:\Users\lh173-13\Downloads\Mock Up Files\Interface\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
 E:\Files\Classwork\CSC289\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
 E:\Files\Classwork\CSC289\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+C:\Users\Lappy\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+C:\Users\Lappy\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
