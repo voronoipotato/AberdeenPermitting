@@ -84,6 +84,7 @@ T:\Users\lh173-13\Downloads\Mock Up Files\Interface\BuildingPermit\BuildingPermi
 T:\Users\lh173-13\Downloads\Mock Up Files\Interface\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
 E:\Files\Classwork\CSC289\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
 E:\Files\Classwork\CSC289\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+<<<<<<< HEAD
 C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
 C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
 C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\ResolveAssemblyReference.cache
@@ -98,3 +99,7 @@ C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\De
 C:\Users\John Reasor\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\RdlCompile.compiled
 E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
 C:\Users\John\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+=======
+C:\Users\Lappy\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+C:\Users\Lappy\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+>>>>>>> cf3ef53ee7707d8e362e1f8af8bc448ac2f47f4c
