@@ -66,6 +66,12 @@
     <Compile Include="ContactInfo.Designer.cs">
       <DependentUpon>ContactInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees.Designer.cs">
+      <DependentUpon>Fees.cs</DependentUpon>
+    </Compile>
     <Compile Include="NameLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContactInfo.resx">
       <DependentUpon>ContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees.resx">
+      <DependentUpon>Fees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InspectionRequestReport.rdlc" />
     <EmbeddedResource Include="NameLookup.resx">
