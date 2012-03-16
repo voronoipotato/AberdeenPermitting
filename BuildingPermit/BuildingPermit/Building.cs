@@ -249,14 +249,22 @@ class Building
 
     }
 
-
+    /// <summary>
+    /// valadation for input int's
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
     private static bool isInt(string value)
     {
         int Num;
 
         return int.TryParse(value, out Num);
     }
-
+    /// <summary>
+    /// valadation for input double's
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
     private static bool isDouble(string value)
     {
         double Num;
