@@ -1,7 +1,7 @@
 ﻿/*
  * Programmer:      John Reasor
  * Date:            3-14-2012
- * Description:     Class for the Building Information
+ * Description:     Class for Building Information
 */
 
 using System;
