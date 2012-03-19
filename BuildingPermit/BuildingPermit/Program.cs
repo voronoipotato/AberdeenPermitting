@@ -15,7 +15,7 @@ namespace BuildingPermit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BuildingPermit());
+            Application.Run(new BuildingPermitTabs());
         }
     }
 }
