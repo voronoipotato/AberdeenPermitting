@@ -15,8 +15,28 @@ namespace BuildingPermit
         public ContactInfo()
         {
             InitializeComponent();
-            Contact thisContact = new Contact();
+            
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Contact Contact = new Contact();
+            Contact.companyName = txtCompany.Text;
+            Contact.firstName = txtFName.Text;
+            Contact.middleName = txtMName.Text;
+            Contact.lastName = txtLName.Text;
+            Contact.liscence = txtLicense.Text;
+            Contact.phone = txtPhone.Text;
+            Contact.cell = txtCell.Text;
+            Contact.email = txtEmail.Text;
+            Contact.buildingLiscence = txtBuildingLicense.Text;
+            Contact.streetNumber = txtStreetNumber.Text; 
+            Contact.streetName = txtStreetName.Text;
+            Contact.streetName2 = txtStreetName2.Text;
+            Contact.city = txtCity.Text;
+            Contact.state = txtState.Text; 
+ 
         }
     }
 }
