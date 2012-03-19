@@ -210,7 +210,7 @@ class Building
     public double getEstimatedCost
     {
 
-        get{return  myEstimatedCost}
+        get { return myEstimatedCost; }
     }
 
     /// <summary>
