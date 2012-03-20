@@ -21,6 +21,7 @@ namespace BuildingPermit
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string xml; 
             Contact Contact = new Contact();
             Contact.companyName = txtCompany.Text;
             Contact.firstName = txtFName.Text;
@@ -38,39 +39,10 @@ namespace BuildingPermit
             Contact.city = txtCity.Text;
             Contact.state = txtState.Text;
             Contact.zip = txtZip.Text;
-
-            txtCompany.Clear();
-            txtFName.Clear(); 
-            txtMName.Clear();
-            txtLName.Clear();
-            txtLicense.Clear();
-            txtPhone.Clear();
-            txtCell.Clear();
-            txtEmail.Clear();
-            txtBuildingLicense.Clear();
-            txtStreetNumber.Clear();
-            txtType.Clear();
-            txtStreetName.Clear();
-            txtStreetName2.Clear();
-            txtCity.Clear();
-            txtZip.Clear();
-
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\xml.txt");
+            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(Contact.GetType());
+            x.Serialize(file, Contact); 
             
-            txtFName.Text = Contact.firstName + "a";
-            txtMName.Text = Contact.middleName + "a";
-            txtLName.Text = Contact.lastName + "a";
-            txtLicense.Text = Contact.liscence + "a";
-            txtPhone.Text = Contact.phone + "a";
-            txtCell.Text = Contact.cell + "a";
-            txtEmail.Text = Contact.email + "a";
-            txtBuildingLicense.Text = Contact.buildingLiscence + "a";
-            txtStreetNumber.Text = Contact.streetNumber + "a";
-            txtStreetName.Text = Contact.streetName + "a";
-            txtType.Text = Contact.type + "a";
-            txtStreetName2.Text = Contact.streetName2 + "a";
-            txtCity.Text = Contact.city + "a";
-            txtState.Text = Contact.state + "a";
-            txtZip.Text = Contact.zip + "a";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

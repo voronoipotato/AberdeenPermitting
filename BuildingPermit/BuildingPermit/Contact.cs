@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BuildingPermit
 {
-    class Contact
+    public class Contact
     {
         private string myCompanyName, myFirstName, myMiddleName, myLastName 
            ,myLicense, myPhone, myCell, myEmail, myBuildingLicense,myStreetNumber, myStreetName
