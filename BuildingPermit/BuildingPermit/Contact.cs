@@ -76,5 +76,13 @@ namespace BuildingPermit
              get { return myState; }
              set { myState = value; } 
          }
+         public string type {
+             get { return myType; }
+             set { myType = value; }
+         }
+         public string zip {
+             get { return myZip; }
+             set { myZip = value; }
+         }
     }
 }

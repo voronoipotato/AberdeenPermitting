@@ -18,12 +18,8 @@ namespace BuildingPermit
 
         private void permittingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            Form frmBuildingPermitTabs = new BuildingPermitTabs();
+            frmBuildingPermitTabs.Show(); 
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

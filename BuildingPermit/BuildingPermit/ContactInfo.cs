@@ -35,8 +35,14 @@ namespace BuildingPermit
             Contact.streetName = txtStreetName.Text;
             Contact.streetName2 = txtStreetName2.Text;
             Contact.city = txtCity.Text;
-            Contact.state = txtState.Text; 
- 
+            Contact.state = txtState.Text;
+            Contact.zip = txtZip.Text;
+            Contact.type = txtType.Text; 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }
