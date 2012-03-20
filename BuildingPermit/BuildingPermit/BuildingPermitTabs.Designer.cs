@@ -32,173 +32,173 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtIssueDate = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cmboStatus = new System.Windows.Forms.ComboBox();
+            this.txtApplicationNumber = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPermitNumber = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtBalance = new System.Windows.Forms.TextBox();
             this.btnFees = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
+            this.txtOwnerCell = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
+            this.txtOwnerPhone = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOwner = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnOwnerContact = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCell = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtApplicantPhone = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtApplicant = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnApplicantContact = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.cmboProposedUse = new System.Windows.Forms.ComboBox();
+            this.cmboCurrentUse = new System.Windows.Forms.ComboBox();
+            this.cmboOccupancyType = new System.Windows.Forms.ComboBox();
+            this.txtSideSetback = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtReatSetback = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtFrontSetback = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtZoningDistrict = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtLRKNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLotNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPropertyContact = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtProperty = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.Contractors = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtNumAmps = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label68 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.rdioTemporaryPole = new System.Windows.Forms.RadioButton();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.txtNumWaterHeaters = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.txtNumSpas = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.txtNumWetBars = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.txtNumDishwashers = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.txtNumClothesWashers = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.txtNumTubs = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.txtNumShowers = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox50 = new System.Windows.Forms.TextBox();
+            this.txtNumWaterClosets = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.txtNumSinks = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
-            this.textBox53 = new System.Windows.Forms.TextBox();
+            this.txtNumBathrooms = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
-            this.textBox54 = new System.Windows.Forms.TextBox();
+            this.txtNumFixtures = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdioGasLine = new System.Windows.Forms.RadioButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.textBox55 = new System.Windows.Forms.TextBox();
+            this.rdioDuctWorkAlterationOnly = new System.Windows.Forms.RadioButton();
+            this.txtNumSystems = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.cmboConstructionType = new System.Windows.Forms.ComboBox();
+            this.txtEstimatedCost = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtSquareFeet = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
+            this.txtDeck = new System.Windows.Forms.TextBox();
             this.label109 = new System.Windows.Forms.Label();
-            this.textBox58 = new System.Windows.Forms.TextBox();
+            this.txtPorchSF = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.txtBasement = new System.Windows.Forms.TextBox();
             this.label112 = new System.Windows.Forms.Label();
-            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.txtGarageSF = new System.Windows.Forms.TextBox();
             this.label113 = new System.Windows.Forms.Label();
-            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.txtNumStories = new System.Windows.Forms.TextBox();
             this.label114 = new System.Windows.Forms.Label();
-            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.txtHeatedSF = new System.Windows.Forms.TextBox();
             this.label115 = new System.Windows.Forms.Label();
             this.btnNext2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
+            this.txtIrrigationPhone = new System.Windows.Forms.MaskedTextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.btnIrrigationContact = new System.Windows.Forms.Button();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txtIrrigationLisenceNumber = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.txtIrrigationName = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
+            this.txtGasPhone = new System.Windows.Forms.MaskedTextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.btngasContact = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtGasLisenceNumber = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txtGasName = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
+            this.txtMechanicalPhone = new System.Windows.Forms.MaskedTextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.btnMechanicalContact = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtMechanicalLisenceNumber = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txtMechanicalName = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.txtPlumbingPhone = new System.Windows.Forms.MaskedTextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.btnPlumbingContact = new System.Windows.Forms.Button();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtPlumbingLisenceNumber = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtPlumbingName = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnContractorContact = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtContractorEmail = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.txtSiteManagerPhone = new System.Windows.Forms.MaskedTextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.txtContractorPhone = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox92 = new System.Windows.Forms.TextBox();
+            this.txtSiteManagerName = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
-            this.textBox93 = new System.Windows.Forms.TextBox();
+            this.txtContractorLiscence = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
-            this.textBox94 = new System.Windows.Forms.TextBox();
+            this.txtContractorName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.txtElectricalPhone = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.btnElectricalContact = new System.Windows.Forms.Button();
-            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.txtElectricalLisenceNumber = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.textBox83 = new System.Windows.Forms.TextBox();
+            this.txtElectricalName = new System.Windows.Forms.TextBox();
             this.btnNext3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnCancelNotes = new System.Windows.Forms.Button();
             this.btnSubmitNotes = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -257,16 +257,16 @@
             // groupBox19
             // 
             this.groupBox19.Controls.Add(this.label24);
-            this.groupBox19.Controls.Add(this.dateTimePicker3);
+            this.groupBox19.Controls.Add(this.dtIssueDate);
             this.groupBox19.Controls.Add(this.label23);
             this.groupBox19.Controls.Add(this.label22);
-            this.groupBox19.Controls.Add(this.dateTimePicker2);
-            this.groupBox19.Controls.Add(this.dateTimePicker1);
+            this.groupBox19.Controls.Add(this.dtEndDate);
+            this.groupBox19.Controls.Add(this.dtStartDate);
             this.groupBox19.Controls.Add(this.label21);
-            this.groupBox19.Controls.Add(this.comboBox1);
-            this.groupBox19.Controls.Add(this.textBox8);
+            this.groupBox19.Controls.Add(this.cmboStatus);
+            this.groupBox19.Controls.Add(this.txtApplicationNumber);
             this.groupBox19.Controls.Add(this.label20);
-            this.groupBox19.Controls.Add(this.textBox2);
+            this.groupBox19.Controls.Add(this.txtPermitNumber);
             this.groupBox19.Controls.Add(this.label19);
             this.groupBox19.Location = new System.Drawing.Point(535, 38);
             this.groupBox19.Name = "groupBox19";
@@ -283,13 +283,13 @@
             this.label24.TabIndex = 182;
             this.label24.Text = "Issue date";
             // 
-            // dateTimePicker3
+            // dtIssueDate
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(79, 145);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(84, 20);
-            this.dateTimePicker3.TabIndex = 181;
+            this.dtIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtIssueDate.Location = new System.Drawing.Point(79, 145);
+            this.dtIssueDate.Name = "dtIssueDate";
+            this.dtIssueDate.Size = new System.Drawing.Size(84, 20);
+            this.dtIssueDate.TabIndex = 181;
             // 
             // label23
             // 
@@ -309,21 +309,21 @@
             this.label22.TabIndex = 179;
             this.label22.Text = "Start date";
             // 
-            // dateTimePicker2
+            // dtEndDate
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(79, 119);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(84, 20);
-            this.dateTimePicker2.TabIndex = 178;
+            this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtEndDate.Location = new System.Drawing.Point(79, 119);
+            this.dtEndDate.Name = "dtEndDate";
+            this.dtEndDate.Size = new System.Drawing.Size(84, 20);
+            this.dtEndDate.TabIndex = 178;
             // 
-            // dateTimePicker1
+            // dtStartDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(79, 93);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(84, 20);
-            this.dateTimePicker1.TabIndex = 177;
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStartDate.Location = new System.Drawing.Point(79, 93);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.Size = new System.Drawing.Size(84, 20);
+            this.dtStartDate.TabIndex = 177;
             // 
             // label21
             // 
@@ -334,20 +334,20 @@
             this.label21.TabIndex = 176;
             this.label21.Text = "Status";
             // 
-            // comboBox1
+            // cmboStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(84, 21);
-            this.comboBox1.TabIndex = 175;
+            this.cmboStatus.FormattingEnabled = true;
+            this.cmboStatus.Location = new System.Drawing.Point(79, 66);
+            this.cmboStatus.Name = "cmboStatus";
+            this.cmboStatus.Size = new System.Drawing.Size(84, 21);
+            this.cmboStatus.TabIndex = 175;
             // 
-            // textBox8
+            // txtApplicationNumber
             // 
-            this.textBox8.Location = new System.Drawing.Point(79, 40);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(84, 20);
-            this.textBox8.TabIndex = 174;
+            this.txtApplicationNumber.Location = new System.Drawing.Point(79, 40);
+            this.txtApplicationNumber.Name = "txtApplicationNumber";
+            this.txtApplicationNumber.Size = new System.Drawing.Size(84, 20);
+            this.txtApplicationNumber.TabIndex = 174;
             // 
             // label20
             // 
@@ -358,12 +358,12 @@
             this.label20.TabIndex = 173;
             this.label20.Text = "Application #";
             // 
-            // textBox2
+            // txtPermitNumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 14);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(84, 20);
-            this.textBox2.TabIndex = 172;
+            this.txtPermitNumber.Location = new System.Drawing.Point(79, 14);
+            this.txtPermitNumber.Name = "txtPermitNumber";
+            this.txtPermitNumber.Size = new System.Drawing.Size(84, 20);
+            this.txtPermitNumber.TabIndex = 172;
             // 
             // label19
             // 
@@ -376,7 +376,7 @@
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.textBox15);
+            this.groupBox18.Controls.Add(this.txtBalance);
             this.groupBox18.Controls.Add(this.btnFees);
             this.groupBox18.Location = new System.Drawing.Point(535, 226);
             this.groupBox18.Name = "groupBox18";
@@ -385,12 +385,12 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Balance";
             // 
-            // textBox15
+            // txtBalance
             // 
-            this.textBox15.Location = new System.Drawing.Point(51, 26);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 201;
+            this.txtBalance.Location = new System.Drawing.Point(51, 26);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(100, 20);
+            this.txtBalance.TabIndex = 201;
             // 
             // btnFees
             // 
@@ -403,11 +403,11 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.maskedTextBox10);
+            this.groupBox14.Controls.Add(this.txtOwnerCell);
             this.groupBox14.Controls.Add(this.label1);
-            this.groupBox14.Controls.Add(this.maskedTextBox11);
+            this.groupBox14.Controls.Add(this.txtOwnerPhone);
             this.groupBox14.Controls.Add(this.label12);
-            this.groupBox14.Controls.Add(this.textBox1);
+            this.groupBox14.Controls.Add(this.txtOwner);
             this.groupBox14.Controls.Add(this.label13);
             this.groupBox14.Controls.Add(this.btnOwnerContact);
             this.groupBox14.Location = new System.Drawing.Point(20, 340);
@@ -417,13 +417,13 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Owner Information";
             // 
-            // maskedTextBox10
+            // txtOwnerCell
             // 
-            this.maskedTextBox10.Location = new System.Drawing.Point(348, 59);
-            this.maskedTextBox10.Mask = "(999) 000-0000";
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox10.TabIndex = 198;
+            this.txtOwnerCell.Location = new System.Drawing.Point(348, 59);
+            this.txtOwnerCell.Mask = "(999) 000-0000";
+            this.txtOwnerCell.Name = "txtOwnerCell";
+            this.txtOwnerCell.Size = new System.Drawing.Size(100, 20);
+            this.txtOwnerCell.TabIndex = 198;
             // 
             // label1
             // 
@@ -434,13 +434,13 @@
             this.label1.TabIndex = 197;
             this.label1.Text = "Cell #";
             // 
-            // maskedTextBox11
+            // txtOwnerPhone
             // 
-            this.maskedTextBox11.Location = new System.Drawing.Point(107, 57);
-            this.maskedTextBox11.Mask = "(999) 000-0000";
-            this.maskedTextBox11.Name = "maskedTextBox11";
-            this.maskedTextBox11.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox11.TabIndex = 196;
+            this.txtOwnerPhone.Location = new System.Drawing.Point(107, 57);
+            this.txtOwnerPhone.Mask = "(999) 000-0000";
+            this.txtOwnerPhone.Name = "txtOwnerPhone";
+            this.txtOwnerPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtOwnerPhone.TabIndex = 196;
             // 
             // label12
             // 
@@ -451,12 +451,12 @@
             this.label12.TabIndex = 195;
             this.label12.Text = "Primary Phone #";
             // 
-            // textBox1
+            // txtOwner
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(378, 20);
-            this.textBox1.TabIndex = 177;
+            this.txtOwner.Location = new System.Drawing.Point(70, 19);
+            this.txtOwner.Name = "txtOwner";
+            this.txtOwner.Size = new System.Drawing.Size(378, 20);
+            this.txtOwner.TabIndex = 177;
             // 
             // label13
             // 
@@ -479,11 +479,11 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.maskedTextBox2);
+            this.groupBox13.Controls.Add(this.txtCell);
             this.groupBox13.Controls.Add(this.label11);
-            this.groupBox13.Controls.Add(this.maskedTextBox1);
+            this.groupBox13.Controls.Add(this.txtApplicantPhone);
             this.groupBox13.Controls.Add(this.label10);
-            this.groupBox13.Controls.Add(this.textBox3);
+            this.groupBox13.Controls.Add(this.txtApplicant);
             this.groupBox13.Controls.Add(this.label2);
             this.groupBox13.Controls.Add(this.btnApplicantContact);
             this.groupBox13.Location = new System.Drawing.Point(20, 222);
@@ -493,13 +493,13 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Applicant Information";
             // 
-            // maskedTextBox2
+            // txtCell
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(348, 59);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 198;
+            this.txtCell.Location = new System.Drawing.Point(348, 59);
+            this.txtCell.Mask = "(999) 000-0000";
+            this.txtCell.Name = "txtCell";
+            this.txtCell.Size = new System.Drawing.Size(100, 20);
+            this.txtCell.TabIndex = 198;
             // 
             // label11
             // 
@@ -510,13 +510,13 @@
             this.label11.TabIndex = 197;
             this.label11.Text = "Cell #";
             // 
-            // maskedTextBox1
+            // txtApplicantPhone
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(107, 57);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 196;
+            this.txtApplicantPhone.Location = new System.Drawing.Point(107, 57);
+            this.txtApplicantPhone.Mask = "(999) 000-0000";
+            this.txtApplicantPhone.Name = "txtApplicantPhone";
+            this.txtApplicantPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtApplicantPhone.TabIndex = 196;
             // 
             // label10
             // 
@@ -527,12 +527,12 @@
             this.label10.TabIndex = 195;
             this.label10.Text = "Primary Phone #";
             // 
-            // textBox3
+            // txtApplicant
             // 
-            this.textBox3.Location = new System.Drawing.Point(70, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(378, 20);
-            this.textBox3.TabIndex = 177;
+            this.txtApplicant.Location = new System.Drawing.Point(70, 19);
+            this.txtApplicant.Name = "txtApplicant";
+            this.txtApplicant.Size = new System.Drawing.Size(378, 20);
+            this.txtApplicant.TabIndex = 177;
             // 
             // label2
             // 
@@ -555,23 +555,23 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.comboBox4);
-            this.groupBox12.Controls.Add(this.comboBox3);
-            this.groupBox12.Controls.Add(this.comboBox2);
-            this.groupBox12.Controls.Add(this.textBox12);
+            this.groupBox12.Controls.Add(this.cmboProposedUse);
+            this.groupBox12.Controls.Add(this.cmboCurrentUse);
+            this.groupBox12.Controls.Add(this.cmboOccupancyType);
+            this.groupBox12.Controls.Add(this.txtSideSetback);
             this.groupBox12.Controls.Add(this.label8);
-            this.groupBox12.Controls.Add(this.textBox9);
+            this.groupBox12.Controls.Add(this.txtReatSetback);
             this.groupBox12.Controls.Add(this.label7);
-            this.groupBox12.Controls.Add(this.textBox7);
+            this.groupBox12.Controls.Add(this.txtFrontSetback);
             this.groupBox12.Controls.Add(this.label6);
-            this.groupBox12.Controls.Add(this.textBox6);
+            this.groupBox12.Controls.Add(this.txtZoningDistrict);
             this.groupBox12.Controls.Add(this.label5);
-            this.groupBox12.Controls.Add(this.textBox5);
+            this.groupBox12.Controls.Add(this.txtLRKNumber);
             this.groupBox12.Controls.Add(this.label4);
-            this.groupBox12.Controls.Add(this.textBox4);
+            this.groupBox12.Controls.Add(this.txtLotNumber);
             this.groupBox12.Controls.Add(this.label3);
             this.groupBox12.Controls.Add(this.btnPropertyContact);
-            this.groupBox12.Controls.Add(this.textBox10);
+            this.groupBox12.Controls.Add(this.txtProperty);
             this.groupBox12.Controls.Add(this.label9);
             this.groupBox12.Location = new System.Drawing.Point(20, 38);
             this.groupBox12.Name = "groupBox12";
@@ -580,39 +580,39 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Property Information";
             // 
-            // comboBox4
+            // cmboProposedUse
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(339, 137);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 210;
-            this.comboBox4.Text = "Proposed Use";
+            this.cmboProposedUse.FormattingEnabled = true;
+            this.cmboProposedUse.Location = new System.Drawing.Point(339, 137);
+            this.cmboProposedUse.Name = "cmboProposedUse";
+            this.cmboProposedUse.Size = new System.Drawing.Size(121, 21);
+            this.cmboProposedUse.TabIndex = 210;
+            this.cmboProposedUse.Text = "Proposed Use";
             // 
-            // comboBox3
+            // cmboCurrentUse
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(180, 137);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 209;
-            this.comboBox3.Text = "Current Use";
+            this.cmboCurrentUse.FormattingEnabled = true;
+            this.cmboCurrentUse.Location = new System.Drawing.Point(180, 137);
+            this.cmboCurrentUse.Name = "cmboCurrentUse";
+            this.cmboCurrentUse.Size = new System.Drawing.Size(121, 21);
+            this.cmboCurrentUse.TabIndex = 209;
+            this.cmboCurrentUse.Text = "Current Use";
             // 
-            // comboBox2
+            // cmboOccupancyType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(20, 137);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 208;
-            this.comboBox2.Text = "Occupancy Type";
+            this.cmboOccupancyType.FormattingEnabled = true;
+            this.cmboOccupancyType.Location = new System.Drawing.Point(20, 137);
+            this.cmboOccupancyType.Name = "cmboOccupancyType";
+            this.cmboOccupancyType.Size = new System.Drawing.Size(121, 21);
+            this.cmboOccupancyType.TabIndex = 208;
+            this.cmboOccupancyType.Text = "Occupancy Type";
             // 
-            // textBox12
+            // txtSideSetback
             // 
-            this.textBox12.Location = new System.Drawing.Point(333, 107);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(95, 20);
-            this.textBox12.TabIndex = 205;
+            this.txtSideSetback.Location = new System.Drawing.Point(333, 107);
+            this.txtSideSetback.Name = "txtSideSetback";
+            this.txtSideSetback.Size = new System.Drawing.Size(95, 20);
+            this.txtSideSetback.TabIndex = 205;
             // 
             // label8
             // 
@@ -624,12 +624,12 @@
             this.label8.TabIndex = 204;
             this.label8.Text = "Side Setback";
             // 
-            // textBox9
+            // txtReatSetback
             // 
-            this.textBox9.Location = new System.Drawing.Point(333, 78);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(95, 20);
-            this.textBox9.TabIndex = 203;
+            this.txtReatSetback.Location = new System.Drawing.Point(333, 78);
+            this.txtReatSetback.Name = "txtReatSetback";
+            this.txtReatSetback.Size = new System.Drawing.Size(95, 20);
+            this.txtReatSetback.TabIndex = 203;
             // 
             // label7
             // 
@@ -641,12 +641,12 @@
             this.label7.TabIndex = 202;
             this.label7.Text = "Rear Setback";
             // 
-            // textBox7
+            // txtFrontSetback
             // 
-            this.textBox7.Location = new System.Drawing.Point(107, 104);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(95, 20);
-            this.textBox7.TabIndex = 201;
+            this.txtFrontSetback.Location = new System.Drawing.Point(107, 104);
+            this.txtFrontSetback.Name = "txtFrontSetback";
+            this.txtFrontSetback.Size = new System.Drawing.Size(95, 20);
+            this.txtFrontSetback.TabIndex = 201;
             // 
             // label6
             // 
@@ -658,12 +658,12 @@
             this.label6.TabIndex = 200;
             this.label6.Text = "Front Setback";
             // 
-            // textBox6
+            // txtZoningDistrict
             // 
-            this.textBox6.Location = new System.Drawing.Point(107, 78);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(95, 20);
-            this.textBox6.TabIndex = 199;
+            this.txtZoningDistrict.Location = new System.Drawing.Point(107, 78);
+            this.txtZoningDistrict.Name = "txtZoningDistrict";
+            this.txtZoningDistrict.Size = new System.Drawing.Size(95, 20);
+            this.txtZoningDistrict.TabIndex = 199;
             // 
             // label5
             // 
@@ -675,12 +675,12 @@
             this.label5.TabIndex = 198;
             this.label5.Text = "Zoning District";
             // 
-            // textBox5
+            // txtLRKNumber
             // 
-            this.textBox5.Location = new System.Drawing.Point(251, 49);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(95, 20);
-            this.textBox5.TabIndex = 197;
+            this.txtLRKNumber.Location = new System.Drawing.Point(251, 49);
+            this.txtLRKNumber.Name = "txtLRKNumber";
+            this.txtLRKNumber.Size = new System.Drawing.Size(95, 20);
+            this.txtLRKNumber.TabIndex = 197;
             // 
             // label4
             // 
@@ -692,12 +692,12 @@
             this.label4.TabIndex = 196;
             this.label4.Text = "LRK #";
             // 
-            // textBox4
+            // txtLotNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(70, 49);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(95, 20);
-            this.textBox4.TabIndex = 195;
+            this.txtLotNumber.Location = new System.Drawing.Point(70, 49);
+            this.txtLotNumber.Name = "txtLotNumber";
+            this.txtLotNumber.Size = new System.Drawing.Size(95, 20);
+            this.txtLotNumber.TabIndex = 195;
             // 
             // label3
             // 
@@ -718,12 +718,12 @@
             this.btnPropertyContact.Text = "...";
             this.btnPropertyContact.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // txtProperty
             // 
-            this.textBox10.Location = new System.Drawing.Point(70, 23);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(378, 20);
-            this.textBox10.TabIndex = 192;
+            this.txtProperty.Location = new System.Drawing.Point(70, 23);
+            this.txtProperty.Name = "txtProperty";
+            this.txtProperty.Size = new System.Drawing.Size(378, 20);
+            this.txtProperty.TabIndex = 192;
             // 
             // label9
             // 
@@ -772,7 +772,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox13);
+            this.groupBox6.Controls.Add(this.txtNumAmps);
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Location = new System.Drawing.Point(39, 383);
@@ -782,12 +782,12 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Electrical";
             // 
-            // textBox13
+            // txtNumAmps
             // 
-            this.textBox13.Location = new System.Drawing.Point(84, 25);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(62, 20);
-            this.textBox13.TabIndex = 228;
+            this.txtNumAmps.Location = new System.Drawing.Point(84, 25);
+            this.txtNumAmps.Name = "txtNumAmps";
+            this.txtNumAmps.Size = new System.Drawing.Size(62, 20);
+            this.txtNumAmps.TabIndex = 228;
             // 
             // label16
             // 
@@ -801,7 +801,7 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.label68);
-            this.groupBox7.Controls.Add(this.radioButton7);
+            this.groupBox7.Controls.Add(this.rdioTemporaryPole);
             this.groupBox7.Location = new System.Drawing.Point(224, 12);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(122, 37);
@@ -817,39 +817,39 @@
             this.label68.TabIndex = 1;
             this.label68.Text = "Temporary Pole";
             // 
-            // radioButton7
+            // rdioTemporaryPole
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(94, 14);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(14, 13);
-            this.radioButton7.TabIndex = 0;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rdioTemporaryPole.AutoSize = true;
+            this.rdioTemporaryPole.Location = new System.Drawing.Point(94, 14);
+            this.rdioTemporaryPole.Name = "rdioTemporaryPole";
+            this.rdioTemporaryPole.Size = new System.Drawing.Size(14, 13);
+            this.rdioTemporaryPole.TabIndex = 0;
+            this.rdioTemporaryPole.TabStop = true;
+            this.rdioTemporaryPole.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.textBox43);
+            this.groupBox8.Controls.Add(this.txtNumWaterHeaters);
             this.groupBox8.Controls.Add(this.label56);
-            this.groupBox8.Controls.Add(this.textBox44);
+            this.groupBox8.Controls.Add(this.txtNumSpas);
             this.groupBox8.Controls.Add(this.label57);
-            this.groupBox8.Controls.Add(this.textBox45);
+            this.groupBox8.Controls.Add(this.txtNumWetBars);
             this.groupBox8.Controls.Add(this.label58);
-            this.groupBox8.Controls.Add(this.textBox46);
+            this.groupBox8.Controls.Add(this.txtNumDishwashers);
             this.groupBox8.Controls.Add(this.label59);
-            this.groupBox8.Controls.Add(this.textBox47);
+            this.groupBox8.Controls.Add(this.txtNumClothesWashers);
             this.groupBox8.Controls.Add(this.label60);
-            this.groupBox8.Controls.Add(this.textBox48);
+            this.groupBox8.Controls.Add(this.txtNumTubs);
             this.groupBox8.Controls.Add(this.label61);
-            this.groupBox8.Controls.Add(this.textBox49);
+            this.groupBox8.Controls.Add(this.txtNumShowers);
             this.groupBox8.Controls.Add(this.label62);
-            this.groupBox8.Controls.Add(this.textBox50);
+            this.groupBox8.Controls.Add(this.txtNumWaterClosets);
             this.groupBox8.Controls.Add(this.label63);
-            this.groupBox8.Controls.Add(this.textBox51);
+            this.groupBox8.Controls.Add(this.txtNumSinks);
             this.groupBox8.Controls.Add(this.label64);
-            this.groupBox8.Controls.Add(this.textBox53);
+            this.groupBox8.Controls.Add(this.txtNumBathrooms);
             this.groupBox8.Controls.Add(this.label72);
-            this.groupBox8.Controls.Add(this.textBox54);
+            this.groupBox8.Controls.Add(this.txtNumFixtures);
             this.groupBox8.Controls.Add(this.label73);
             this.groupBox8.Location = new System.Drawing.Point(39, 252);
             this.groupBox8.Name = "groupBox8";
@@ -858,12 +858,12 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Plumbing";
             // 
-            // textBox43
+            // txtNumWaterHeaters
             // 
-            this.textBox43.Location = new System.Drawing.Point(119, 95);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(27, 20);
-            this.textBox43.TabIndex = 238;
+            this.txtNumWaterHeaters.Location = new System.Drawing.Point(119, 95);
+            this.txtNumWaterHeaters.Name = "txtNumWaterHeaters";
+            this.txtNumWaterHeaters.Size = new System.Drawing.Size(27, 20);
+            this.txtNumWaterHeaters.TabIndex = 238;
             // 
             // label56
             // 
@@ -874,12 +874,12 @@
             this.label56.TabIndex = 237;
             this.label56.Text = "Water Heater";
             // 
-            // textBox44
+            // txtNumSpas
             // 
-            this.textBox44.Location = new System.Drawing.Point(395, 74);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(27, 20);
-            this.textBox44.TabIndex = 236;
+            this.txtNumSpas.Location = new System.Drawing.Point(395, 74);
+            this.txtNumSpas.Name = "txtNumSpas";
+            this.txtNumSpas.Size = new System.Drawing.Size(27, 20);
+            this.txtNumSpas.TabIndex = 236;
             // 
             // label57
             // 
@@ -890,12 +890,12 @@
             this.label57.TabIndex = 234;
             this.label57.Text = "Spa";
             // 
-            // textBox45
+            // txtNumWetBars
             // 
-            this.textBox45.Location = new System.Drawing.Point(267, 95);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(28, 20);
-            this.textBox45.TabIndex = 235;
+            this.txtNumWetBars.Location = new System.Drawing.Point(267, 95);
+            this.txtNumWetBars.Name = "txtNumWetBars";
+            this.txtNumWetBars.Size = new System.Drawing.Size(28, 20);
+            this.txtNumWetBars.TabIndex = 235;
             // 
             // label58
             // 
@@ -906,28 +906,28 @@
             this.label58.TabIndex = 233;
             this.label58.Text = "Wet Bar";
             // 
-            // textBox46
+            // txtNumDishwashers
             // 
-            this.textBox46.Location = new System.Drawing.Point(119, 69);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(27, 20);
-            this.textBox46.TabIndex = 232;
+            this.txtNumDishwashers.Location = new System.Drawing.Point(119, 69);
+            this.txtNumDishwashers.Name = "txtNumDishwashers";
+            this.txtNumDishwashers.Size = new System.Drawing.Size(27, 20);
+            this.txtNumDishwashers.TabIndex = 232;
             // 
             // label59
             // 
             this.label59.AutoSize = true;
             this.label59.Location = new System.Drawing.Point(50, 72);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(62, 13);
+            this.label59.Size = new System.Drawing.Size(67, 13);
             this.label59.TabIndex = 231;
-            this.label59.Text = "Dishwasher";
+            this.label59.Text = "Dishwashers";
             // 
-            // textBox47
+            // txtNumClothesWashers
             // 
-            this.textBox47.Location = new System.Drawing.Point(394, 48);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(27, 20);
-            this.textBox47.TabIndex = 230;
+            this.txtNumClothesWashers.Location = new System.Drawing.Point(394, 48);
+            this.txtNumClothesWashers.Name = "txtNumClothesWashers";
+            this.txtNumClothesWashers.Size = new System.Drawing.Size(27, 20);
+            this.txtNumClothesWashers.TabIndex = 230;
             // 
             // label60
             // 
@@ -938,12 +938,12 @@
             this.label60.TabIndex = 229;
             this.label60.Text = "Clothes Washers";
             // 
-            // textBox48
+            // txtNumTubs
             // 
-            this.textBox48.Location = new System.Drawing.Point(267, 69);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(27, 20);
-            this.textBox48.TabIndex = 228;
+            this.txtNumTubs.Location = new System.Drawing.Point(267, 69);
+            this.txtNumTubs.Name = "txtNumTubs";
+            this.txtNumTubs.Size = new System.Drawing.Size(27, 20);
+            this.txtNumTubs.TabIndex = 228;
             // 
             // label61
             // 
@@ -954,12 +954,12 @@
             this.label61.TabIndex = 226;
             this.label61.Text = "Tubs";
             // 
-            // textBox49
+            // txtNumShowers
             // 
-            this.textBox49.Location = new System.Drawing.Point(267, 45);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(28, 20);
-            this.textBox49.TabIndex = 227;
+            this.txtNumShowers.Location = new System.Drawing.Point(267, 45);
+            this.txtNumShowers.Name = "txtNumShowers";
+            this.txtNumShowers.Size = new System.Drawing.Size(28, 20);
+            this.txtNumShowers.TabIndex = 227;
             // 
             // label62
             // 
@@ -970,12 +970,12 @@
             this.label62.TabIndex = 225;
             this.label62.Text = "Showers";
             // 
-            // textBox50
+            // txtNumWaterClosets
             // 
-            this.textBox50.Location = new System.Drawing.Point(119, 45);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(27, 20);
-            this.textBox50.TabIndex = 224;
+            this.txtNumWaterClosets.Location = new System.Drawing.Point(119, 45);
+            this.txtNumWaterClosets.Name = "txtNumWaterClosets";
+            this.txtNumWaterClosets.Size = new System.Drawing.Size(27, 20);
+            this.txtNumWaterClosets.TabIndex = 224;
             // 
             // label63
             // 
@@ -986,12 +986,12 @@
             this.label63.TabIndex = 222;
             this.label63.Text = "Water Closets";
             // 
-            // textBox51
+            // txtNumSinks
             // 
-            this.textBox51.Location = new System.Drawing.Point(395, 22);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(26, 20);
-            this.textBox51.TabIndex = 223;
+            this.txtNumSinks.Location = new System.Drawing.Point(395, 22);
+            this.txtNumSinks.Name = "txtNumSinks";
+            this.txtNumSinks.Size = new System.Drawing.Size(26, 20);
+            this.txtNumSinks.TabIndex = 223;
             // 
             // label64
             // 
@@ -1002,12 +1002,12 @@
             this.label64.TabIndex = 221;
             this.label64.Text = "Sinks";
             // 
-            // textBox53
+            // txtNumBathrooms
             // 
-            this.textBox53.Location = new System.Drawing.Point(119, 22);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(27, 20);
-            this.textBox53.TabIndex = 220;
+            this.txtNumBathrooms.Location = new System.Drawing.Point(119, 22);
+            this.txtNumBathrooms.Name = "txtNumBathrooms";
+            this.txtNumBathrooms.Size = new System.Drawing.Size(27, 20);
+            this.txtNumBathrooms.TabIndex = 220;
             // 
             // label72
             // 
@@ -1018,12 +1018,12 @@
             this.label72.TabIndex = 218;
             this.label72.Text = "Total # of Bathrooms";
             // 
-            // textBox54
+            // txtNumFixtures
             // 
-            this.textBox54.Location = new System.Drawing.Point(267, 22);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(28, 20);
-            this.textBox54.TabIndex = 219;
+            this.txtNumFixtures.Location = new System.Drawing.Point(267, 22);
+            this.txtNumFixtures.Name = "txtNumFixtures";
+            this.txtNumFixtures.Size = new System.Drawing.Size(28, 20);
+            this.txtNumFixtures.TabIndex = 219;
             // 
             // label73
             // 
@@ -1038,7 +1038,7 @@
             // 
             this.groupBox17.Controls.Add(this.groupBox16);
             this.groupBox17.Controls.Add(this.groupBox9);
-            this.groupBox17.Controls.Add(this.textBox55);
+            this.groupBox17.Controls.Add(this.txtNumSystems);
             this.groupBox17.Controls.Add(this.label78);
             this.groupBox17.Location = new System.Drawing.Point(37, 168);
             this.groupBox17.Name = "groupBox17";
@@ -1050,7 +1050,7 @@
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.label14);
-            this.groupBox16.Controls.Add(this.radioButton1);
+            this.groupBox16.Controls.Add(this.rdioGasLine);
             this.groupBox16.Location = new System.Drawing.Point(213, 20);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(89, 37);
@@ -1066,20 +1066,20 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Gas Line";
             // 
-            // radioButton1
+            // rdioGasLine
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(67, 15);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdioGasLine.AutoSize = true;
+            this.rdioGasLine.Location = new System.Drawing.Point(67, 15);
+            this.rdioGasLine.Name = "rdioGasLine";
+            this.rdioGasLine.Size = new System.Drawing.Size(14, 13);
+            this.rdioGasLine.TabIndex = 0;
+            this.rdioGasLine.TabStop = true;
+            this.rdioGasLine.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.label75);
-            this.groupBox9.Controls.Add(this.radioButton12);
+            this.groupBox9.Controls.Add(this.rdioDuctWorkAlterationOnly);
             this.groupBox9.Location = new System.Drawing.Point(355, 20);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(195, 37);
@@ -1095,22 +1095,22 @@
             this.label75.TabIndex = 1;
             this.label75.Text = "Duct Work for Alteration Only";
             // 
-            // radioButton12
+            // rdioDuctWorkAlterationOnly
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(167, 16);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(14, 13);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rdioDuctWorkAlterationOnly.AutoSize = true;
+            this.rdioDuctWorkAlterationOnly.Location = new System.Drawing.Point(167, 16);
+            this.rdioDuctWorkAlterationOnly.Name = "rdioDuctWorkAlterationOnly";
+            this.rdioDuctWorkAlterationOnly.Size = new System.Drawing.Size(14, 13);
+            this.rdioDuctWorkAlterationOnly.TabIndex = 0;
+            this.rdioDuctWorkAlterationOnly.TabStop = true;
+            this.rdioDuctWorkAlterationOnly.UseVisualStyleBackColor = true;
             // 
-            // textBox55
+            // txtNumSystems
             // 
-            this.textBox55.Location = new System.Drawing.Point(113, 29);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(56, 20);
-            this.textBox55.TabIndex = 188;
+            this.txtNumSystems.Location = new System.Drawing.Point(113, 29);
+            this.txtNumSystems.Name = "txtNumSystems";
+            this.txtNumSystems.Size = new System.Drawing.Size(56, 20);
+            this.txtNumSystems.TabIndex = 188;
             // 
             // label78
             // 
@@ -1123,10 +1123,10 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.comboBox5);
-            this.groupBox10.Controls.Add(this.textBox14);
+            this.groupBox10.Controls.Add(this.cmboConstructionType);
+            this.groupBox10.Controls.Add(this.txtEstimatedCost);
             this.groupBox10.Controls.Add(this.label15);
-            this.groupBox10.Controls.Add(this.textBox18);
+            this.groupBox10.Controls.Add(this.txtSquareFeet);
             this.groupBox10.Controls.Add(this.label39);
             this.groupBox10.Location = new System.Drawing.Point(35, 6);
             this.groupBox10.Name = "groupBox10";
@@ -1135,21 +1135,21 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "General";
             // 
-            // comboBox5
+            // cmboConstructionType
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(409, 19);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(143, 21);
-            this.comboBox5.TabIndex = 209;
-            this.comboBox5.Text = "Type of Construction";
+            this.cmboConstructionType.FormattingEnabled = true;
+            this.cmboConstructionType.Location = new System.Drawing.Point(409, 19);
+            this.cmboConstructionType.Name = "cmboConstructionType";
+            this.cmboConstructionType.Size = new System.Drawing.Size(143, 21);
+            this.cmboConstructionType.TabIndex = 209;
+            this.cmboConstructionType.Text = "Type of Construction";
             // 
-            // textBox14
+            // txtEstimatedCost
             // 
-            this.textBox14.Location = new System.Drawing.Point(277, 20);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(101, 20);
-            this.textBox14.TabIndex = 185;
+            this.txtEstimatedCost.Location = new System.Drawing.Point(277, 20);
+            this.txtEstimatedCost.Name = "txtEstimatedCost";
+            this.txtEstimatedCost.Size = new System.Drawing.Size(101, 20);
+            this.txtEstimatedCost.TabIndex = 185;
             // 
             // label15
             // 
@@ -1160,12 +1160,12 @@
             this.label15.TabIndex = 177;
             this.label15.Text = "Estimated Cost";
             // 
-            // textBox18
+            // txtSquareFeet
             // 
-            this.textBox18.Location = new System.Drawing.Point(100, 19);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(82, 20);
-            this.textBox18.TabIndex = 184;
+            this.txtSquareFeet.Location = new System.Drawing.Point(100, 19);
+            this.txtSquareFeet.Name = "txtSquareFeet";
+            this.txtSquareFeet.Size = new System.Drawing.Size(82, 20);
+            this.txtSquareFeet.TabIndex = 184;
             // 
             // label39
             // 
@@ -1178,17 +1178,17 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.textBox57);
+            this.groupBox15.Controls.Add(this.txtDeck);
             this.groupBox15.Controls.Add(this.label109);
-            this.groupBox15.Controls.Add(this.textBox58);
+            this.groupBox15.Controls.Add(this.txtPorchSF);
             this.groupBox15.Controls.Add(this.label110);
-            this.groupBox15.Controls.Add(this.textBox60);
+            this.groupBox15.Controls.Add(this.txtBasement);
             this.groupBox15.Controls.Add(this.label112);
-            this.groupBox15.Controls.Add(this.textBox61);
+            this.groupBox15.Controls.Add(this.txtGarageSF);
             this.groupBox15.Controls.Add(this.label113);
-            this.groupBox15.Controls.Add(this.textBox62);
+            this.groupBox15.Controls.Add(this.txtNumStories);
             this.groupBox15.Controls.Add(this.label114);
-            this.groupBox15.Controls.Add(this.textBox63);
+            this.groupBox15.Controls.Add(this.txtHeatedSF);
             this.groupBox15.Controls.Add(this.label115);
             this.groupBox15.Location = new System.Drawing.Point(35, 70);
             this.groupBox15.Name = "groupBox15";
@@ -1197,12 +1197,12 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Building";
             // 
-            // textBox57
+            // txtDeck
             // 
-            this.textBox57.Location = new System.Drawing.Point(87, 51);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(87, 20);
-            this.textBox57.TabIndex = 186;
+            this.txtDeck.Location = new System.Drawing.Point(87, 51);
+            this.txtDeck.Name = "txtDeck";
+            this.txtDeck.Size = new System.Drawing.Size(87, 20);
+            this.txtDeck.TabIndex = 186;
             // 
             // label109
             // 
@@ -1213,12 +1213,12 @@
             this.label109.TabIndex = 181;
             this.label109.Text = "Deck";
             // 
-            // textBox58
+            // txtPorchSF
             // 
-            this.textBox58.Location = new System.Drawing.Point(252, 14);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(100, 20);
-            this.textBox58.TabIndex = 185;
+            this.txtPorchSF.Location = new System.Drawing.Point(252, 14);
+            this.txtPorchSF.Name = "txtPorchSF";
+            this.txtPorchSF.Size = new System.Drawing.Size(100, 20);
+            this.txtPorchSF.TabIndex = 185;
             // 
             // label110
             // 
@@ -1229,12 +1229,12 @@
             this.label110.TabIndex = 177;
             this.label110.Text = "Porch SF";
             // 
-            // textBox60
+            // txtBasement
             // 
-            this.textBox60.Location = new System.Drawing.Point(436, 51);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(100, 20);
-            this.textBox60.TabIndex = 189;
+            this.txtBasement.Location = new System.Drawing.Point(436, 51);
+            this.txtBasement.Name = "txtBasement";
+            this.txtBasement.Size = new System.Drawing.Size(100, 20);
+            this.txtBasement.TabIndex = 189;
             // 
             // label112
             // 
@@ -1245,12 +1245,12 @@
             this.label112.TabIndex = 180;
             this.label112.Text = "Basement";
             // 
-            // textBox61
+            // txtGarageSF
             // 
-            this.textBox61.Location = new System.Drawing.Point(252, 51);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(100, 20);
-            this.textBox61.TabIndex = 188;
+            this.txtGarageSF.Location = new System.Drawing.Point(252, 51);
+            this.txtGarageSF.Name = "txtGarageSF";
+            this.txtGarageSF.Size = new System.Drawing.Size(100, 20);
+            this.txtGarageSF.TabIndex = 188;
             // 
             // label113
             // 
@@ -1261,12 +1261,12 @@
             this.label113.TabIndex = 179;
             this.label113.Text = "Garage SF";
             // 
-            // textBox62
+            // txtNumStories
             // 
-            this.textBox62.Location = new System.Drawing.Point(458, 14);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(78, 20);
-            this.textBox62.TabIndex = 187;
+            this.txtNumStories.Location = new System.Drawing.Point(458, 14);
+            this.txtNumStories.Name = "txtNumStories";
+            this.txtNumStories.Size = new System.Drawing.Size(78, 20);
+            this.txtNumStories.TabIndex = 187;
             // 
             // label114
             // 
@@ -1277,12 +1277,12 @@
             this.label114.TabIndex = 178;
             this.label114.Text = "# of Stories";
             // 
-            // textBox63
+            // txtHeatedSF
             // 
-            this.textBox63.Location = new System.Drawing.Point(87, 14);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(87, 20);
-            this.textBox63.TabIndex = 184;
+            this.txtHeatedSF.Location = new System.Drawing.Point(87, 14);
+            this.txtHeatedSF.Name = "txtHeatedSF";
+            this.txtHeatedSF.Size = new System.Drawing.Size(87, 20);
+            this.txtHeatedSF.TabIndex = 184;
             // 
             // label115
             // 
@@ -1321,12 +1321,12 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.maskedTextBox9);
+            this.groupBox11.Controls.Add(this.txtIrrigationPhone);
             this.groupBox11.Controls.Add(this.label37);
             this.groupBox11.Controls.Add(this.btnIrrigationContact);
-            this.groupBox11.Controls.Add(this.textBox26);
+            this.groupBox11.Controls.Add(this.txtIrrigationLisenceNumber);
             this.groupBox11.Controls.Add(this.label38);
-            this.groupBox11.Controls.Add(this.textBox27);
+            this.groupBox11.Controls.Add(this.txtIrrigationName);
             this.groupBox11.Location = new System.Drawing.Point(20, 321);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(647, 41);
@@ -1334,13 +1334,13 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Irrigation Sub";
             // 
-            // maskedTextBox9
+            // txtIrrigationPhone
             // 
-            this.maskedTextBox9.Location = new System.Drawing.Point(473, 14);
-            this.maskedTextBox9.Mask = "(999) 000-0000";
-            this.maskedTextBox9.Name = "maskedTextBox9";
-            this.maskedTextBox9.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox9.TabIndex = 194;
+            this.txtIrrigationPhone.Location = new System.Drawing.Point(473, 14);
+            this.txtIrrigationPhone.Mask = "(999) 000-0000";
+            this.txtIrrigationPhone.Name = "txtIrrigationPhone";
+            this.txtIrrigationPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtIrrigationPhone.TabIndex = 194;
             // 
             // label37
             // 
@@ -1360,12 +1360,12 @@
             this.btnIrrigationContact.Text = "...";
             this.btnIrrigationContact.UseVisualStyleBackColor = true;
             // 
-            // textBox26
+            // txtIrrigationLisenceNumber
             // 
-            this.textBox26.Location = new System.Drawing.Point(310, 13);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(89, 20);
-            this.textBox26.TabIndex = 191;
+            this.txtIrrigationLisenceNumber.Location = new System.Drawing.Point(310, 13);
+            this.txtIrrigationLisenceNumber.Name = "txtIrrigationLisenceNumber";
+            this.txtIrrigationLisenceNumber.Size = new System.Drawing.Size(89, 20);
+            this.txtIrrigationLisenceNumber.TabIndex = 191;
             // 
             // label38
             // 
@@ -1376,21 +1376,21 @@
             this.label38.TabIndex = 189;
             this.label38.Text = "License#:";
             // 
-            // textBox27
+            // txtIrrigationName
             // 
-            this.textBox27.Location = new System.Drawing.Point(6, 14);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(227, 20);
-            this.textBox27.TabIndex = 190;
+            this.txtIrrigationName.Location = new System.Drawing.Point(6, 14);
+            this.txtIrrigationName.Name = "txtIrrigationName";
+            this.txtIrrigationName.Size = new System.Drawing.Size(227, 20);
+            this.txtIrrigationName.TabIndex = 190;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.maskedTextBox8);
+            this.groupBox5.Controls.Add(this.txtGasPhone);
             this.groupBox5.Controls.Add(this.label35);
             this.groupBox5.Controls.Add(this.btngasContact);
-            this.groupBox5.Controls.Add(this.textBox24);
+            this.groupBox5.Controls.Add(this.txtGasLisenceNumber);
             this.groupBox5.Controls.Add(this.label36);
-            this.groupBox5.Controls.Add(this.textBox25);
+            this.groupBox5.Controls.Add(this.txtGasName);
             this.groupBox5.Location = new System.Drawing.Point(20, 274);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(647, 41);
@@ -1398,13 +1398,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Gas Line Sub";
             // 
-            // maskedTextBox8
+            // txtGasPhone
             // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(473, 14);
-            this.maskedTextBox8.Mask = "(999) 000-0000";
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox8.TabIndex = 194;
+            this.txtGasPhone.Location = new System.Drawing.Point(473, 14);
+            this.txtGasPhone.Mask = "(999) 000-0000";
+            this.txtGasPhone.Name = "txtGasPhone";
+            this.txtGasPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtGasPhone.TabIndex = 194;
             // 
             // label35
             // 
@@ -1424,12 +1424,12 @@
             this.btngasContact.Text = "...";
             this.btngasContact.UseVisualStyleBackColor = true;
             // 
-            // textBox24
+            // txtGasLisenceNumber
             // 
-            this.textBox24.Location = new System.Drawing.Point(310, 13);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(89, 20);
-            this.textBox24.TabIndex = 191;
+            this.txtGasLisenceNumber.Location = new System.Drawing.Point(310, 13);
+            this.txtGasLisenceNumber.Name = "txtGasLisenceNumber";
+            this.txtGasLisenceNumber.Size = new System.Drawing.Size(89, 20);
+            this.txtGasLisenceNumber.TabIndex = 191;
             // 
             // label36
             // 
@@ -1440,21 +1440,21 @@
             this.label36.TabIndex = 189;
             this.label36.Text = "License#:";
             // 
-            // textBox25
+            // txtGasName
             // 
-            this.textBox25.Location = new System.Drawing.Point(6, 14);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(227, 20);
-            this.textBox25.TabIndex = 190;
+            this.txtGasName.Location = new System.Drawing.Point(6, 14);
+            this.txtGasName.Name = "txtGasName";
+            this.txtGasName.Size = new System.Drawing.Size(227, 20);
+            this.txtGasName.TabIndex = 190;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.maskedTextBox7);
+            this.groupBox4.Controls.Add(this.txtMechanicalPhone);
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.btnMechanicalContact);
-            this.groupBox4.Controls.Add(this.textBox22);
+            this.groupBox4.Controls.Add(this.txtMechanicalLisenceNumber);
             this.groupBox4.Controls.Add(this.label34);
-            this.groupBox4.Controls.Add(this.textBox23);
+            this.groupBox4.Controls.Add(this.txtMechanicalName);
             this.groupBox4.Location = new System.Drawing.Point(20, 227);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(647, 41);
@@ -1462,13 +1462,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mechanical Sub";
             // 
-            // maskedTextBox7
+            // txtMechanicalPhone
             // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(473, 14);
-            this.maskedTextBox7.Mask = "(999) 000-0000";
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox7.TabIndex = 194;
+            this.txtMechanicalPhone.Location = new System.Drawing.Point(473, 14);
+            this.txtMechanicalPhone.Mask = "(999) 000-0000";
+            this.txtMechanicalPhone.Name = "txtMechanicalPhone";
+            this.txtMechanicalPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtMechanicalPhone.TabIndex = 194;
             // 
             // label33
             // 
@@ -1488,12 +1488,12 @@
             this.btnMechanicalContact.Text = "...";
             this.btnMechanicalContact.UseVisualStyleBackColor = true;
             // 
-            // textBox22
+            // txtMechanicalLisenceNumber
             // 
-            this.textBox22.Location = new System.Drawing.Point(310, 13);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(89, 20);
-            this.textBox22.TabIndex = 191;
+            this.txtMechanicalLisenceNumber.Location = new System.Drawing.Point(310, 13);
+            this.txtMechanicalLisenceNumber.Name = "txtMechanicalLisenceNumber";
+            this.txtMechanicalLisenceNumber.Size = new System.Drawing.Size(89, 20);
+            this.txtMechanicalLisenceNumber.TabIndex = 191;
             // 
             // label34
             // 
@@ -1504,21 +1504,21 @@
             this.label34.TabIndex = 189;
             this.label34.Text = "License#:";
             // 
-            // textBox23
+            // txtMechanicalName
             // 
-            this.textBox23.Location = new System.Drawing.Point(6, 14);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(227, 20);
-            this.textBox23.TabIndex = 190;
+            this.txtMechanicalName.Location = new System.Drawing.Point(6, 14);
+            this.txtMechanicalName.Name = "txtMechanicalName";
+            this.txtMechanicalName.Size = new System.Drawing.Size(227, 20);
+            this.txtMechanicalName.TabIndex = 190;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.maskedTextBox6);
+            this.groupBox3.Controls.Add(this.txtPlumbingPhone);
             this.groupBox3.Controls.Add(this.label31);
             this.groupBox3.Controls.Add(this.btnPlumbingContact);
-            this.groupBox3.Controls.Add(this.textBox20);
+            this.groupBox3.Controls.Add(this.txtPlumbingLisenceNumber);
             this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.textBox21);
+            this.groupBox3.Controls.Add(this.txtPlumbingName);
             this.groupBox3.Location = new System.Drawing.Point(20, 180);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(647, 41);
@@ -1526,13 +1526,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Plumbing Sub";
             // 
-            // maskedTextBox6
+            // txtPlumbingPhone
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(473, 14);
-            this.maskedTextBox6.Mask = "(999) 000-0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox6.TabIndex = 194;
+            this.txtPlumbingPhone.Location = new System.Drawing.Point(473, 14);
+            this.txtPlumbingPhone.Mask = "(999) 000-0000";
+            this.txtPlumbingPhone.Name = "txtPlumbingPhone";
+            this.txtPlumbingPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtPlumbingPhone.TabIndex = 194;
             // 
             // label31
             // 
@@ -1552,12 +1552,12 @@
             this.btnPlumbingContact.Text = "...";
             this.btnPlumbingContact.UseVisualStyleBackColor = true;
             // 
-            // textBox20
+            // txtPlumbingLisenceNumber
             // 
-            this.textBox20.Location = new System.Drawing.Point(310, 13);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(89, 20);
-            this.textBox20.TabIndex = 191;
+            this.txtPlumbingLisenceNumber.Location = new System.Drawing.Point(310, 13);
+            this.txtPlumbingLisenceNumber.Name = "txtPlumbingLisenceNumber";
+            this.txtPlumbingLisenceNumber.Size = new System.Drawing.Size(89, 20);
+            this.txtPlumbingLisenceNumber.TabIndex = 191;
             // 
             // label32
             // 
@@ -1568,28 +1568,28 @@
             this.label32.TabIndex = 189;
             this.label32.Text = "License#:";
             // 
-            // textBox21
+            // txtPlumbingName
             // 
-            this.textBox21.Location = new System.Drawing.Point(6, 14);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(227, 20);
-            this.textBox21.TabIndex = 190;
+            this.txtPlumbingName.Location = new System.Drawing.Point(6, 14);
+            this.txtPlumbingName.Name = "txtPlumbingName";
+            this.txtPlumbingName.Size = new System.Drawing.Size(227, 20);
+            this.txtPlumbingName.TabIndex = 190;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnContractorContact);
-            this.groupBox2.Controls.Add(this.textBox19);
+            this.groupBox2.Controls.Add(this.txtContractorEmail);
             this.groupBox2.Controls.Add(this.label30);
-            this.groupBox2.Controls.Add(this.maskedTextBox5);
+            this.groupBox2.Controls.Add(this.txtSiteManagerPhone);
             this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.maskedTextBox4);
+            this.groupBox2.Controls.Add(this.txtContractorPhone);
             this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Controls.Add(this.textBox92);
+            this.groupBox2.Controls.Add(this.txtSiteManagerName);
             this.groupBox2.Controls.Add(this.label105);
-            this.groupBox2.Controls.Add(this.textBox93);
+            this.groupBox2.Controls.Add(this.txtContractorLiscence);
             this.groupBox2.Controls.Add(this.label106);
-            this.groupBox2.Controls.Add(this.textBox94);
+            this.groupBox2.Controls.Add(this.txtContractorName);
             this.groupBox2.Location = new System.Drawing.Point(20, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(647, 99);
@@ -1606,12 +1606,12 @@
             this.btnContractorContact.Text = "...";
             this.btnContractorContact.UseVisualStyleBackColor = true;
             // 
-            // textBox19
+            // txtContractorEmail
             // 
-            this.textBox19.Location = new System.Drawing.Point(518, 43);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(114, 20);
-            this.textBox19.TabIndex = 201;
+            this.txtContractorEmail.Location = new System.Drawing.Point(518, 43);
+            this.txtContractorEmail.Name = "txtContractorEmail";
+            this.txtContractorEmail.Size = new System.Drawing.Size(114, 20);
+            this.txtContractorEmail.TabIndex = 201;
             // 
             // label30
             // 
@@ -1622,13 +1622,13 @@
             this.label30.TabIndex = 200;
             this.label30.Text = "Email";
             // 
-            // maskedTextBox5
+            // txtSiteManagerPhone
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(344, 43);
-            this.maskedTextBox5.Mask = "(999) 000-0000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox5.TabIndex = 199;
+            this.txtSiteManagerPhone.Location = new System.Drawing.Point(344, 43);
+            this.txtSiteManagerPhone.Mask = "(999) 000-0000";
+            this.txtSiteManagerPhone.Name = "txtSiteManagerPhone";
+            this.txtSiteManagerPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtSiteManagerPhone.TabIndex = 199;
             // 
             // label29
             // 
@@ -1648,13 +1648,13 @@
             this.label28.TabIndex = 197;
             this.label28.Text = "Name";
             // 
-            // maskedTextBox4
+            // txtContractorPhone
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(532, 19);
-            this.maskedTextBox4.Mask = "(999) 000-0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox4.TabIndex = 196;
+            this.txtContractorPhone.Location = new System.Drawing.Point(532, 19);
+            this.txtContractorPhone.Mask = "(999) 000-0000";
+            this.txtContractorPhone.Name = "txtContractorPhone";
+            this.txtContractorPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtContractorPhone.TabIndex = 196;
             // 
             // label27
             // 
@@ -1665,12 +1665,12 @@
             this.label27.TabIndex = 195;
             this.label27.Text = "Phone #";
             // 
-            // textBox92
+            // txtSiteManagerName
             // 
-            this.textBox92.Location = new System.Drawing.Point(75, 43);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(191, 20);
-            this.textBox92.TabIndex = 162;
+            this.txtSiteManagerName.Location = new System.Drawing.Point(75, 43);
+            this.txtSiteManagerName.Name = "txtSiteManagerName";
+            this.txtSiteManagerName.Size = new System.Drawing.Size(191, 20);
+            this.txtSiteManagerName.TabIndex = 162;
             // 
             // label105
             // 
@@ -1681,12 +1681,12 @@
             this.label105.TabIndex = 159;
             this.label105.Text = "Site Manager";
             // 
-            // textBox93
+            // txtContractorLiscence
             // 
-            this.textBox93.Location = new System.Drawing.Point(352, 17);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(92, 20);
-            this.textBox93.TabIndex = 161;
+            this.txtContractorLiscence.Location = new System.Drawing.Point(352, 17);
+            this.txtContractorLiscence.Name = "txtContractorLiscence";
+            this.txtContractorLiscence.Size = new System.Drawing.Size(92, 20);
+            this.txtContractorLiscence.TabIndex = 161;
             // 
             // label106
             // 
@@ -1697,21 +1697,21 @@
             this.label106.TabIndex = 158;
             this.label106.Text = "License#";
             // 
-            // textBox94
+            // txtContractorName
             // 
-            this.textBox94.Location = new System.Drawing.Point(56, 18);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(228, 20);
-            this.textBox94.TabIndex = 160;
+            this.txtContractorName.Location = new System.Drawing.Point(56, 18);
+            this.txtContractorName.Name = "txtContractorName";
+            this.txtContractorName.Size = new System.Drawing.Size(228, 20);
+            this.txtContractorName.TabIndex = 160;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
+            this.groupBox1.Controls.Add(this.txtElectricalPhone);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.btnElectricalContact);
-            this.groupBox1.Controls.Add(this.textBox82);
+            this.groupBox1.Controls.Add(this.txtElectricalLisenceNumber);
             this.groupBox1.Controls.Add(this.label95);
-            this.groupBox1.Controls.Add(this.textBox83);
+            this.groupBox1.Controls.Add(this.txtElectricalName);
             this.groupBox1.Location = new System.Drawing.Point(20, 133);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(647, 41);
@@ -1719,13 +1719,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Electrical Sub";
             // 
-            // maskedTextBox3
+            // txtElectricalPhone
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(473, 14);
-            this.maskedTextBox3.Mask = "(999) 000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox3.TabIndex = 194;
+            this.txtElectricalPhone.Location = new System.Drawing.Point(473, 14);
+            this.txtElectricalPhone.Mask = "(999) 000-0000";
+            this.txtElectricalPhone.Name = "txtElectricalPhone";
+            this.txtElectricalPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtElectricalPhone.TabIndex = 194;
             // 
             // label26
             // 
@@ -1745,12 +1745,12 @@
             this.btnElectricalContact.Text = "...";
             this.btnElectricalContact.UseVisualStyleBackColor = true;
             // 
-            // textBox82
+            // txtElectricalLisenceNumber
             // 
-            this.textBox82.Location = new System.Drawing.Point(310, 13);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(89, 20);
-            this.textBox82.TabIndex = 191;
+            this.txtElectricalLisenceNumber.Location = new System.Drawing.Point(310, 13);
+            this.txtElectricalLisenceNumber.Name = "txtElectricalLisenceNumber";
+            this.txtElectricalLisenceNumber.Size = new System.Drawing.Size(89, 20);
+            this.txtElectricalLisenceNumber.TabIndex = 191;
             // 
             // label95
             // 
@@ -1761,12 +1761,12 @@
             this.label95.TabIndex = 189;
             this.label95.Text = "License#:";
             // 
-            // textBox83
+            // txtElectricalName
             // 
-            this.textBox83.Location = new System.Drawing.Point(6, 14);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(227, 20);
-            this.textBox83.TabIndex = 190;
+            this.txtElectricalName.Location = new System.Drawing.Point(6, 14);
+            this.txtElectricalName.Name = "txtElectricalName";
+            this.txtElectricalName.Size = new System.Drawing.Size(227, 20);
+            this.txtElectricalName.TabIndex = 190;
             // 
             // btnNext3
             // 
@@ -1783,7 +1783,7 @@
             this.tabPage2.Controls.Add(this.btnSubmitNotes);
             this.tabPage2.Controls.Add(this.btnSubmit);
             this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.txtNotes);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1798,7 +1798,7 @@
             this.btnCancelNotes.Name = "btnCancelNotes";
             this.btnCancelNotes.Size = new System.Drawing.Size(75, 23);
             this.btnCancelNotes.TabIndex = 211;
-            this.btnCancelNotes.Text = "Cancel";
+            this.btnCancelNotes.Text = "Clear";
             this.btnCancelNotes.UseVisualStyleBackColor = true;
             // 
             // btnSubmitNotes
@@ -1828,13 +1828,13 @@
             this.label25.TabIndex = 157;
             this.label25.Text = "Notes";
             // 
-            // textBox11
+            // txtNotes
             // 
-            this.textBox11.Location = new System.Drawing.Point(6, 83);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(701, 294);
-            this.textBox11.TabIndex = 0;
+            this.txtNotes.Location = new System.Drawing.Point(6, 83);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(701, 294);
+            this.txtNotes.TabIndex = 0;
             // 
             // BuildingPermitTabs
             // 
@@ -1905,166 +1905,166 @@
         private System.Windows.Forms.Button btnNext3;
         private System.Windows.Forms.Button btnSubmit;
         internal System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Button btnCancelNotes;
         private System.Windows.Forms.Button btnSubmitNotes;
         private System.Windows.Forms.GroupBox groupBox2;
-        internal System.Windows.Forms.TextBox textBox92;
+        internal System.Windows.Forms.TextBox txtSiteManagerName;
         internal System.Windows.Forms.Label label105;
-        internal System.Windows.Forms.TextBox textBox93;
+        internal System.Windows.Forms.TextBox txtContractorLiscence;
         internal System.Windows.Forms.Label label106;
-        internal System.Windows.Forms.TextBox textBox94;
+        internal System.Windows.Forms.TextBox txtContractorName;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox txtElectricalPhone;
         internal System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnElectricalContact;
-        internal System.Windows.Forms.TextBox textBox82;
+        internal System.Windows.Forms.TextBox txtElectricalLisenceNumber;
         internal System.Windows.Forms.Label label95;
-        internal System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
+        internal System.Windows.Forms.TextBox txtElectricalName;
+        private System.Windows.Forms.MaskedTextBox txtSiteManagerPhone;
         internal System.Windows.Forms.Label label29;
         internal System.Windows.Forms.Label label28;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox txtContractorPhone;
         internal System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox txtCell;
         internal System.Windows.Forms.Label label11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtApplicantPhone;
         internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.TextBox textBox3;
+        internal System.Windows.Forms.TextBox txtApplicant;
         internal System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnApplicantContact;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        internal System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.ComboBox cmboProposedUse;
+        private System.Windows.Forms.ComboBox cmboCurrentUse;
+        private System.Windows.Forms.ComboBox cmboOccupancyType;
+        internal System.Windows.Forms.TextBox txtSideSetback;
         internal System.Windows.Forms.Label label8;
-        internal System.Windows.Forms.TextBox textBox9;
+        internal System.Windows.Forms.TextBox txtReatSetback;
         internal System.Windows.Forms.Label label7;
-        internal System.Windows.Forms.TextBox textBox7;
+        internal System.Windows.Forms.TextBox txtFrontSetback;
         internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.TextBox textBox6;
+        internal System.Windows.Forms.TextBox txtZoningDistrict;
         internal System.Windows.Forms.Label label5;
-        internal System.Windows.Forms.TextBox textBox5;
+        internal System.Windows.Forms.TextBox txtLRKNumber;
         internal System.Windows.Forms.Label label4;
-        internal System.Windows.Forms.TextBox textBox4;
+        internal System.Windows.Forms.TextBox txtLotNumber;
         internal System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPropertyContact;
-        internal System.Windows.Forms.TextBox textBox10;
+        internal System.Windows.Forms.TextBox txtProperty;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Label Title;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox9;
+        private System.Windows.Forms.MaskedTextBox txtIrrigationPhone;
         internal System.Windows.Forms.Label label37;
         private System.Windows.Forms.Button btnIrrigationContact;
-        internal System.Windows.Forms.TextBox textBox26;
+        internal System.Windows.Forms.TextBox txtIrrigationLisenceNumber;
         internal System.Windows.Forms.Label label38;
-        internal System.Windows.Forms.TextBox textBox27;
+        internal System.Windows.Forms.TextBox txtIrrigationName;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
+        private System.Windows.Forms.MaskedTextBox txtGasPhone;
         internal System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button btngasContact;
-        internal System.Windows.Forms.TextBox textBox24;
+        internal System.Windows.Forms.TextBox txtGasLisenceNumber;
         internal System.Windows.Forms.Label label36;
-        internal System.Windows.Forms.TextBox textBox25;
+        internal System.Windows.Forms.TextBox txtGasName;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
+        private System.Windows.Forms.MaskedTextBox txtMechanicalPhone;
         internal System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btnMechanicalContact;
-        internal System.Windows.Forms.TextBox textBox22;
+        internal System.Windows.Forms.TextBox txtMechanicalLisenceNumber;
         internal System.Windows.Forms.Label label34;
-        internal System.Windows.Forms.TextBox textBox23;
+        internal System.Windows.Forms.TextBox txtMechanicalName;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox txtPlumbingPhone;
         internal System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button btnPlumbingContact;
-        internal System.Windows.Forms.TextBox textBox20;
+        internal System.Windows.Forms.TextBox txtPlumbingLisenceNumber;
         internal System.Windows.Forms.Label label32;
-        internal System.Windows.Forms.TextBox textBox21;
+        internal System.Windows.Forms.TextBox txtPlumbingName;
         private System.Windows.Forms.Button btnContractorContact;
-        internal System.Windows.Forms.TextBox textBox19;
+        internal System.Windows.Forms.TextBox txtContractorEmail;
         internal System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
+        private System.Windows.Forms.MaskedTextBox txtOwnerCell;
         internal System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox11;
+        private System.Windows.Forms.MaskedTextBox txtOwnerPhone;
         internal System.Windows.Forms.Label label12;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox txtOwner;
         internal System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnOwnerContact;
         private System.Windows.Forms.GroupBox groupBox6;
-        internal System.Windows.Forms.TextBox textBox13;
+        internal System.Windows.Forms.TextBox txtNumAmps;
         internal System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton rdioTemporaryPole;
         private System.Windows.Forms.GroupBox groupBox8;
-        internal System.Windows.Forms.TextBox textBox43;
+        internal System.Windows.Forms.TextBox txtNumWaterHeaters;
         internal System.Windows.Forms.Label label56;
-        internal System.Windows.Forms.TextBox textBox44;
+        internal System.Windows.Forms.TextBox txtNumSpas;
         internal System.Windows.Forms.Label label57;
-        internal System.Windows.Forms.TextBox textBox45;
+        internal System.Windows.Forms.TextBox txtNumWetBars;
         internal System.Windows.Forms.Label label58;
-        internal System.Windows.Forms.TextBox textBox46;
+        internal System.Windows.Forms.TextBox txtNumDishwashers;
         internal System.Windows.Forms.Label label59;
-        internal System.Windows.Forms.TextBox textBox47;
+        internal System.Windows.Forms.TextBox txtNumClothesWashers;
         internal System.Windows.Forms.Label label60;
-        internal System.Windows.Forms.TextBox textBox48;
+        internal System.Windows.Forms.TextBox txtNumTubs;
         internal System.Windows.Forms.Label label61;
-        internal System.Windows.Forms.TextBox textBox49;
+        internal System.Windows.Forms.TextBox txtNumShowers;
         internal System.Windows.Forms.Label label62;
-        internal System.Windows.Forms.TextBox textBox50;
+        internal System.Windows.Forms.TextBox txtNumWaterClosets;
         internal System.Windows.Forms.Label label63;
-        internal System.Windows.Forms.TextBox textBox51;
+        internal System.Windows.Forms.TextBox txtNumSinks;
         internal System.Windows.Forms.Label label64;
-        internal System.Windows.Forms.TextBox textBox53;
+        internal System.Windows.Forms.TextBox txtNumBathrooms;
         internal System.Windows.Forms.Label label72;
-        internal System.Windows.Forms.TextBox textBox54;
+        internal System.Windows.Forms.TextBox txtNumFixtures;
         internal System.Windows.Forms.Label label73;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdioGasLine;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.RadioButton radioButton12;
-        internal System.Windows.Forms.TextBox textBox55;
+        private System.Windows.Forms.RadioButton rdioDuctWorkAlterationOnly;
+        internal System.Windows.Forms.TextBox txtNumSystems;
         internal System.Windows.Forms.Label label78;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.ComboBox comboBox5;
-        internal System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.ComboBox cmboConstructionType;
+        internal System.Windows.Forms.TextBox txtEstimatedCost;
         internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.TextBox textBox18;
+        internal System.Windows.Forms.TextBox txtSquareFeet;
         internal System.Windows.Forms.Label label39;
         private System.Windows.Forms.GroupBox groupBox15;
-        internal System.Windows.Forms.TextBox textBox57;
+        internal System.Windows.Forms.TextBox txtDeck;
         internal System.Windows.Forms.Label label109;
-        internal System.Windows.Forms.TextBox textBox58;
+        internal System.Windows.Forms.TextBox txtPorchSF;
         internal System.Windows.Forms.Label label110;
-        internal System.Windows.Forms.TextBox textBox60;
+        internal System.Windows.Forms.TextBox txtBasement;
         internal System.Windows.Forms.Label label112;
-        internal System.Windows.Forms.TextBox textBox61;
+        internal System.Windows.Forms.TextBox txtGarageSF;
         internal System.Windows.Forms.Label label113;
-        internal System.Windows.Forms.TextBox textBox62;
+        internal System.Windows.Forms.TextBox txtNumStories;
         internal System.Windows.Forms.Label label114;
-        internal System.Windows.Forms.TextBox textBox63;
+        internal System.Windows.Forms.TextBox txtHeatedSF;
         internal System.Windows.Forms.Label label115;
         private System.Windows.Forms.GroupBox groupBox19;
         internal System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtIssueDate;
         internal System.Windows.Forms.Label label23;
         internal System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtEndDate;
+        private System.Windows.Forms.DateTimePicker dtStartDate;
         internal System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox1;
-        internal System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox cmboStatus;
+        internal System.Windows.Forms.TextBox txtApplicationNumber;
         internal System.Windows.Forms.Label label20;
-        internal System.Windows.Forms.TextBox textBox2;
+        internal System.Windows.Forms.TextBox txtPermitNumber;
         internal System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox18;
-        internal System.Windows.Forms.TextBox textBox15;
+        internal System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.Button btnFees;
 
     }
