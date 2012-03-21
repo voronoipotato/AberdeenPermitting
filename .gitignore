@@ -1,0 +1,8 @@
+#well this is the gitignore enjoy
+*.suo
+*.exe
+*.cache
+*.txt
+*.zip
+*.resource
+*.pdb
