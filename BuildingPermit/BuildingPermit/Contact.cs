@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace BuildingPermit
-{
+{   
     class Contact
     {
         private string myCompanyName, myFirstName, myMiddleName, myLastName 
