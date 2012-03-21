@@ -1,0 +1,17 @@
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\bin\Debug\BuildingPermit.exe
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\bin\Debug\BuildingPermit.pdb
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.BuildingPermitTabs.resources
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.FirstPage.resources
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.ContactInfo.resources
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.Fees.resources
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.NameLookup.resources
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.Properties.Resources.resources
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\RdlCompile.cache
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\RdlCompile.compiled
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+E:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
+F:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.exe
+F:\AberdeenPermitting\BuildingPermit\BuildingPermit\obj\x86\Debug\BuildingPermit.pdb
