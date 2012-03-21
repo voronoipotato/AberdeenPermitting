@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="BuildingPermitReport.rdlc" />
     <EmbeddedResource Include="BuildingPermitTabs.resx">
       <DependentUpon>BuildingPermitTabs.cs</DependentUpon>
