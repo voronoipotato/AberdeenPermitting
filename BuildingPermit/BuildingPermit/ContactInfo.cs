@@ -21,6 +21,7 @@ namespace BuildingPermit
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string xml; 
             Contact Contact = new Contact();
             Contact.companyName = txtCompany.Text;
             Contact.firstName = txtFName.Text;
@@ -33,11 +34,15 @@ namespace BuildingPermit
             Contact.buildingLiscence = txtBuildingLicense.Text;
             Contact.streetNumber = txtStreetNumber.Text; 
             Contact.streetName = txtStreetName.Text;
+            Contact.type = txtType.Text;
             Contact.streetName2 = txtStreetName2.Text;
             Contact.city = txtCity.Text;
             Contact.state = txtState.Text;
             Contact.zip = txtZip.Text;
-            Contact.type = txtType.Text; 
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"xml.txt");
+            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(Contact.GetType());
+            x.Serialize(file, Contact); 
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
