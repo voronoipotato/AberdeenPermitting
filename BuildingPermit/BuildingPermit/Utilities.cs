@@ -29,7 +29,7 @@ class Utilities
     private string myNumClothesWasher;
     private string myNumSpa;
     // ELECTRICAL
-    private int myNumAmps;
+    private string myNumAmps;
     private Boolean myTempPole;
 
     //  HEATING/AIR-CONDITIONING/MECHANICAL
@@ -190,30 +190,14 @@ class Utilities
 
     // ELECTRICAL
     /// <summary>
-    /// Number of AMPS used in caculation get
+    /// number of Amp's
     /// </summary>
-    public int getNumAmps
+    public string numAmps
     {
         get { return myNumAmps; }
+        set { myNumAmps = value; }
     }
-    /// <summary>
-    /// Number of AMPS used in caculation set
-    /// </summary>
-    public string setNumAmps
-    {
-        set
-        {
-
-            if (isInt(value))
-            {
-                myNumAmps = Convert.ToInt16(value);
-            }
-            else
-            {
-                MessageBox.Show("Number of AMPS must be a number");
-            }
-        }
-    }
+    
     /// <summary>
     /// Temppole variable
     /// </summary>
