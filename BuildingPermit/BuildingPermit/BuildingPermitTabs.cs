@@ -22,6 +22,42 @@ namespace BuildingPermit
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 1;
+
+        }
+
+        private void btnNext2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void btnNext3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void btnPropertyContact_Click(object sender, EventArgs e)
+        {
+            Form frmContactInfo = new ContactInfo();
+            frmContactInfo.Show();
+        }
+
+        private void btnApplicantContact_Click(object sender, EventArgs e)
+        {
+            Form frmContactInfo = new ContactInfo();
+            frmContactInfo.Show();
+        }
+
+        private void btnOwnerContact_Click(object sender, EventArgs e)
+        {
+            Form frmContactInfo = new ContactInfo();
+            frmContactInfo.Show();
+        }
+
+        private void btnFees_Click(object sender, EventArgs e)
+        {
+            Form frmFees = new Fees();
+            frmFees.Show();
 
         }
 

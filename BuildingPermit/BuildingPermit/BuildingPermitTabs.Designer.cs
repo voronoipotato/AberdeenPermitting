@@ -400,6 +400,7 @@
             this.btnFees.TabIndex = 199;
             this.btnFees.Text = "...";
             this.btnFees.UseVisualStyleBackColor = true;
+            this.btnFees.Click += new System.EventHandler(this.btnFees_Click);
             // 
             // groupBox14
             // 
@@ -476,6 +477,7 @@
             this.btnOwnerContact.TabIndex = 178;
             this.btnOwnerContact.Text = "...";
             this.btnOwnerContact.UseVisualStyleBackColor = true;
+            this.btnOwnerContact.Click += new System.EventHandler(this.btnOwnerContact_Click);
             // 
             // groupBox13
             // 
@@ -552,6 +554,7 @@
             this.btnApplicantContact.TabIndex = 178;
             this.btnApplicantContact.Text = "...";
             this.btnApplicantContact.UseVisualStyleBackColor = true;
+            this.btnApplicantContact.Click += new System.EventHandler(this.btnApplicantContact_Click);
             // 
             // groupBox12
             // 
@@ -717,6 +720,7 @@
             this.btnPropertyContact.TabIndex = 193;
             this.btnPropertyContact.Text = "...";
             this.btnPropertyContact.UseVisualStyleBackColor = true;
+            this.btnPropertyContact.Click += new System.EventHandler(this.btnPropertyContact_Click);
             // 
             // txtProperty
             // 
@@ -1302,6 +1306,7 @@
             this.btnNext2.TabIndex = 217;
             this.btnNext2.Text = "Next";
             this.btnNext2.UseVisualStyleBackColor = true;
+            this.btnNext2.Click += new System.EventHandler(this.btnNext2_Click);
             // 
             // tabPage3
             // 
@@ -1777,6 +1782,7 @@
             this.btnNext3.TabIndex = 185;
             this.btnNext3.Text = "Next";
             this.btnNext3.UseVisualStyleBackColor = true;
+            this.btnNext3.Click += new System.EventHandler(this.btnNext3_Click);
             // 
             // tabPage2
             // 

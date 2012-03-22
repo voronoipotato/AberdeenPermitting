@@ -196,6 +196,7 @@ class Utilities
     {
         get { return myNumAmps; }
         set { myNumAmps = value; }
+        
     }
     
     /// <summary>
@@ -216,5 +217,6 @@ class Utilities
         int Num;
 
         return int.TryParse(value, out Num);
+        
     }
 }
