@@ -15,13 +15,13 @@ class Utilities
     //  HEATING/AIR-CONDITIONING/MECHANICAL
     private Boolean myGasLine;
     private Boolean myDuctWork;
-    private int myNumSys;
+    private string myNumSys;
     //  PLUMBING
     private string myTotNumBathrooms;
     private string myNumWaterClosets;
     private string myNumDishWasher;
     private string myNumWaterHeater;
-    private int myTotNumFixtures;
+    private string myTotNumFixtures;
     private string myNumShowers;
     private string myNumTubs;
     private string myNumWetBar;
@@ -49,30 +49,34 @@ class Utilities
         get { return myDuctWork; }
         set { myDuctWork = value; }
     }
-    /// <summary>
-    /// number of air conditioning systems get
-    /// </summary
-    public int getNumSys
-    {
-        get { return myNumSys; }
-    }
+    
     /// <summary>
     /// number of air conditioning systems set
     /// </summary>
     public string setNumSys
     {
+        get { return myNumSys; }
+
         set
         {
 
-            if (isInt(value))
+            if (value == null )
             {
-                myNumSys = Convert.ToInt16(value);
+                MessageBox.Show("Number of systems is needed for the permit fee calculation.");
             }
-
             else
             {
-                MessageBox.Show("Number of systems must be a number");
-            }
+                
+                if (isInt(value))
+                {
+                    myNumSys = value;
+                }
+
+                else
+                {
+                    MessageBox.Show("Number of systems must be a number.");
+                } 
+            } 
         }
     }
 
@@ -110,30 +114,34 @@ class Utilities
         get { return myNumWaterHeater; }
         set { myNumWaterHeater = value; }
     }
-    /// <summary>
-    /// number of total fixtures used in caculation get
-    /// </summary>
-    public int getNumFixtures
-    {
-        get { return myTotNumFixtures; }
-
-    }
+    
     /// <summary>
     /// number of total fixtures used in caculation set
     /// </summary>
     public string setNumFixtures
     {
+        get { return myTotNumFixtures; }
+
         set
         {
 
-            if (isInt(value))
+            if (value == null )
             {
-                myTotNumFixtures = Convert.ToInt16(value);
+                MessageBox.Show("Number of fixtures are need for the permit fee calculation.");
             }
             else
             {
-                MessageBox.Show("Number of fixtures must be a number");
-            }
+
+
+                if (isInt(value))
+                {
+                    myTotNumFixtures = value;
+                }
+                else
+                {
+                    MessageBox.Show("Number of fixtures must be a numbe.r");
+                } 
+            } 
         }
     }
     /// <summary>
