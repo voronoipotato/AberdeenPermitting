@@ -53,7 +53,6 @@
     <Compile Include="BuildingPermitTabs.Designer.cs">
       <DependentUpon>BuildingPermitTabs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="FirstPage.cs">
       <SubType>Form</SubType>
