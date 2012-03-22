@@ -1155,6 +1155,8 @@
             this.txtEstimatedCost.Name = "txtEstimatedCost";
             this.txtEstimatedCost.Size = new System.Drawing.Size(101, 20);
             this.txtEstimatedCost.TabIndex = 185;
+            this.txtEstimatedCost.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEstimatedCost_KeyDown);
+            this.txtEstimatedCost.Leave += new System.EventHandler(this.txtEstimatedCost_Leave);
             // 
             // label15
             // 
@@ -1171,6 +1173,8 @@
             this.txtSquareFeet.Name = "txtSquareFeet";
             this.txtSquareFeet.Size = new System.Drawing.Size(82, 20);
             this.txtSquareFeet.TabIndex = 184;
+            this.txtSquareFeet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSquareFeet_KeyDown);
+            this.txtSquareFeet.Leave += new System.EventHandler(this.txtSquareFeet_Leave);
             // 
             // label39
             // 
@@ -1208,6 +1212,7 @@
             this.txtDeck.Name = "txtDeck";
             this.txtDeck.Size = new System.Drawing.Size(87, 20);
             this.txtDeck.TabIndex = 186;
+            this.txtDeck.Leave += new System.EventHandler(this.txtDeck_Leave);
             // 
             // label109
             // 
@@ -1224,6 +1229,7 @@
             this.txtPorchSF.Name = "txtPorchSF";
             this.txtPorchSF.Size = new System.Drawing.Size(100, 20);
             this.txtPorchSF.TabIndex = 185;
+            this.txtPorchSF.Leave += new System.EventHandler(this.txtPorchSF_Leave);
             // 
             // label110
             // 
@@ -1240,6 +1246,7 @@
             this.txtBasement.Name = "txtBasement";
             this.txtBasement.Size = new System.Drawing.Size(100, 20);
             this.txtBasement.TabIndex = 189;
+            this.txtBasement.Leave += new System.EventHandler(this.txtBasement_Leave);
             // 
             // label112
             // 
@@ -1256,6 +1263,7 @@
             this.txtGarageSF.Name = "txtGarageSF";
             this.txtGarageSF.Size = new System.Drawing.Size(100, 20);
             this.txtGarageSF.TabIndex = 188;
+            this.txtGarageSF.Leave += new System.EventHandler(this.txtGarageSF_Leave);
             // 
             // label113
             // 
@@ -1272,6 +1280,8 @@
             this.txtNumStories.Name = "txtNumStories";
             this.txtNumStories.Size = new System.Drawing.Size(78, 20);
             this.txtNumStories.TabIndex = 187;
+            this.txtNumStories.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNumStories_KeyDown);
+            this.txtNumStories.Leave += new System.EventHandler(this.txtNumStories_Leave);
             // 
             // label114
             // 
@@ -1288,6 +1298,8 @@
             this.txtHeatedSF.Name = "txtHeatedSF";
             this.txtHeatedSF.Size = new System.Drawing.Size(87, 20);
             this.txtHeatedSF.TabIndex = 184;
+            this.txtHeatedSF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHeatedSF_KeyDown);
+            this.txtHeatedSF.Leave += new System.EventHandler(this.txtHeatedSF_Leave);
             // 
             // label115
             // 
@@ -1851,6 +1863,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "BuildingPermitTabs";
             this.Text = "Town of Aberdeen Permit Application";
+            this.Load += new System.EventHandler(this.BuildingPermitTabs_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

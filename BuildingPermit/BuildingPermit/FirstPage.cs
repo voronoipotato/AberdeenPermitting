@@ -11,6 +11,8 @@ namespace BuildingPermit
 {
     public partial class FirstPage : Form
     {
+
+
         public FirstPage()
         {
             InitializeComponent();

@@ -36,7 +36,7 @@ public class Building
         set
         {
 
-            if (value == null)
+            if (value == null || value == "")
             {
 
             }
@@ -45,7 +45,7 @@ public class Building
                 if (isInt(value))
                 {
                     myBasementSF = value.Trim();
-
+                    
                 }
                 else
                 {
@@ -63,7 +63,7 @@ public class Building
         get { return myGarageSF; }
         set
         {
-            if (value == null)
+            if (value == null || value == "")
             {
 
             }
@@ -90,7 +90,7 @@ public class Building
 
         set
         {
-            if (value == null)
+            if (value == null || value == "")
             {
 
             }
@@ -116,9 +116,10 @@ public class Building
 
         set
         {
-            if (value == null)
+            if (value == null || value == "")
             {
 
+                MessageBox.Show("Number of stories is a required field.");
             }
             else
             {
@@ -143,7 +144,7 @@ public class Building
 
         set
         {
-            if (value == null)
+            if (value == null || value == "")
             {
 
             }
@@ -171,9 +172,9 @@ public class Building
 
         set
         {
-            if (value == null )
+            if (value == null || value == "")
             {
-                
+                MessageBox.Show("Heated square feet is a required field.");
             }
             else
             {
@@ -198,9 +199,9 @@ public class Building
         set
         {
 
-           if (value == null )
+            if (value == null || value == "")
             {
-                MessageBox.Show("Total Square Feet is need for a the permit fee calculation and must be a number");
+                MessageBox.Show("Total Square Feet is a required field.");
                 
             }
             else
@@ -229,9 +230,9 @@ public class Building
 
         set
         {
-            if (value == null)
+            if (value == null || value == "")
             {
-
+                MessageBox.Show("Estimated cost is a required field.");
             }
             else
             {
@@ -241,7 +242,7 @@ public class Building
                 }
                 else
                 {
-                    MessageBox.Show("Estimated cost must be a dollar amount, numbers only");
+                    MessageBox.Show("Estimated cost must be a dollar amount, numbers only.");
                 }
             }
 
