@@ -12,6 +12,9 @@ namespace BuildingPermit
     
     public partial class ContactInfo : Form
     {
+
+       
+
         public ContactInfo()
         {
             InitializeComponent();
@@ -21,28 +24,29 @@ namespace BuildingPermit
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string xml; 
-            Contact Contact = new Contact();
-            Contact.companyName = txtCompany.Text;
-            Contact.firstName = txtFName.Text;
-            Contact.middleName = txtMName.Text;
-            Contact.lastName = txtLName.Text;
-            Contact.liscence = txtLicense.Text;
-            Contact.phone = txtPhone.Text;
-            Contact.cell = txtCell.Text;
-            Contact.email = txtEmail.Text;
-            Contact.buildingLiscence = txtBuildingLicense.Text;
-            Contact.streetNumber = txtStreetNumber.Text; 
-            Contact.streetName = txtStreetName.Text;
-            Contact.type = txtType.Text;
-            Contact.streetName2 = txtStreetName2.Text;
-            Contact.city = txtCity.Text;
-            Contact.state = txtState.Text;
-            Contact.zip = txtZip.Text;
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"xml.txt");
-            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(Contact.GetType());
-            x.Serialize(file, Contact); 
-            
+            //string xml; 
+           Contact contact = new Contact();
+
+            contact.companyName = txtCompany.Text;
+            contact.firstName = txtFName.Text;
+            contact.middleName = txtMName.Text;
+            contact.lastName = txtLName.Text;
+            contact.liscence = txtLicense.Text;
+            contact.phone = txtPhone.Text;
+            contact.cell = txtCell.Text;
+            contact.email = txtEmail.Text;
+            contact.buildingLiscence = txtBuildingLicense.Text;
+            contact.streetNumber = txtStreetNumber.Text; 
+            contact.streetName = txtStreetName.Text;
+            contact.type = txtType.Text;
+            contact.streetName2 = txtStreetName2.Text;
+            contact.city = txtCity.Text;
+            contact.state = txtState.Text;
+            contact.zip = txtZip.Text;
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"Contact.xml");
+            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(contact.GetType());
+            x.Serialize(file, contact);
+            file.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Contact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <companyName>dfVDVFV</companyName>
+  <firstName>C V</firstName>
+  <middleName>DFVG</middleName>
+  <lastName />
+  <liscence />
+  <phone>(   )    -</phone>
+  <cell>(   )    -</cell>
+  <email />
+  <buildingLiscence />
+  <streetNumber />
+  <streetName />
+  <streetName2 />
+  <city />
+  <state />
+  <type />
+  <zip />
+</Contact>

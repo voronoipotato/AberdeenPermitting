@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Building xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <garageSF>1</garageSF>
+  <deckSF>1</deckSF>
+  <numStories>1</numStories>
+  <porchSF>1</porchSF>
+  <heatedSF>1</heatedSF>
+  <estimatedCost>1</estimatedCost>
+  <buildingType>Type of Construction</buildingType>
+</Building>
