@@ -15,22 +15,22 @@ class Utilities
     //  HEATING/AIR-CONDITIONING/MECHANICAL
         private Boolean MyGasLine;
         private Boolean MyDuctWork;
-        private int MyNumbOfSys;
+        private int MyNumSys;
     //  PLUMBING
-        private int MyTotNumbOfBathrooms;
-        private int MyNumbWaterClosets;
-        private int MyNumbDishWasher;
-        private int MyNumbWaterHeater;
-        private int MyTotNumbOfFixtures;
-        private int MyNumbShowers;
-        private int MyNumbTubs;
-        private int MyNumbWetBar;
-        private int MyNumbSinks;
-        private int MyNumbClothesWasher;
-        private int MyNumbSpa;
+        private int MyTotNumBathrooms;
+        private int MyNumWaterClosets;
+        private int MyNumDishWasher;
+        private int MyNumWaterHeater;
+        private int MyTotNumFixtures;
+        private int MyNumShowers;
+        private int MyNumTubs;
+        private int MyNumWetBar;
+        private int MyNumSinks;
+        private int MyNumClothesWasher;
+        private int MyNumSpa;
     // ELECTRICAL
-        private int MyNumbOfAmps;
-        private Boolean MyTempPoll;
+        private int MyNumAmps;
+        private Boolean MyTempPole;
 
     //  HEATING/AIR-CONDITIONING/MECHANICAL
         public Boolean GasLine
@@ -48,112 +48,94 @@ class Utilities
             }
         }
 
-        public Boolean DuckWork
+        public Boolean DuctWork
         {
-            set
-            {
-                if (MyDuctWork == true)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("no duckwork.");
-                }
-            }
+            get { return MyDuctWork;  }
+            set {MyDuctWork = value; }
         }
         
-        public int NumbOfSys
+        public int NumSys
         {
-            get { return MyNumbOfSys; }
-            set { MyNumbOfSys = value; }
+            get { return MyNumSys; }
+            set { MyNumSys = value; }
         }
 
     //  PLUMBING
-        public int NumbOfBathrooms
+        public int NumBathrooms
         {
-            get { return MyTotNumbOfBathrooms; }
-            set { MyTotNumbOfBathrooms = value; }
+            get { return MyTotNumBathrooms; }
+            set { MyTotNumBathrooms = value; }
         }
 
         public int WaterClosets
         {
-            get { return MyNumbWaterClosets; }
-            set { MyNumbWaterClosets = value; } 
+            get { return MyNumWaterClosets; }
+            set { MyNumWaterClosets = value; } 
         }
 
         public int DishWasher
         {
-            get { return MyNumbDishWasher; }
-            set { MyNumbDishWasher = value; }
+            get { return MyNumDishWasher; }
+            set { MyNumDishWasher = value; }
         }
 
         public int WaterHeater
         {
-            get { return MyNumbWaterHeater; }
-            set { MyNumbWaterHeater = value; }
+            get { return MyNumWaterHeater; }
+            set { MyNumWaterHeater = value; }
         }
 
-        public int NumbOfFixtures
+        public int NumFixtures
         {
-            get { return MyTotNumbOfFixtures; }
-            set { MyTotNumbOfFixtures = value; }
+            get { return MyTotNumFixtures; }
+            set { MyTotNumFixtures = value; }
         }
 
         public int Showers
         {
-            get { return MyNumbShowers; }
-            set { MyNumbShowers = value; }
+            get { return MyNumShowers; }
+            set { MyNumShowers = value; }
         }
 
         public int Tub
         {
-            get { return MyNumbTubs; }
-            set { MyNumbTubs = value; }
+            get { return MyNumTubs; }
+            set { MyNumTubs = value; }
         }
 
         public int WetBar
         {
-            get { return MyNumbWetBar; }
-            set { MyNumbWetBar = value; }
+            get { return MyNumWetBar; }
+            set { MyNumWetBar = value; }
         }
 
         public int Sinks
         {
-            get { return MyNumbSinks; }
-            set { MyNumbSinks = value; }
+            get { return MyNumSinks; }
+            set { MyNumSinks = value; }
         }
 
         public int clothesWasher
         {
-            get { return MyNumbClothesWasher; }
-            set { MyNumbClothesWasher = value; }
+            get { return MyNumClothesWasher; }
+            set { MyNumClothesWasher = value; }
         }
 
         public int Spa
         {
-            get { return MyNumbSpa; }
-            set { MyNumbSpa = value; }
+            get { return MyNumSpa; }
+            set { MyNumSpa = value; }
         }
 
     // ELECTRICAL
-        public int NumbOfAmps
+        public int NumAmps
         {
-            get { return MyNumbOfAmps; }
-            set { MyNumbOfAmps = value; }
+            get { return MyNumAmps; }
+            set { MyNumAmps = value; }
         }
-        public Boolean TempPoll
+        public Boolean TempPole
         {
-            set
-            {
-                if (MyTempPoll == true)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("no temporary poll");
-                }
-            }
+            get { return MyTempPole; }
+            set { MyTempPole = value; }
         }
 }
