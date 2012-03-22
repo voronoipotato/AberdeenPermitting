@@ -9,133 +9,228 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-    
+
 class Utilities
 {
     //  HEATING/AIR-CONDITIONING/MECHANICAL
-        private Boolean MyGasLine;
-        private Boolean MyDuctWork;
-        private int MyNumSys;
+    private Boolean myGasLine;
+    private Boolean myDuctWork;
+    private int myNumSys;
     //  PLUMBING
-        private int MyTotNumBathrooms;
-        private int MyNumWaterClosets;
-        private int MyNumDishWasher;
-        private int MyNumWaterHeater;
-        private int MyTotNumFixtures;
-        private int MyNumShowers;
-        private int MyNumTubs;
-        private int MyNumWetBar;
-        private int MyNumSinks;
-        private int MyNumClothesWasher;
-        private int MyNumSpa;
+    private string myTotNumBathrooms;
+    private string myNumWaterClosets;
+    private string myNumDishWasher;
+    private string myNumWaterHeater;
+    private int myTotNumFixtures;
+    private string myNumShowers;
+    private string myNumTubs;
+    private string myNumWetBar;
+    private string myNumSinks;
+    private string myNumClothesWasher;
+    private string myNumSpa;
     // ELECTRICAL
-        private int MyNumAmps;
-        private Boolean MyTempPole;
+    private int myNumAmps;
+    private Boolean myTempPole;
 
     //  HEATING/AIR-CONDITIONING/MECHANICAL
-        public Boolean GasLine
+    /// <summary>
+    /// gas line variable
+    /// </summary>
+    public Boolean gasLine
+    {
+        set { myGasLine = value; }
+        get { return myGasLine; }
+    }
+    /// <summary>
+    /// duck work variable
+    /// </summary>
+    public Boolean ductWork
+    {
+        get { return myDuctWork; }
+        set { myDuctWork = value; }
+    }
+    /// <summary>
+    /// number of air conditioning systems get
+    /// </summary
+    public int getNumSys
+    {
+        get { return myNumSys; }
+    }
+    /// <summary>
+    /// number of air conditioning systems set
+    /// </summary>
+    public string setNumSys
+    {
+        set
         {
-            set
-            {
-                if (MyGasLine == true)
-                {
 
-                }
-                else
-                {
-                    MessageBox.Show("no gas line.");
-                }
+            if (isInt(value))
+            {
+                myNumSys = Convert.ToInt16(value);
+            }
+
+            else
+            {
+                MessageBox.Show("Number of systems must be a number");
             }
         }
+    }
 
-        public Boolean DuctWork
-        {
-            get { return MyDuctWork;  }
-            set {MyDuctWork = value; }
-        }
-        
-        public int NumSys
-        {
-            get { return MyNumSys; }
-            set { MyNumSys = value; }
-        }
 
     //  PLUMBING
-        public int NumBathrooms
-        {
-            get { return MyTotNumBathrooms; }
-            set { MyTotNumBathrooms = value; }
-        }
+    /// <summary>
+    /// number of bathrooms
+    /// </summary>
+    public string numBathrooms
+    {
+        get { return myTotNumBathrooms; }
+        set { myTotNumBathrooms = value; }
+    }
+    /// <summary>
+    /// number of water closets
+    /// </summary>
+    public string waterClosets
+    {
+        get { return myNumWaterClosets; }
+        set { myNumWaterClosets = value; }
+    }
+    /// <summary>
+    /// number of dish washers
+    /// </summary>
+    public string dishWasher
+    {
+        get { return myNumDishWasher; }
+        set { myNumDishWasher = value; }
+    }
+    /// <summary>
+    /// number of water heaters
+    /// </summary>
+    public string waterHeater
+    {
+        get { return myNumWaterHeater; }
+        set { myNumWaterHeater = value; }
+    }
+    /// <summary>
+    /// number of total fixtures used in caculation get
+    /// </summary>
+    public int getNumFixtures
+    {
+        get { return myTotNumFixtures; }
 
-        public int WaterClosets
+    }
+    /// <summary>
+    /// number of total fixtures used in caculation set
+    /// </summary>
+    public string setNumFixtures
+    {
+        set
         {
-            get { return MyNumWaterClosets; }
-            set { MyNumWaterClosets = value; } 
-        }
 
-        public int DishWasher
-        {
-            get { return MyNumDishWasher; }
-            set { MyNumDishWasher = value; }
+            if (isInt(value))
+            {
+                myTotNumFixtures = Convert.ToInt16(value);
+            }
+            else
+            {
+                MessageBox.Show("Number of fixtures must be a number");
+            }
         }
+    }
+    /// <summary>
+    /// number of showers
+    /// </summary>
+    public string showers
+    {
+        get { return myNumShowers; }
+        set { myNumShowers = value; }
+    }
+    /// <summary>
+    /// number of tubs
+    /// </summary>
+    public string tub
+    {
+        get { return myNumTubs; }
+        set { myNumTubs = value; }
+    }
+    /// <summary>
+    /// numbe rof wet bar small sink with frig.
+    /// </summary>
+    public string wetBar
+    {
+        get { return myNumWetBar; }
+        set { myNumWetBar = value; }
+    }
 
-        public int WaterHeater
-        {
-            get { return MyNumWaterHeater; }
-            set { MyNumWaterHeater = value; }
-        }
+    /// <summary>
+    /// number of sinks
+    /// </summary>
+    public string sinks
+    {
+        get { return myNumSinks; }
+        set { myNumSinks = value; }
+    }
 
-        public int NumFixtures
-        {
-            get { return MyTotNumFixtures; }
-            set { MyTotNumFixtures = value; }
-        }
+    /// <summary>
+    /// number of clothswashers
+    /// </summary>
+    public string clothesWasher
+    {
+        get { return myNumClothesWasher; }
+        set { myNumClothesWasher = value; }
+    }
 
-        public int Showers
-        {
-            get { return MyNumShowers; }
-            set { MyNumShowers = value; }
-        }
-
-        public int Tub
-        {
-            get { return MyNumTubs; }
-            set { MyNumTubs = value; }
-        }
-
-        public int WetBar
-        {
-            get { return MyNumWetBar; }
-            set { MyNumWetBar = value; }
-        }
-
-        public int Sinks
-        {
-            get { return MyNumSinks; }
-            set { MyNumSinks = value; }
-        }
-
-        public int clothesWasher
-        {
-            get { return MyNumClothesWasher; }
-            set { MyNumClothesWasher = value; }
-        }
-
-        public int Spa
-        {
-            get { return MyNumSpa; }
-            set { MyNumSpa = value; }
-        }
+    /// <summary>
+    /// number of spa's
+    /// </summary>
+    public string spa
+    {
+        get { return myNumSpa; }
+        set { myNumSpa = value; }
+    }
 
     // ELECTRICAL
-        public int NumAmps
+    /// <summary>
+    /// Number of AMPS used in caculation get
+    /// </summary>
+    public int getNumAmps
+    {
+        get { return myNumAmps; }
+    }
+    /// <summary>
+    /// Number of AMPS used in caculation set
+    /// </summary>
+    public string setNumAmps
+    {
+        set
         {
-            get { return MyNumAmps; }
-            set { MyNumAmps = value; }
+
+            if (isInt(value))
+            {
+                myNumAmps = Convert.ToInt16(value);
+            }
+            else
+            {
+                MessageBox.Show("Number of AMPS must be a number");
+            }
         }
-        public Boolean TempPole
-        {
-            get { return MyTempPole; }
-            set { MyTempPole = value; }
-        }
+    }
+    /// <summary>
+    /// Temppole variable
+    /// </summary>
+    public Boolean tempPole
+    {
+        get { return myTempPole; }
+        set { myTempPole = value; }
+    }
+    /// <summary>
+    /// valadation for input int's
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    private static bool isInt(string value)
+    {
+        int Num;
+
+        return int.TryParse(value, out Num);
+    }
 }

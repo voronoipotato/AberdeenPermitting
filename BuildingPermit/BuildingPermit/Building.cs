@@ -41,7 +41,6 @@ class Building
     {
         set
         {
-
             if (isInt(value))
             {
                 myBasementSF = Convert.ToInt16(value);
@@ -68,7 +67,6 @@ class Building
     /// </summary>
     public string setGarageSF
     {
-
         set
         {
             if (isInt(value))
@@ -96,7 +94,6 @@ class Building
     /// </summary>
     public string setDeckSF
     {
-
         set
         {
             if (isInt(value))
@@ -116,7 +113,6 @@ class Building
     public int getNumStories
     {
         get { return myNumStories; }
-
     }
 
     /// <summary>
@@ -124,7 +120,6 @@ class Building
     /// </summary>
     public string setNumStories
     {
-
         set
         {
             if (isInt(value))
@@ -144,7 +139,6 @@ class Building
     public int getPorchSF
     {
         get { return myPorchSF; }
-
     }
 
     /// <summary>
@@ -152,7 +146,6 @@ class Building
     /// </summary>
     public string setPorchSF
     {
-
         set
         {
             if (isInt(value))
