@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Building xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <garageSF>1</garageSF>
-  <deckSF>1</deckSF>
-  <numStories>1</numStories>
-  <porchSF>1</porchSF>
-  <heatedSF>1</heatedSF>
-  <estimatedCost>1</estimatedCost>
-  <buildingType>Type of Construction</buildingType>
+  <basementSF>0</basementSF>
+  <garageSF>356</garageSF>
+  <deckSF>120</deckSF>
+  <numStories>2</numStories>
+  <porchSF>345</porchSF>
+  <heatedSF>2435</heatedSF>
+  <totalSF>3600</totalSF>
+  <estimatedCost>130000</estimatedCost>
 </Building>
