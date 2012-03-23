@@ -30,27 +30,7 @@ namespace BuildingPermit
 
         }
 
-        private void btnNext2_Click(object sender, EventArgs e)
-        {
-
-
-
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"Building.xml");
-            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(building.GetType());
-            x.Serialize(file, building);
-            file.Close();
-
-
-
-            if (holdTab == false)
-            {
-                tabControl1.SelectedIndex = 2; 
-            }
-
-
-        }
-
-        private void btnNext3_Click(object sender, EventArgs e)
+               private void btnNext3_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 3;
         }
@@ -181,7 +161,124 @@ namespace BuildingPermit
             holdTab = false;
         }
 
-      
+        private void cmboConstructionType_Leave(object sender, EventArgs e)
+        {
+            building.buildingType = cmboConstructionType.Text;
+        }
+
+        private void txtNumSystems_Leave(object sender, EventArgs e)
+        {
+            utilities.setNumSys = txtNumSystems.Text;
+        }
+
+        private void txtNumBathrooms_Leave(object sender, EventArgs e)
+        {
+            utilities.numBathrooms = txtNumBathrooms.Text;
+        }
+
+        private void txtNumWaterClosets_Leave(object sender, EventArgs e)
+        {
+            utilities.numWaterClosets = txtNumWaterClosets.Text;
+        }
+
+        private void txtNumDishwashers_Leave(object sender, EventArgs e)
+        {
+            utilities.numDishWasher = txtNumDishwashers.Text;
+        }
+
+        private void txtNumWaterHeaters_Leave(object sender, EventArgs e)
+        {
+            utilities.numWaterHeater = txtNumWaterHeaters.Text;
+        }
+
+        private void txtNumFixtures_Leave(object sender, EventArgs e)
+        {
+            utilities.numFixtures = txtNumFixtures.Text;
+        }
+
+        private void txtNumShowers_Leave(object sender, EventArgs e)
+        {
+            utilities.numShowers = txtNumShowers.Text;
+        }
+
+        private void txtNumTubs_Leave(object sender, EventArgs e)
+        {
+            utilities.numTub = txtNumTubs.Text;
+        }
+
+        private void txtNumWetBars_Leave(object sender, EventArgs e)
+        {
+            utilities.numWetBar = txtNumWetBars.Text;
+        }
+
+        private void txtNumSinks_Leave(object sender, EventArgs e)
+        {
+            utilities.numSinks = txtNumSinks.Text;
+        }
+
+        private void txtNumClothesWashers_Leave(object sender, EventArgs e)
+        {
+            utilities.numClothesWasher = txtNumClothesWashers.Text;
+        }
+
+        private void txtNumSpas_Leave(object sender, EventArgs e)
+        {
+            utilities.numSpa = txtNumSpas.Text;
+        }
+
+        private void cmboNumAmps_Leave(object sender, EventArgs e)
+        {
+            utilities.numAmps = cmboNumAmps.Text;
+        }
+
+        private void btnNext2_Click(object sender, EventArgs e)
+        {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"Building.xml");
+            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(building.GetType());
+            x.Serialize(file, building);
+            file.Close();
+
+
+            if (cboxDuctwork.Checked)
+            {
+                utilities.ductWork = true;
+            }
+            else
+            {
+                utilities.ductWork = false;
+            }
+
+            if (cboxGasLine.Checked)
+            {
+                utilities.gasLine = true;
+            }
+            else
+            {
+                utilities.gasLine = false;
+            }
+
+            if (cboxTempPole.Checked)
+            {
+                utilities.tempPole = true;
+            }
+            else
+            {
+                utilities.tempPole = false;
+            }
+
+            System.IO.StreamWriter fileUtilities = new System.IO.StreamWriter(@"Utilities.xml");
+            System.Xml.Serialization.XmlSerializer y = new System.Xml.Serialization.XmlSerializer(utilities.GetType());
+            y.Serialize(fileUtilities, utilities);
+            file.Close();
+
+
+            if (holdTab == false)
+            {
+                tabControl1.SelectedIndex = 2;
+            }
+
+        }
+
 
     }
 }

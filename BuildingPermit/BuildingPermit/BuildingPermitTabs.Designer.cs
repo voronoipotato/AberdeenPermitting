@@ -85,11 +85,10 @@
             this.Title = new System.Windows.Forms.Label();
             this.Contractors = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtNumAmps = new System.Windows.Forms.TextBox();
+            this.cmboNumAmps = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label68 = new System.Windows.Forms.Label();
-            this.rdioTemporaryPole = new System.Windows.Forms.RadioButton();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.txtNumWaterHeaters = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
@@ -116,10 +115,8 @@
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.rdioGasLine = new System.Windows.Forms.RadioButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.rdioDuctWorkAlterationOnly = new System.Windows.Forms.RadioButton();
             this.txtNumSystems = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -199,6 +196,9 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
+            this.cboxGasLine = new System.Windows.Forms.CheckBox();
+            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
+            this.cboxTempPole = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -777,7 +777,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.txtNumAmps);
+            this.groupBox6.Controls.Add(this.cmboNumAmps);
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Location = new System.Drawing.Point(39, 383);
@@ -787,12 +787,26 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Electrical";
             // 
-            // txtNumAmps
+            // cmboNumAmps
             // 
-            this.txtNumAmps.Location = new System.Drawing.Point(84, 25);
-            this.txtNumAmps.Name = "txtNumAmps";
-            this.txtNumAmps.Size = new System.Drawing.Size(62, 20);
-            this.txtNumAmps.TabIndex = 228;
+            this.cmboNumAmps.FormattingEnabled = true;
+            this.cmboNumAmps.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "320",
+            "400",
+            "600",
+            "600/+",
+            "200",
+            "400",
+            "600",
+            "800",
+            "1000"});
+            this.cmboNumAmps.Location = new System.Drawing.Point(83, 24);
+            this.cmboNumAmps.Name = "cmboNumAmps";
+            this.cmboNumAmps.Size = new System.Drawing.Size(73, 21);
+            this.cmboNumAmps.TabIndex = 228;
+            this.cmboNumAmps.Leave += new System.EventHandler(this.cmboNumAmps_Leave);
             // 
             // label16
             // 
@@ -805,8 +819,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.cboxTempPole);
             this.groupBox7.Controls.Add(this.label68);
-            this.groupBox7.Controls.Add(this.rdioTemporaryPole);
             this.groupBox7.Location = new System.Drawing.Point(224, 12);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(122, 37);
@@ -821,16 +835,6 @@
             this.label68.Size = new System.Drawing.Size(81, 13);
             this.label68.TabIndex = 1;
             this.label68.Text = "Temporary Pole";
-            // 
-            // rdioTemporaryPole
-            // 
-            this.rdioTemporaryPole.AutoSize = true;
-            this.rdioTemporaryPole.Location = new System.Drawing.Point(94, 14);
-            this.rdioTemporaryPole.Name = "rdioTemporaryPole";
-            this.rdioTemporaryPole.Size = new System.Drawing.Size(14, 13);
-            this.rdioTemporaryPole.TabIndex = 0;
-            this.rdioTemporaryPole.TabStop = true;
-            this.rdioTemporaryPole.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -869,6 +873,7 @@
             this.txtNumWaterHeaters.Name = "txtNumWaterHeaters";
             this.txtNumWaterHeaters.Size = new System.Drawing.Size(27, 20);
             this.txtNumWaterHeaters.TabIndex = 238;
+            this.txtNumWaterHeaters.Leave += new System.EventHandler(this.txtNumWaterHeaters_Leave);
             // 
             // label56
             // 
@@ -885,6 +890,7 @@
             this.txtNumSpas.Name = "txtNumSpas";
             this.txtNumSpas.Size = new System.Drawing.Size(27, 20);
             this.txtNumSpas.TabIndex = 236;
+            this.txtNumSpas.Leave += new System.EventHandler(this.txtNumSpas_Leave);
             // 
             // label57
             // 
@@ -901,6 +907,7 @@
             this.txtNumWetBars.Name = "txtNumWetBars";
             this.txtNumWetBars.Size = new System.Drawing.Size(28, 20);
             this.txtNumWetBars.TabIndex = 235;
+            this.txtNumWetBars.Leave += new System.EventHandler(this.txtNumWetBars_Leave);
             // 
             // label58
             // 
@@ -917,6 +924,7 @@
             this.txtNumDishwashers.Name = "txtNumDishwashers";
             this.txtNumDishwashers.Size = new System.Drawing.Size(27, 20);
             this.txtNumDishwashers.TabIndex = 232;
+            this.txtNumDishwashers.Leave += new System.EventHandler(this.txtNumDishwashers_Leave);
             // 
             // label59
             // 
@@ -933,6 +941,7 @@
             this.txtNumClothesWashers.Name = "txtNumClothesWashers";
             this.txtNumClothesWashers.Size = new System.Drawing.Size(27, 20);
             this.txtNumClothesWashers.TabIndex = 230;
+            this.txtNumClothesWashers.Leave += new System.EventHandler(this.txtNumClothesWashers_Leave);
             // 
             // label60
             // 
@@ -949,6 +958,7 @@
             this.txtNumTubs.Name = "txtNumTubs";
             this.txtNumTubs.Size = new System.Drawing.Size(27, 20);
             this.txtNumTubs.TabIndex = 228;
+            this.txtNumTubs.Leave += new System.EventHandler(this.txtNumTubs_Leave);
             // 
             // label61
             // 
@@ -965,6 +975,7 @@
             this.txtNumShowers.Name = "txtNumShowers";
             this.txtNumShowers.Size = new System.Drawing.Size(28, 20);
             this.txtNumShowers.TabIndex = 227;
+            this.txtNumShowers.Leave += new System.EventHandler(this.txtNumShowers_Leave);
             // 
             // label62
             // 
@@ -981,6 +992,7 @@
             this.txtNumWaterClosets.Name = "txtNumWaterClosets";
             this.txtNumWaterClosets.Size = new System.Drawing.Size(27, 20);
             this.txtNumWaterClosets.TabIndex = 224;
+            this.txtNumWaterClosets.Leave += new System.EventHandler(this.txtNumWaterClosets_Leave);
             // 
             // label63
             // 
@@ -997,6 +1009,7 @@
             this.txtNumSinks.Name = "txtNumSinks";
             this.txtNumSinks.Size = new System.Drawing.Size(26, 20);
             this.txtNumSinks.TabIndex = 223;
+            this.txtNumSinks.Leave += new System.EventHandler(this.txtNumSinks_Leave);
             // 
             // label64
             // 
@@ -1013,6 +1026,7 @@
             this.txtNumBathrooms.Name = "txtNumBathrooms";
             this.txtNumBathrooms.Size = new System.Drawing.Size(27, 20);
             this.txtNumBathrooms.TabIndex = 220;
+            this.txtNumBathrooms.Leave += new System.EventHandler(this.txtNumBathrooms_Leave);
             // 
             // label72
             // 
@@ -1029,6 +1043,7 @@
             this.txtNumFixtures.Name = "txtNumFixtures";
             this.txtNumFixtures.Size = new System.Drawing.Size(28, 20);
             this.txtNumFixtures.TabIndex = 219;
+            this.txtNumFixtures.Leave += new System.EventHandler(this.txtNumFixtures_Leave);
             // 
             // label73
             // 
@@ -1054,8 +1069,8 @@
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.cboxGasLine);
             this.groupBox16.Controls.Add(this.label14);
-            this.groupBox16.Controls.Add(this.rdioGasLine);
             this.groupBox16.Location = new System.Drawing.Point(213, 20);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(89, 37);
@@ -1071,20 +1086,10 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Gas Line";
             // 
-            // rdioGasLine
-            // 
-            this.rdioGasLine.AutoSize = true;
-            this.rdioGasLine.Location = new System.Drawing.Point(67, 15);
-            this.rdioGasLine.Name = "rdioGasLine";
-            this.rdioGasLine.Size = new System.Drawing.Size(14, 13);
-            this.rdioGasLine.TabIndex = 0;
-            this.rdioGasLine.TabStop = true;
-            this.rdioGasLine.UseVisualStyleBackColor = true;
-            // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.cboxDuctwork);
             this.groupBox9.Controls.Add(this.label75);
-            this.groupBox9.Controls.Add(this.rdioDuctWorkAlterationOnly);
             this.groupBox9.Location = new System.Drawing.Point(355, 20);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(195, 37);
@@ -1100,22 +1105,13 @@
             this.label75.TabIndex = 1;
             this.label75.Text = "Duct Work for Alteration Only";
             // 
-            // rdioDuctWorkAlterationOnly
-            // 
-            this.rdioDuctWorkAlterationOnly.AutoSize = true;
-            this.rdioDuctWorkAlterationOnly.Location = new System.Drawing.Point(167, 16);
-            this.rdioDuctWorkAlterationOnly.Name = "rdioDuctWorkAlterationOnly";
-            this.rdioDuctWorkAlterationOnly.Size = new System.Drawing.Size(14, 13);
-            this.rdioDuctWorkAlterationOnly.TabIndex = 0;
-            this.rdioDuctWorkAlterationOnly.TabStop = true;
-            this.rdioDuctWorkAlterationOnly.UseVisualStyleBackColor = true;
-            // 
             // txtNumSystems
             // 
             this.txtNumSystems.Location = new System.Drawing.Point(113, 29);
             this.txtNumSystems.Name = "txtNumSystems";
             this.txtNumSystems.Size = new System.Drawing.Size(56, 20);
             this.txtNumSystems.TabIndex = 188;
+            this.txtNumSystems.Leave += new System.EventHandler(this.txtNumSystems_Leave);
             // 
             // label78
             // 
@@ -1143,11 +1139,15 @@
             // cmboConstructionType
             // 
             this.cmboConstructionType.FormattingEnabled = true;
+            this.cmboConstructionType.Items.AddRange(new object[] {
+            "Residential",
+            "Commercial"});
             this.cmboConstructionType.Location = new System.Drawing.Point(409, 19);
             this.cmboConstructionType.Name = "cmboConstructionType";
             this.cmboConstructionType.Size = new System.Drawing.Size(143, 21);
             this.cmboConstructionType.TabIndex = 209;
             this.cmboConstructionType.Text = "Type of Construction";
+            this.cmboConstructionType.Leave += new System.EventHandler(this.cmboConstructionType_Leave);
             // 
             // txtEstimatedCost
             // 
@@ -1855,6 +1855,35 @@
             this.txtNotes.Size = new System.Drawing.Size(701, 294);
             this.txtNotes.TabIndex = 0;
             // 
+            // cboxGasLine
+            // 
+            this.cboxGasLine.AutoSize = true;
+            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
+            this.cboxGasLine.Name = "cboxGasLine";
+            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
+            this.cboxGasLine.TabIndex = 2;
+            this.cboxGasLine.UseVisualStyleBackColor = true;
+            // 
+            // cboxDuctwork
+            // 
+            this.cboxDuctwork.AutoSize = true;
+            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
+            this.cboxDuctwork.Name = "cboxDuctwork";
+            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
+            this.cboxDuctwork.TabIndex = 2;
+            this.cboxDuctwork.UseVisualStyleBackColor = true;
+            // 
+            // cboxTempPole
+            // 
+            this.cboxTempPole.AutoSize = true;
+            this.cboxTempPole.Checked = true;
+            this.cboxTempPole.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cboxTempPole.Location = new System.Drawing.Point(93, 13);
+            this.cboxTempPole.Name = "cboxTempPole";
+            this.cboxTempPole.Size = new System.Drawing.Size(15, 14);
+            this.cboxTempPole.TabIndex = 2;
+            this.cboxTempPole.UseVisualStyleBackColor = true;
+            // 
             // BuildingPermitTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2014,11 +2043,9 @@
         internal System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnOwnerContact;
         private System.Windows.Forms.GroupBox groupBox6;
-        internal System.Windows.Forms.TextBox txtNumAmps;
         internal System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.RadioButton rdioTemporaryPole;
         private System.Windows.Forms.GroupBox groupBox8;
         internal System.Windows.Forms.TextBox txtNumWaterHeaters;
         internal System.Windows.Forms.Label label56;
@@ -2045,10 +2072,8 @@
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton rdioGasLine;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.RadioButton rdioDuctWorkAlterationOnly;
         internal System.Windows.Forms.TextBox txtNumSystems;
         internal System.Windows.Forms.Label label78;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -2086,6 +2111,10 @@
         private System.Windows.Forms.GroupBox groupBox18;
         internal System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.Button btnFees;
+        private System.Windows.Forms.ComboBox cmboNumAmps;
+        private System.Windows.Forms.CheckBox cboxTempPole;
+        private System.Windows.Forms.CheckBox cboxGasLine;
+        private System.Windows.Forms.CheckBox cboxDuctwork;
 
     }
 }

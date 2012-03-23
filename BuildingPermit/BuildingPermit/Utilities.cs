@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-class Utilities
+public class Utilities
 {
     //  HEATING/AIR-CONDITIONING/MECHANICAL
     private Boolean myGasLine;
@@ -93,7 +93,7 @@ class Utilities
     /// <summary>
     /// number of water closets
     /// </summary>
-    public string waterClosets
+    public string numWaterClosets
     {
         get { return myNumWaterClosets; }
         set { myNumWaterClosets = value; }
@@ -101,7 +101,7 @@ class Utilities
     /// <summary>
     /// number of dish washers
     /// </summary>
-    public string dishWasher
+    public string numDishWasher
     {
         get { return myNumDishWasher; }
         set { myNumDishWasher = value; }
@@ -109,7 +109,7 @@ class Utilities
     /// <summary>
     /// number of water heaters
     /// </summary>
-    public string waterHeater
+    public string numWaterHeater
     {
         get { return myNumWaterHeater; }
         set { myNumWaterHeater = value; }
@@ -118,7 +118,7 @@ class Utilities
     /// <summary>
     /// number of total fixtures used in caculation set
     /// </summary>
-    public string setNumFixtures
+    public string numFixtures
     {
         get { return myTotNumFixtures; }
 
@@ -147,7 +147,7 @@ class Utilities
     /// <summary>
     /// number of showers
     /// </summary>
-    public string showers
+    public string numShowers
     {
         get { return myNumShowers; }
         set { myNumShowers = value; }
@@ -155,7 +155,7 @@ class Utilities
     /// <summary>
     /// number of tubs
     /// </summary>
-    public string tub
+    public string numTub
     {
         get { return myNumTubs; }
         set { myNumTubs = value; }
@@ -163,7 +163,7 @@ class Utilities
     /// <summary>
     /// numbe rof wet bar small sink with frig.
     /// </summary>
-    public string wetBar
+    public string numWetBar
     {
         get { return myNumWetBar; }
         set { myNumWetBar = value; }
@@ -172,7 +172,7 @@ class Utilities
     /// <summary>
     /// number of sinks
     /// </summary>
-    public string sinks
+    public string numSinks
     {
         get { return myNumSinks; }
         set { myNumSinks = value; }
@@ -181,7 +181,7 @@ class Utilities
     /// <summary>
     /// number of clothswashers
     /// </summary>
-    public string clothesWasher
+    public string numClothesWasher
     {
         get { return myNumClothesWasher; }
         set { myNumClothesWasher = value; }
@@ -190,7 +190,7 @@ class Utilities
     /// <summary>
     /// number of spa's
     /// </summary>
-    public string spa
+    public string numSpa
     {
         get { return myNumSpa; }
         set { myNumSpa = value; }
@@ -226,5 +226,9 @@ class Utilities
 
         return int.TryParse(value, out Num);
         
+    }
+    public Utilities()
+    {
+
     }
 }

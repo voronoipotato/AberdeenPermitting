@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Utilities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <gasLine>false</gasLine>
+  <ductWork>true</ductWork>
+  <setNumSys>1</setNumSys>
+  <numBathrooms>11</numBathrooms>
+  <numWaterClosets>1</numWaterClosets>
+  <numDishWasher>1</numDishWasher>
+  <numWaterHeater>1</numWaterHeater>
+  <numFixtures>1</numFixtures>
+  <numShowers>1</numShowers>
+  <numTub>1</numTub>
+  <numWetBar>1</numWetBar>
+  <numSinks>1</numSinks>
+  <numClothesWasher>1</numClothesWasher>
+  <numSpa>1</numSpa>
+  <numAmps>600/+</numAmps>
+  <tempPole>true</tempPole>
+</Utilities>

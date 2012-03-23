@@ -5,7 +5,8 @@
   <deckSF>1</deckSF>
   <numStories>1</numStories>
   <porchSF>1</porchSF>
-  <heatedSF>2345</heatedSF>
-  <totalSF>2454</totalSF>
-  <estimatedCost>124343</estimatedCost>
+  <heatedSF>1</heatedSF>
+  <totalSF>1</totalSF>
+  <estimatedCost>1</estimatedCost>
+  <buildingType>Residential</buildingType>
 </Building>
