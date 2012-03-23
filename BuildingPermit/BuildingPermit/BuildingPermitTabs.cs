@@ -15,7 +15,7 @@ namespace BuildingPermit
 
         Building building = new Building();
         Utilities utilities = new Utilities();
-
+        Boolean holdTab = false;
 
         public BuildingPermitTabs()
         {
@@ -42,7 +42,10 @@ namespace BuildingPermit
 
 
 
-            tabControl1.SelectedIndex = 2;
+            if (holdTab == false)
+            {
+                tabControl1.SelectedIndex = 2; 
+            }
 
 
         }
@@ -89,6 +92,7 @@ namespace BuildingPermit
             {
                 txtSquareFeet.Focus();
                 txtSquareFeet.BackColor = Color.Red;
+                holdTab = true;
             }
         }
 
@@ -100,6 +104,7 @@ namespace BuildingPermit
             {
                 txtEstimatedCost.Focus();
                 txtEstimatedCost.BackColor = Color.Red;
+                holdTab = true;
             }
         }
 
@@ -111,6 +116,7 @@ namespace BuildingPermit
             {
                 txtNumStories.Focus();
                 txtNumStories.BackColor = Color.Red;
+                holdTab = true;
 
             }
 
@@ -124,6 +130,7 @@ namespace BuildingPermit
             {
                 txtHeatedSF.Focus();
                 txtHeatedSF.BackColor = Color.Red;
+                holdTab = true;
             }
 
         }
@@ -153,21 +160,25 @@ namespace BuildingPermit
         private void txtSquareFeet_KeyDown(object sender, KeyEventArgs e)
         {
             txtSquareFeet.BackColor = Color.White;
+            holdTab = false;
         }
 
         private void txtEstimatedCost_KeyDown(object sender, KeyEventArgs e)
         {
             txtEstimatedCost.BackColor = Color.White;
+            holdTab = false;
         }
 
         private void txtNumStories_KeyDown(object sender, KeyEventArgs e)
         {
             txtNumStories.BackColor = Color.White;
+            holdTab = false;
         }
 
         private void txtHeatedSF_KeyDown(object sender, KeyEventArgs e)
         {
             txtHeatedSF.BackColor = Color.White;
+            holdTab = false;
         }
 
       
