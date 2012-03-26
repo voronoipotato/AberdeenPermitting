@@ -88,6 +88,7 @@
             this.cmboNumAmps = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cboxTempPole = new System.Windows.Forms.CheckBox();
             this.label68 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.txtNumWaterHeaters = new System.Windows.Forms.TextBox();
@@ -114,8 +115,10 @@
             this.label73 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.cboxGasLine = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
             this.label75 = new System.Windows.Forms.Label();
             this.txtNumSystems = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
@@ -196,9 +199,6 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.cboxGasLine = new System.Windows.Forms.CheckBox();
-            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
-            this.cboxTempPole = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -827,6 +827,17 @@
             this.groupBox7.TabIndex = 226;
             this.groupBox7.TabStop = false;
             // 
+            // cboxTempPole
+            // 
+            this.cboxTempPole.AutoSize = true;
+            this.cboxTempPole.Checked = true;
+            this.cboxTempPole.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cboxTempPole.Location = new System.Drawing.Point(93, 13);
+            this.cboxTempPole.Name = "cboxTempPole";
+            this.cboxTempPole.Size = new System.Drawing.Size(15, 14);
+            this.cboxTempPole.TabIndex = 2;
+            this.cboxTempPole.UseVisualStyleBackColor = true;
+            // 
             // label68
             // 
             this.label68.AutoSize = true;
@@ -1077,6 +1088,15 @@
             this.groupBox16.TabIndex = 190;
             this.groupBox16.TabStop = false;
             // 
+            // cboxGasLine
+            // 
+            this.cboxGasLine.AutoSize = true;
+            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
+            this.cboxGasLine.Name = "cboxGasLine";
+            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
+            this.cboxGasLine.TabIndex = 2;
+            this.cboxGasLine.UseVisualStyleBackColor = true;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -1095,6 +1115,15 @@
             this.groupBox9.Size = new System.Drawing.Size(195, 37);
             this.groupBox9.TabIndex = 189;
             this.groupBox9.TabStop = false;
+            // 
+            // cboxDuctwork
+            // 
+            this.cboxDuctwork.AutoSize = true;
+            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
+            this.cboxDuctwork.Name = "cboxDuctwork";
+            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
+            this.cboxDuctwork.TabIndex = 2;
+            this.cboxDuctwork.UseVisualStyleBackColor = true;
             // 
             // label75
             // 
@@ -1854,35 +1883,6 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(701, 294);
             this.txtNotes.TabIndex = 0;
-            // 
-            // cboxGasLine
-            // 
-            this.cboxGasLine.AutoSize = true;
-            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
-            this.cboxGasLine.Name = "cboxGasLine";
-            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
-            this.cboxGasLine.TabIndex = 2;
-            this.cboxGasLine.UseVisualStyleBackColor = true;
-            // 
-            // cboxDuctwork
-            // 
-            this.cboxDuctwork.AutoSize = true;
-            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
-            this.cboxDuctwork.Name = "cboxDuctwork";
-            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
-            this.cboxDuctwork.TabIndex = 2;
-            this.cboxDuctwork.UseVisualStyleBackColor = true;
-            // 
-            // cboxTempPole
-            // 
-            this.cboxTempPole.AutoSize = true;
-            this.cboxTempPole.Checked = true;
-            this.cboxTempPole.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboxTempPole.Location = new System.Drawing.Point(93, 13);
-            this.cboxTempPole.Name = "cboxTempPole";
-            this.cboxTempPole.Size = new System.Drawing.Size(15, 14);
-            this.cboxTempPole.TabIndex = 2;
-            this.cboxTempPole.UseVisualStyleBackColor = true;
             // 
             // BuildingPermitTabs
             // 

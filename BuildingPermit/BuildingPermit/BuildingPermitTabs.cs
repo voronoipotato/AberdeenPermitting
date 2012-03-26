@@ -233,6 +233,7 @@ namespace BuildingPermit
 
         private void btnNext2_Click(object sender, EventArgs e)
         {
+            
             System.IO.StreamWriter file = new System.IO.StreamWriter(@"Building.xml");
             System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(building.GetType());
             x.Serialize(file, building);
@@ -269,7 +270,7 @@ namespace BuildingPermit
             System.IO.StreamWriter fileUtilities = new System.IO.StreamWriter(@"Utilities.xml");
             System.Xml.Serialization.XmlSerializer y = new System.Xml.Serialization.XmlSerializer(utilities.GetType());
             y.Serialize(fileUtilities, utilities);
-            file.Close();
+            fileUtilities.Close();
 
 
             if (holdTab == false)
@@ -278,7 +279,5 @@ namespace BuildingPermit
             }
 
         }
-
-
     }
 }
