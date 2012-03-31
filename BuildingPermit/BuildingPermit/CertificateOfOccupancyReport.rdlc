@@ -380,7 +380,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>appears to have completed the required specifications of the permit and has satisfactorily complied with all North Carolina Building, Electrical, Mechanical and/or Planning Codes and with the Town of Aberdeen Zoning Code. The occupancy may be safely occupied.</Value>
+                <Value> appears to have completed the required specifications of the permit and has                 satisfactorily complied with all North Carolina Building, Electrical, Mechanical and/or     Planning Codes and with the Town of Aberdeen Zoning Code. The occupancy may be   safely occupied.</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Tahoma</FontFamily>
@@ -527,8 +527,8 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <RightIndent>-0.0625in</RightIndent>
-            <HangingIndent>-3in</HangingIndent>
+            <RightIndent>0.0625in</RightIndent>
+            <HangingIndent>3in</HangingIndent>
             <Style>
               <TextAlign>Left</TextAlign>
             </Style>
@@ -695,10 +695,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.88833in</Top>
-        <Left>0.39667in</Left>
-        <Height>7.99167in</Height>
-        <Width>6.225in</Width>
+        <Top>0.29458in</Top>
+        <Left>0.24042in</Left>
+        <Height>8.1375in</Height>
+        <Width>6.475in</Width>
         <Style>
           <Border>
             <Style>None</Style>
