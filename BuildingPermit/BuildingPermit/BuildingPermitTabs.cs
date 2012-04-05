@@ -62,6 +62,9 @@ namespace BuildingPermit
 
         private void BuildingPermitTabs_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
+            this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
+           
         }
 
         private void txtSquareFeet_Leave(object sender, EventArgs e)
@@ -277,6 +280,16 @@ namespace BuildingPermit
             {
                 tabControl1.SelectedIndex = 2;
             }
+
+        }
+
+        private void txtProperty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
 
         }
     }
