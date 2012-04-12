@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient; 
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics; 
 
 namespace BuildingPermit
 {
     public partial class BuildingPermitTabs : Form
     {
+        public string connectionString; 
 
+        public static SqlDataReader queryDatabase(string queryString, string connectionString)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(queryString, con);
+            con.Open();
+            return cmd.ExecuteReader();
+        }
 
         Building building = new Building();
         Utilities utilities = new Utilities();
@@ -63,9 +73,14 @@ namespace BuildingPermit
         private void BuildingPermitTabs_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
-            this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
-            
-           
+           // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
+            connectionString = @"Data Source=JOHNREASOR-LT\SQLEXPRESS;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
+            SqlDataReader dataReader = queryDatabase("SELECT * FROM Contact", connectionString);
+            while (dataReader.Read()) {
+                    Debug.WriteLine((string)dataReader["ContactFname"]);
+            }
+            dataReader.Close();
+
         }
 
         private void txtSquareFeet_Leave(object sender, EventArgs e)
