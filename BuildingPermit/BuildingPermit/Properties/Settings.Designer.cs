@@ -44,5 +44,16 @@ namespace BuildingPermit.Properties {
                 return ((string)(this["AberdeenPermittingConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JOHNREASOR-LT\\SQLEXPRESS;Initial Catalog=AberdeenPermitting;Persist S" +
+            "ecurity Info=True;User ID=Capstone;Password=Capstone2012")]
+        public string AberdeenPermittingConnectionString2 {
+            get {
+                return ((string)(this["AberdeenPermittingConnectionString2"]));
+            }
+        }
     }
 }

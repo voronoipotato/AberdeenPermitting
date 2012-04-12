@@ -64,27 +64,33 @@ namespace BuildingPermit {
         
         private global::System.Data.DataRelation _relationBanner_ContactBanner;
         
-        private global::System.Data.DataRelation _relationBuilding_PermitBuilding;
-        
         private global::System.Data.DataRelation _relationContractorToPermit_ContractorsContractorToPermit;
         
         private global::System.Data.DataRelation _relationContractorToPermit_PermitContractorToPermit;
         
         private global::System.Data.DataRelation _relationElectrical_BuildingElectrical;
         
+        private global::System.Data.DataRelation relationFK_Fees_Permit;
+        
+        private global::System.Data.DataRelation relationFK_Fees_Permit1;
+        
         private global::System.Data.DataRelation _relationInspectionRequest_InspectorTableInspectionRequest;
         
         private global::System.Data.DataRelation _relationMechanical_BuildingMechanical;
+        
+        private global::System.Data.DataRelation relationFK_Parcel_Contact;
+        
+        private global::System.Data.DataRelation relationFK_Permit_Building;
+        
+        private global::System.Data.DataRelation relationFK_Permit_Parcel;
         
         private global::System.Data.DataRelation _relationPermit_ContactPermit;
         
         private global::System.Data.DataRelation _relationPermit_InspectorTablePermit;
         
-        private global::System.Data.DataRelation _relationPermit_ParcelPermit;
-        
         private global::System.Data.DataRelation _relationPlumbing_BuildingPlumbing;
         
-        private global::System.Data.DataRelation relationFK_Receivables_Permit;
+        private global::System.Data.DataRelation relationFK_Receivables_Permit1;
         
         private global::System.Data.DataRelation _relationSubBanAddy_BannerSubBanAddy;
         
@@ -653,17 +659,20 @@ namespace BuildingPermit {
                 }
             }
             this._relationBanner_ContactBanner = this.Relations["Banner$ContactBanner"];
-            this._relationBuilding_PermitBuilding = this.Relations["Building$PermitBuilding"];
             this._relationContractorToPermit_ContractorsContractorToPermit = this.Relations["ContractorToPermit$ContractorsContractorToPermit"];
             this._relationContractorToPermit_PermitContractorToPermit = this.Relations["ContractorToPermit$PermitContractorToPermit"];
             this._relationElectrical_BuildingElectrical = this.Relations["Electrical$BuildingElectrical"];
+            this.relationFK_Fees_Permit = this.Relations["FK_Fees_Permit"];
+            this.relationFK_Fees_Permit1 = this.Relations["FK_Fees_Permit1"];
             this._relationInspectionRequest_InspectorTableInspectionRequest = this.Relations["InspectionRequest$InspectorTableInspectionRequest"];
             this._relationMechanical_BuildingMechanical = this.Relations["Mechanical$BuildingMechanical"];
+            this.relationFK_Parcel_Contact = this.Relations["FK_Parcel_Contact"];
+            this.relationFK_Permit_Building = this.Relations["FK_Permit_Building"];
+            this.relationFK_Permit_Parcel = this.Relations["FK_Permit_Parcel"];
             this._relationPermit_ContactPermit = this.Relations["Permit$ContactPermit"];
             this._relationPermit_InspectorTablePermit = this.Relations["Permit$InspectorTablePermit"];
-            this._relationPermit_ParcelPermit = this.Relations["Permit$ParcelPermit"];
             this._relationPlumbing_BuildingPlumbing = this.Relations["Plumbing$BuildingPlumbing"];
-            this.relationFK_Receivables_Permit = this.Relations["FK_Receivables_Permit"];
+            this.relationFK_Receivables_Permit1 = this.Relations["FK_Receivables_Permit1"];
             this._relationSubBanAddy_BannerSubBanAddy = this.Relations["SubBanAddy$BannerSubBanAddy"];
         }
         
@@ -717,10 +726,6 @@ namespace BuildingPermit {
                         this.tableContact.ContactIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableBanner.ContactIDColumn}, false);
             this.Relations.Add(this._relationBanner_ContactBanner);
-            this._relationBuilding_PermitBuilding = new global::System.Data.DataRelation("Building$PermitBuilding", new global::System.Data.DataColumn[] {
-                        this.tablePermit.PermitIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBuilding.PermitIDColumn}, false);
-            this.Relations.Add(this._relationBuilding_PermitBuilding);
             this._relationContractorToPermit_ContractorsContractorToPermit = new global::System.Data.DataRelation("ContractorToPermit$ContractorsContractorToPermit", new global::System.Data.DataColumn[] {
                         this.tableContractors.ContractorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableContractorToPermit.ContractorIDColumn}, false);
@@ -733,6 +738,14 @@ namespace BuildingPermit {
                         this.tableBuilding.BuildingIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableElectrical.BuildingIDColumn}, false);
             this.Relations.Add(this._relationElectrical_BuildingElectrical);
+            this.relationFK_Fees_Permit = new global::System.Data.DataRelation("FK_Fees_Permit", new global::System.Data.DataColumn[] {
+                        this.tableReceivables.ReceivablesIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFees.ReceivablesIDColumn}, false);
+            this.Relations.Add(this.relationFK_Fees_Permit);
+            this.relationFK_Fees_Permit1 = new global::System.Data.DataRelation("FK_Fees_Permit1", new global::System.Data.DataColumn[] {
+                        this.tablePermit.PermitIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFees.PermitIDColumn}, false);
+            this.Relations.Add(this.relationFK_Fees_Permit1);
             this._relationInspectionRequest_InspectorTableInspectionRequest = new global::System.Data.DataRelation("InspectionRequest$InspectorTableInspectionRequest", new global::System.Data.DataColumn[] {
                         this.tableInspectorTable.InspectorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableInspectionRequest.InspectorIDColumn}, false);
@@ -741,6 +754,18 @@ namespace BuildingPermit {
                         this.tableBuilding.BuildingIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableMechanical.BuildingIDColumn}, false);
             this.Relations.Add(this._relationMechanical_BuildingMechanical);
+            this.relationFK_Parcel_Contact = new global::System.Data.DataRelation("FK_Parcel_Contact", new global::System.Data.DataColumn[] {
+                        this.tableContact.ContactIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableParcel.ContactIDColumn}, false);
+            this.Relations.Add(this.relationFK_Parcel_Contact);
+            this.relationFK_Permit_Building = new global::System.Data.DataRelation("FK_Permit_Building", new global::System.Data.DataColumn[] {
+                        this.tableBuilding.BuildingIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePermit.BuildingIDColumn}, false);
+            this.Relations.Add(this.relationFK_Permit_Building);
+            this.relationFK_Permit_Parcel = new global::System.Data.DataRelation("FK_Permit_Parcel", new global::System.Data.DataColumn[] {
+                        this.tableParcel.ParcelIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePermit.ParcelIDColumn}, false);
+            this.Relations.Add(this.relationFK_Permit_Parcel);
             this._relationPermit_ContactPermit = new global::System.Data.DataRelation("Permit$ContactPermit", new global::System.Data.DataColumn[] {
                         this.tableContact.ContactIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePermit.ContactIDColumn}, false);
@@ -749,18 +774,14 @@ namespace BuildingPermit {
                         this.tableInspectorTable.InspectorIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePermit.InpsectorIDColumn}, false);
             this.Relations.Add(this._relationPermit_InspectorTablePermit);
-            this._relationPermit_ParcelPermit = new global::System.Data.DataRelation("Permit$ParcelPermit", new global::System.Data.DataColumn[] {
-                        this.tableParcel.ParcelIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePermit.ParcelIDColumn}, false);
-            this.Relations.Add(this._relationPermit_ParcelPermit);
             this._relationPlumbing_BuildingPlumbing = new global::System.Data.DataRelation("Plumbing$BuildingPlumbing", new global::System.Data.DataColumn[] {
                         this.tableBuilding.BuildingIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePlumbing.BuildingIDColumn}, false);
             this.Relations.Add(this._relationPlumbing_BuildingPlumbing);
-            this.relationFK_Receivables_Permit = new global::System.Data.DataRelation("FK_Receivables_Permit", new global::System.Data.DataColumn[] {
-                        this.tableFees.FeeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReceivables.FeeIDColumn}, false);
-            this.Relations.Add(this.relationFK_Receivables_Permit);
+            this.relationFK_Receivables_Permit1 = new global::System.Data.DataRelation("FK_Receivables_Permit1", new global::System.Data.DataColumn[] {
+                        this.tablePermit.PermitIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableReceivables.PermitIDColumn}, false);
+            this.Relations.Add(this.relationFK_Receivables_Permit1);
             this._relationSubBanAddy_BannerSubBanAddy = new global::System.Data.DataRelation("SubBanAddy$BannerSubBanAddy", new global::System.Data.DataColumn[] {
                         this.tableBanner.BannerIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSubBanAddy.BannerIDColumn}, false);
@@ -1617,7 +1638,7 @@ namespace BuildingPermit {
                         bool TownSewer, 
                         bool townWater, 
                         bool SepticImprovPermit, 
-                        PermitRow _parentPermitRowByBuilding_PermitBuilding, 
+                        string PermitID, 
                         byte[] SSMA_TimeStamp) {
                 BuildingRow rowBuildingRow = ((BuildingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1637,11 +1658,8 @@ namespace BuildingPermit {
                         TownSewer,
                         townWater,
                         SepticImprovPermit,
-                        null,
+                        PermitID,
                         SSMA_TimeStamp};
-                if ((_parentPermitRowByBuilding_PermitBuilding != null)) {
-                    columnValuesArray[16] = _parentPermitRowByBuilding_PermitBuilding[0];
-                }
                 rowBuildingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuildingRow);
                 return rowBuildingRow;
@@ -3363,6 +3381,8 @@ namespace BuildingPermit {
             
             private global::System.Data.DataColumn columnPermitID;
             
+            private global::System.Data.DataColumn columnReceivablesID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public FeesDataTable() {
@@ -3430,6 +3450,14 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReceivablesIDColumn {
+                get {
+                    return this.columnReceivablesID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3465,13 +3493,20 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FeesRow AddFeesRow(string FeeID, string FeeName, decimal FeeAmount, string PermitID) {
+            public FeesRow AddFeesRow(string FeeID, string FeeName, decimal FeeAmount, PermitRow parentPermitRowByFK_Fees_Permit1, ReceivablesRow parentReceivablesRowByFK_Fees_Permit) {
                 FeesRow rowFeesRow = ((FeesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FeeID,
                         FeeName,
                         FeeAmount,
-                        PermitID};
+                        null,
+                        null};
+                if ((parentPermitRowByFK_Fees_Permit1 != null)) {
+                    columnValuesArray[3] = parentPermitRowByFK_Fees_Permit1[0];
+                }
+                if ((parentReceivablesRowByFK_Fees_Permit != null)) {
+                    columnValuesArray[4] = parentReceivablesRowByFK_Fees_Permit[0];
+                }
                 rowFeesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFeesRow);
                 return rowFeesRow;
@@ -3505,6 +3540,7 @@ namespace BuildingPermit {
                 this.columnFeeName = base.Columns["FeeName"];
                 this.columnFeeAmount = base.Columns["FeeAmount"];
                 this.columnPermitID = base.Columns["PermitID"];
+                this.columnReceivablesID = base.Columns["ReceivablesID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3518,6 +3554,8 @@ namespace BuildingPermit {
                 base.Columns.Add(this.columnFeeAmount);
                 this.columnPermitID = new global::System.Data.DataColumn("PermitID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPermitID);
+                this.columnReceivablesID = new global::System.Data.DataColumn("ReceivablesID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReceivablesID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFeeID}, true));
                 this.columnFeeID.AllowDBNull = false;
@@ -3525,6 +3563,7 @@ namespace BuildingPermit {
                 this.columnFeeID.MaxLength = 16;
                 this.columnFeeName.MaxLength = 75;
                 this.columnPermitID.MaxLength = 50;
+                this.columnReceivablesID.MaxLength = 16;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4700,6 +4739,8 @@ namespace BuildingPermit {
             
             private global::System.Data.DataColumn columnParcelDeedAcre;
             
+            private global::System.Data.DataColumn columnContactID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ParcelDataTable() {
@@ -4839,6 +4880,14 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ContactIDColumn {
+                get {
+                    return this.columnContactID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4874,7 +4923,7 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ParcelRow AddParcelRow(string ParcelID, string ParcelAddress, string ParacelCity, string ParacelState, string ParacelZip, string ParcelDeedBook, string ParcelDeedPage, int ParcelLotNum, string ParcelSize, decimal ParcelValue, string ParcelZoningDist, int ParcelTaxAcre, string ParcelDeedAcre) {
+            public ParcelRow AddParcelRow(string ParcelID, string ParcelAddress, string ParacelCity, string ParacelState, string ParacelZip, string ParcelDeedBook, string ParcelDeedPage, int ParcelLotNum, string ParcelSize, decimal ParcelValue, string ParcelZoningDist, int ParcelTaxAcre, string ParcelDeedAcre, ContactRow parentContactRowByFK_Parcel_Contact) {
                 ParcelRow rowParcelRow = ((ParcelRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ParcelID,
@@ -4889,7 +4938,11 @@ namespace BuildingPermit {
                         ParcelValue,
                         ParcelZoningDist,
                         ParcelTaxAcre,
-                        ParcelDeedAcre};
+                        ParcelDeedAcre,
+                        null};
+                if ((parentContactRowByFK_Parcel_Contact != null)) {
+                    columnValuesArray[13] = parentContactRowByFK_Parcel_Contact[0];
+                }
                 rowParcelRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowParcelRow);
                 return rowParcelRow;
@@ -4932,6 +4985,7 @@ namespace BuildingPermit {
                 this.columnParcelZoningDist = base.Columns["ParcelZoningDist"];
                 this.columnParcelTaxAcre = base.Columns["ParcelTaxAcre"];
                 this.columnParcelDeedAcre = base.Columns["ParcelDeedAcre"];
+                this.columnContactID = base.Columns["ContactID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4963,6 +5017,8 @@ namespace BuildingPermit {
                 base.Columns.Add(this.columnParcelTaxAcre);
                 this.columnParcelDeedAcre = new global::System.Data.DataColumn("ParcelDeedAcre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnParcelDeedAcre);
+                this.columnContactID = new global::System.Data.DataColumn("ContactID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContactID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnParcelID}, true));
                 this.columnParcelID.AllowDBNull = false;
@@ -4977,6 +5033,7 @@ namespace BuildingPermit {
                 this.columnParcelSize.MaxLength = 50;
                 this.columnParcelZoningDist.MaxLength = 50;
                 this.columnParcelDeedAcre.MaxLength = 50;
+                this.columnContactID.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5440,6 +5497,8 @@ namespace BuildingPermit {
             
             private global::System.Data.DataColumn columnContactID;
             
+            private global::System.Data.DataColumn columnBuildingID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PermitDataTable() {
@@ -5523,6 +5582,14 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BuildingIDColumn {
+                get {
+                    return this.columnBuildingID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5558,7 +5625,7 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PermitRow AddPermitRow(string PermitID, System.DateTime PermitDate, InspectorTableRow _parentInspectorTableRowByPermit_InspectorTablePermit, ParcelRow _parentParcelRowByPermit_ParcelPermit, int FeeTotal, ContactRow _parentContactRowByPermit_ContactPermit) {
+            public PermitRow AddPermitRow(string PermitID, System.DateTime PermitDate, InspectorTableRow _parentInspectorTableRowByPermit_InspectorTablePermit, ParcelRow parentParcelRowByFK_Permit_Parcel, int FeeTotal, ContactRow _parentContactRowByPermit_ContactPermit, BuildingRow parentBuildingRowByFK_Permit_Building) {
                 PermitRow rowPermitRow = ((PermitRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PermitID,
@@ -5566,15 +5633,19 @@ namespace BuildingPermit {
                         null,
                         null,
                         FeeTotal,
+                        null,
                         null};
                 if ((_parentInspectorTableRowByPermit_InspectorTablePermit != null)) {
                     columnValuesArray[2] = _parentInspectorTableRowByPermit_InspectorTablePermit[0];
                 }
-                if ((_parentParcelRowByPermit_ParcelPermit != null)) {
-                    columnValuesArray[3] = _parentParcelRowByPermit_ParcelPermit[0];
+                if ((parentParcelRowByFK_Permit_Parcel != null)) {
+                    columnValuesArray[3] = parentParcelRowByFK_Permit_Parcel[0];
                 }
                 if ((_parentContactRowByPermit_ContactPermit != null)) {
                     columnValuesArray[5] = _parentContactRowByPermit_ContactPermit[0];
+                }
+                if ((parentBuildingRowByFK_Permit_Building != null)) {
+                    columnValuesArray[6] = parentBuildingRowByFK_Permit_Building[0];
                 }
                 rowPermitRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPermitRow);
@@ -5611,6 +5682,7 @@ namespace BuildingPermit {
                 this.columnParcelID = base.Columns["ParcelID"];
                 this.columnFeeTotal = base.Columns["FeeTotal"];
                 this.columnContactID = base.Columns["ContactID"];
+                this.columnBuildingID = base.Columns["BuildingID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5628,6 +5700,8 @@ namespace BuildingPermit {
                 base.Columns.Add(this.columnFeeTotal);
                 this.columnContactID = new global::System.Data.DataColumn("ContactID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnContactID);
+                this.columnBuildingID = new global::System.Data.DataColumn("BuildingID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuildingID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPermitID}, true));
                 this.columnPermitID.AllowDBNull = false;
@@ -5636,6 +5710,7 @@ namespace BuildingPermit {
                 this.columnInpsectorID.MaxLength = 50;
                 this.columnParcelID.MaxLength = 50;
                 this.columnContactID.MaxLength = 50;
+                this.columnBuildingID.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6335,16 +6410,16 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReceivablesRow AddReceivablesRow(string ReceivablesID, string PermitID, FeesRow parentFeesRowByFK_Receivables_Permit, string CheckNumber, double AmountPaid) {
+            public ReceivablesRow AddReceivablesRow(string ReceivablesID, PermitRow parentPermitRowByFK_Receivables_Permit1, string FeeID, string CheckNumber, double AmountPaid) {
                 ReceivablesRow rowReceivablesRow = ((ReceivablesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ReceivablesID,
-                        PermitID,
                         null,
+                        FeeID,
                         CheckNumber,
                         AmountPaid};
-                if ((parentFeesRowByFK_Receivables_Permit != null)) {
-                    columnValuesArray[2] = parentFeesRowByFK_Receivables_Permit[0];
+                if ((parentPermitRowByFK_Receivables_Permit1 != null)) {
+                    columnValuesArray[1] = parentPermitRowByFK_Receivables_Permit1[0];
                 }
                 rowReceivablesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReceivablesRow);
@@ -8112,17 +8187,6 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PermitRow PermitRow {
-                get {
-                    return ((PermitRow)(this.GetParentRow(this.Table.ParentRelations["Building$PermitBuilding"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Building$PermitBuilding"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTypeOfConstNull() {
                 return this.IsNull(this.tableBuilding.TypeOfConstColumn);
             }
@@ -8344,6 +8408,17 @@ namespace BuildingPermit {
                 }
                 else {
                     return ((MechanicalRow[])(base.GetChildRows(this.Table.ChildRelations["Mechanical$BuildingMechanical"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PermitRow[] GetPermitRows() {
+                if ((this.Table.ChildRelations["FK_Permit_Building"] == null)) {
+                    return new PermitRow[0];
+                }
+                else {
+                    return ((PermitRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Permit_Building"])));
                 }
             }
             
@@ -8728,6 +8803,17 @@ namespace BuildingPermit {
                 }
                 else {
                     return ((BannerRow[])(base.GetChildRows(this.Table.ChildRelations["Banner$ContactBanner"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ParcelRow[] GetParcelRows() {
+                if ((this.Table.ChildRelations["FK_Parcel_Contact"] == null)) {
+                    return new ParcelRow[0];
+                }
+                else {
+                    return ((ParcelRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Parcel_Contact"])));
                 }
             }
             
@@ -9462,6 +9548,44 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ReceivablesID {
+                get {
+                    try {
+                        return ((string)(this[this.tableFees.ReceivablesIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ReceivablesID\' in table \'Fees\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFees.ReceivablesIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ReceivablesRow ReceivablesRow {
+                get {
+                    return ((ReceivablesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Fees_Permit"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Fees_Permit"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PermitRow PermitRow {
+                get {
+                    return ((PermitRow)(this.GetParentRow(this.Table.ParentRelations["FK_Fees_Permit1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Fees_Permit1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFeeNameNull() {
                 return this.IsNull(this.tableFees.FeeNameColumn);
             }
@@ -9498,13 +9622,14 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReceivablesRow[] GetReceivablesRows() {
-                if ((this.Table.ChildRelations["FK_Receivables_Permit"] == null)) {
-                    return new ReceivablesRow[0];
-                }
-                else {
-                    return ((ReceivablesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Receivables_Permit"])));
-                }
+            public bool IsReceivablesIDNull() {
+                return this.IsNull(this.tableFees.ReceivablesIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetReceivablesIDNull() {
+                this[this.tableFees.ReceivablesIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10297,6 +10422,33 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ContactID {
+                get {
+                    try {
+                        return ((string)(this[this.tableParcel.ContactIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ContactID\' in table \'Parcel\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableParcel.ContactIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ContactRow ContactRow {
+                get {
+                    return ((ContactRow)(this.GetParentRow(this.Table.ParentRelations["FK_Parcel_Contact"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Parcel_Contact"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsParcelAddressNull() {
                 return this.IsNull(this.tableParcel.ParcelAddressColumn);
             }
@@ -10441,12 +10593,24 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsContactIDNull() {
+                return this.IsNull(this.tableParcel.ContactIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetContactIDNull() {
+                this[this.tableParcel.ContactIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PermitRow[] GetPermitRows() {
-                if ((this.Table.ChildRelations["Permit$ParcelPermit"] == null)) {
+                if ((this.Table.ChildRelations["FK_Permit_Parcel"] == null)) {
                     return new PermitRow[0];
                 }
                 else {
-                    return ((PermitRow[])(base.GetChildRows(this.Table.ChildRelations["Permit$ParcelPermit"])));
+                    return ((PermitRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Permit_Parcel"])));
                 }
             }
         }
@@ -10679,6 +10843,44 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BuildingID {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermit.BuildingIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BuildingID\' in table \'Permit\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermit.BuildingIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuildingRow BuildingRow {
+                get {
+                    return ((BuildingRow)(this.GetParentRow(this.Table.ParentRelations["FK_Permit_Building"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Permit_Building"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ParcelRow ParcelRow {
+                get {
+                    return ((ParcelRow)(this.GetParentRow(this.Table.ParentRelations["FK_Permit_Parcel"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Permit_Parcel"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ContactRow ContactRow {
                 get {
                     return ((ContactRow)(this.GetParentRow(this.Table.ParentRelations["Permit$ContactPermit"])));
@@ -10696,17 +10898,6 @@ namespace BuildingPermit {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["Permit$InspectorTablePermit"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ParcelRow ParcelRow {
-                get {
-                    return ((ParcelRow)(this.GetParentRow(this.Table.ParentRelations["Permit$ParcelPermit"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Permit$ParcelPermit"]);
                 }
             }
             
@@ -10772,13 +10963,14 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingRow[] GetBuildingRows() {
-                if ((this.Table.ChildRelations["Building$PermitBuilding"] == null)) {
-                    return new BuildingRow[0];
-                }
-                else {
-                    return ((BuildingRow[])(base.GetChildRows(this.Table.ChildRelations["Building$PermitBuilding"])));
-                }
+            public bool IsBuildingIDNull() {
+                return this.IsNull(this.tablePermit.BuildingIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBuildingIDNull() {
+                this[this.tablePermit.BuildingIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10789,6 +10981,28 @@ namespace BuildingPermit {
                 }
                 else {
                     return ((ContractorToPermitRow[])(base.GetChildRows(this.Table.ChildRelations["ContractorToPermit$PermitContractorToPermit"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public FeesRow[] GetFeesRows() {
+                if ((this.Table.ChildRelations["FK_Fees_Permit1"] == null)) {
+                    return new FeesRow[0];
+                }
+                else {
+                    return ((FeesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Fees_Permit1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ReceivablesRow[] GetReceivablesRows() {
+                if ((this.Table.ChildRelations["FK_Receivables_Permit1"] == null)) {
+                    return new ReceivablesRow[0];
+                }
+                else {
+                    return ((ReceivablesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Receivables_Permit1"])));
                 }
             }
         }
@@ -11285,12 +11499,12 @@ namespace BuildingPermit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FeesRow FeesRow {
+            public PermitRow PermitRow {
                 get {
-                    return ((FeesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Receivables_Permit"])));
+                    return ((PermitRow)(this.GetParentRow(this.Table.ParentRelations["FK_Receivables_Permit1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Receivables_Permit"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Receivables_Permit1"]);
                 }
             }
             
@@ -11340,6 +11554,17 @@ namespace BuildingPermit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAmountPaidNull() {
                 this[this.tableReceivables.AmountPaidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public FeesRow[] GetFeesRows() {
+                if ((this.Table.ChildRelations["FK_Fees_Permit"] == null)) {
+                    return new FeesRow[0];
+                }
+                else {
+                    return ((FeesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Fees_Permit"])));
+                }
             }
         }
         
@@ -12445,7 +12670,7 @@ SELECT PermitID, NumbBanners, Size, DatesInUse, Event, BannerID, ContactID FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12975,7 +13200,7 @@ SELECT BuildingID, TypeOfConst, ProposedUse, Dimensions, HeatedSF, NumberOfStori
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13582,7 +13807,7 @@ SELECT ContactID, ContactFname, ContactLname, Contact1stPhone, Contact2ndPhone, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14168,7 +14393,7 @@ SELECT ContractorID, ContractorCompName, ContractorFname, ContractorLname, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14857,7 +15082,7 @@ SELECT ContractorID, ContractorCompName, ContractorFname, ContractorLname, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15120,7 +15345,7 @@ SELECT ElectricalID, NumAmps, NumDiscon, TempPole, BuildingID, SSMA_TimeStamp FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15468,10 +15693,11 @@ SELECT ElectricalID, NumAmps, NumDiscon, TempPole, BuildingID, SSMA_TimeStamp FR
             tableMapping.ColumnMappings.Add("FeeName", "FeeName");
             tableMapping.ColumnMappings.Add("FeeAmount", "FeeAmount");
             tableMapping.ColumnMappings.Add("PermitID", "PermitID");
+            tableMapping.ColumnMappings.Add("ReceivablesID", "ReceivablesID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Fees] WHERE (([FeeID] = @Original_FeeID) AND ((@IsNull_FeeName = 1 AND [FeeName] IS NULL) OR ([FeeName] = @Original_FeeName)) AND ((@IsNull_FeeAmount = 1 AND [FeeAmount] IS NULL) OR ([FeeAmount] = @Original_FeeAmount)) AND ((@IsNull_PermitID = 1 AND [PermitID] IS NULL) OR ([PermitID] = @Original_PermitID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Fees] WHERE (([FeeID] = @Original_FeeID) AND ((@IsNull_FeeName = 1 AND [FeeName] IS NULL) OR ([FeeName] = @Original_FeeName)) AND ((@IsNull_FeeAmount = 1 AND [FeeAmount] IS NULL) OR ([FeeAmount] = @Original_FeeAmount)) AND ((@IsNull_PermitID = 1 AND [PermitID] IS NULL) OR ([PermitID] = @Original_PermitID)) AND ((@IsNull_ReceivablesID = 1 AND [ReceivablesID] IS NULL) OR ([ReceivablesID] = @Original_ReceivablesID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FeeName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -15480,25 +15706,30 @@ SELECT ElectricalID, NumAmps, NumDiscon, TempPole, BuildingID, SSMA_TimeStamp FR
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeAmount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeAmount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PermitID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ReceivablesID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivablesID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceivablesID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivablesID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Fees] ([FeeID], [FeeName], [FeeAmount], [PermitID]) VALUES (@F" +
-                "eeID, @FeeName, @FeeAmount, @PermitID);\r\nSELECT FeeID, FeeName, FeeAmount, Permi" +
-                "tID FROM Fees WHERE (FeeID = @FeeID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Fees] ([FeeID], [FeeName], [FeeAmount], [PermitID], [Receivabl" +
+                "esID]) VALUES (@FeeID, @FeeName, @FeeAmount, @PermitID, @ReceivablesID);\r\nSELECT" +
+                " FeeID, FeeName, FeeAmount, PermitID, ReceivablesID FROM Fees WHERE (FeeID = @Fe" +
+                "eID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeAmount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReceivablesID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivablesID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Fees] SET [FeeID] = @FeeID, [FeeName] = @FeeName, [FeeAmount] = @FeeAmount, [PermitID] = @PermitID WHERE (([FeeID] = @Original_FeeID) AND ((@IsNull_FeeName = 1 AND [FeeName] IS NULL) OR ([FeeName] = @Original_FeeName)) AND ((@IsNull_FeeAmount = 1 AND [FeeAmount] IS NULL) OR ([FeeAmount] = @Original_FeeAmount)) AND ((@IsNull_PermitID = 1 AND [PermitID] IS NULL) OR ([PermitID] = @Original_PermitID)));
-SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Fees] SET [FeeID] = @FeeID, [FeeName] = @FeeName, [FeeAmount] = @FeeAmount, [PermitID] = @PermitID, [ReceivablesID] = @ReceivablesID WHERE (([FeeID] = @Original_FeeID) AND ((@IsNull_FeeName = 1 AND [FeeName] IS NULL) OR ([FeeName] = @Original_FeeName)) AND ((@IsNull_FeeAmount = 1 AND [FeeAmount] IS NULL) OR ([FeeAmount] = @Original_FeeAmount)) AND ((@IsNull_PermitID = 1 AND [PermitID] IS NULL) OR ([PermitID] = @Original_PermitID)) AND ((@IsNull_ReceivablesID = 1 AND [ReceivablesID] IS NULL) OR ([ReceivablesID] = @Original_ReceivablesID)));
+SELECT FeeID, FeeName, FeeAmount, PermitID, ReceivablesID FROM Fees WHERE (FeeID = @FeeID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeAmount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReceivablesID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivablesID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FeeName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -15506,13 +15737,15 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeAmount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeAmount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PermitID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ReceivablesID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivablesID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceivablesID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceivablesID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15521,7 +15754,7 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT FeeID, FeeName, FeeAmount, PermitID FROM dbo.Fees";
+            this._commandCollection[0].CommandText = "SELECT FeeID, FeeName, FeeAmount, PermitID, ReceivablesID FROM dbo.Fees";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15582,7 +15815,7 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_FeeID, string Original_FeeName, global::System.Nullable<decimal> Original_FeeAmount, string Original_PermitID) {
+        public virtual int Delete(string Original_FeeID, string Original_FeeName, global::System.Nullable<decimal> Original_FeeAmount, string Original_PermitID, string Original_ReceivablesID) {
             if ((Original_FeeID == null)) {
                 throw new global::System.ArgumentNullException("Original_FeeID");
             }
@@ -15613,6 +15846,14 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_PermitID));
             }
+            if ((Original_ReceivablesID == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_ReceivablesID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -15633,7 +15874,7 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FeeID, string FeeName, global::System.Nullable<decimal> FeeAmount, string PermitID) {
+        public virtual int Insert(string FeeID, string FeeName, global::System.Nullable<decimal> FeeAmount, string PermitID, string ReceivablesID) {
             if ((FeeID == null)) {
                 throw new global::System.ArgumentNullException("FeeID");
             }
@@ -15658,6 +15899,12 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PermitID));
             }
+            if ((ReceivablesID == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ReceivablesID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -15678,7 +15925,7 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FeeID, string FeeName, global::System.Nullable<decimal> FeeAmount, string PermitID, string Original_FeeID, string Original_FeeName, global::System.Nullable<decimal> Original_FeeAmount, string Original_PermitID) {
+        public virtual int Update(string FeeID, string FeeName, global::System.Nullable<decimal> FeeAmount, string PermitID, string ReceivablesID, string Original_FeeID, string Original_FeeName, global::System.Nullable<decimal> Original_FeeAmount, string Original_PermitID, string Original_ReceivablesID) {
             if ((FeeID == null)) {
                 throw new global::System.ArgumentNullException("FeeID");
             }
@@ -15703,35 +15950,49 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(PermitID));
             }
+            if ((ReceivablesID == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ReceivablesID));
+            }
             if ((Original_FeeID == null)) {
                 throw new global::System.ArgumentNullException("Original_FeeID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_FeeID));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_FeeID));
             }
             if ((Original_FeeName == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_FeeName));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_FeeName));
             }
             if ((Original_FeeAmount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_FeeAmount.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_FeeAmount.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Original_PermitID == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_PermitID));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_PermitID));
+            }
+            if ((Original_ReceivablesID == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ReceivablesID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15753,8 +16014,8 @@ SELECT FeeID, FeeName, FeeAmount, PermitID FROM Fees WHERE (FeeID = @FeeID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FeeName, global::System.Nullable<decimal> FeeAmount, string PermitID, string Original_FeeID, string Original_FeeName, global::System.Nullable<decimal> Original_FeeAmount, string Original_PermitID) {
-            return this.Update(Original_FeeID, FeeName, FeeAmount, PermitID, Original_FeeID, Original_FeeName, Original_FeeAmount, Original_PermitID);
+        public virtual int Update(string FeeName, global::System.Nullable<decimal> FeeAmount, string PermitID, string ReceivablesID, string Original_FeeID, string Original_FeeName, global::System.Nullable<decimal> Original_FeeAmount, string Original_PermitID, string Original_ReceivablesID) {
+            return this.Update(Original_FeeID, FeeName, FeeAmount, PermitID, ReceivablesID, Original_FeeID, Original_FeeName, Original_FeeAmount, Original_PermitID, Original_ReceivablesID);
         }
     }
     
@@ -15930,7 +16191,7 @@ SELECT InspectionRequestID, [Inspection Notes], InspectionStatus, PermitID, Insp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16353,7 +16614,7 @@ SELECT InspectorID, InspectorFname, InspectorLname FROM InspectorTable WHERE (In
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16737,7 +16998,7 @@ SELECT MechID, SystemType, NumSystems, Tons, GasLine, BuildingID, SSMA_TimeStamp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17106,10 +17367,11 @@ SELECT MechID, SystemType, NumSystems, Tons, GasLine, BuildingID, SSMA_TimeStamp
             tableMapping.ColumnMappings.Add("ParcelZoningDist", "ParcelZoningDist");
             tableMapping.ColumnMappings.Add("ParcelTaxAcre", "ParcelTaxAcre");
             tableMapping.ColumnMappings.Add("ParcelDeedAcre", "ParcelDeedAcre");
+            tableMapping.ColumnMappings.Add("ContactID", "ContactID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Parcel] WHERE (([ParcelID] = @Original_ParcelID) AND ((@IsNull_ParcelAddress = 1 AND [ParcelAddress] IS NULL) OR ([ParcelAddress] = @Original_ParcelAddress)) AND ((@IsNull_ParacelCity = 1 AND [ParacelCity] IS NULL) OR ([ParacelCity] = @Original_ParacelCity)) AND ((@IsNull_ParacelState = 1 AND [ParacelState] IS NULL) OR ([ParacelState] = @Original_ParacelState)) AND ((@IsNull_ParacelZip = 1 AND [ParacelZip] IS NULL) OR ([ParacelZip] = @Original_ParacelZip)) AND ((@IsNull_ParcelDeedBook = 1 AND [ParcelDeedBook] IS NULL) OR ([ParcelDeedBook] = @Original_ParcelDeedBook)) AND ((@IsNull_ParcelDeedPage = 1 AND [ParcelDeedPage] IS NULL) OR ([ParcelDeedPage] = @Original_ParcelDeedPage)) AND ((@IsNull_ParcelLotNum = 1 AND [ParcelLotNum] IS NULL) OR ([ParcelLotNum] = @Original_ParcelLotNum)) AND ((@IsNull_ParcelSize = 1 AND [ParcelSize] IS NULL) OR ([ParcelSize] = @Original_ParcelSize)) AND ((@IsNull_ParcelValue = 1 AND [ParcelValue] IS NULL) OR ([ParcelValue] = @Original_ParcelValue)) AND ((@IsNull_ParcelZoningDist = 1 AND [ParcelZoningDist] IS NULL) OR ([ParcelZoningDist] = @Original_ParcelZoningDist)) AND ((@IsNull_ParcelTaxAcre = 1 AND [ParcelTaxAcre] IS NULL) OR ([ParcelTaxAcre] = @Original_ParcelTaxAcre)) AND ((@IsNull_ParcelDeedAcre = 1 AND [ParcelDeedAcre] IS NULL) OR ([ParcelDeedAcre] = @Original_ParcelDeedAcre)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Parcel] WHERE (([ParcelID] = @Original_ParcelID) AND ((@IsNull_ParcelAddress = 1 AND [ParcelAddress] IS NULL) OR ([ParcelAddress] = @Original_ParcelAddress)) AND ((@IsNull_ParacelCity = 1 AND [ParacelCity] IS NULL) OR ([ParacelCity] = @Original_ParacelCity)) AND ((@IsNull_ParacelState = 1 AND [ParacelState] IS NULL) OR ([ParacelState] = @Original_ParacelState)) AND ((@IsNull_ParacelZip = 1 AND [ParacelZip] IS NULL) OR ([ParacelZip] = @Original_ParacelZip)) AND ((@IsNull_ParcelDeedBook = 1 AND [ParcelDeedBook] IS NULL) OR ([ParcelDeedBook] = @Original_ParcelDeedBook)) AND ((@IsNull_ParcelDeedPage = 1 AND [ParcelDeedPage] IS NULL) OR ([ParcelDeedPage] = @Original_ParcelDeedPage)) AND ((@IsNull_ParcelLotNum = 1 AND [ParcelLotNum] IS NULL) OR ([ParcelLotNum] = @Original_ParcelLotNum)) AND ((@IsNull_ParcelSize = 1 AND [ParcelSize] IS NULL) OR ([ParcelSize] = @Original_ParcelSize)) AND ((@IsNull_ParcelValue = 1 AND [ParcelValue] IS NULL) OR ([ParcelValue] = @Original_ParcelValue)) AND ((@IsNull_ParcelZoningDist = 1 AND [ParcelZoningDist] IS NULL) OR ([ParcelZoningDist] = @Original_ParcelZoningDist)) AND ((@IsNull_ParcelTaxAcre = 1 AND [ParcelTaxAcre] IS NULL) OR ([ParcelTaxAcre] = @Original_ParcelTaxAcre)) AND ((@IsNull_ParcelDeedAcre = 1 AND [ParcelDeedAcre] IS NULL) OR ([ParcelDeedAcre] = @Original_ParcelDeedAcre)) AND ((@IsNull_ContactID = 1 AND [ContactID] IS NULL) OR ([ContactID] = @Original_ContactID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ParcelAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -17136,10 +17398,12 @@ SELECT MechID, SystemType, NumSystems, Tons, GasLine, BuildingID, SSMA_TimeStamp
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelTaxAcre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelTaxAcre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ParcelDeedAcre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelDeedAcre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelDeedAcre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelDeedAcre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Parcel] ([ParcelID], [ParcelAddress], [ParacelCity], [ParacelState], [ParacelZip], [ParcelDeedBook], [ParcelDeedPage], [ParcelLotNum], [ParcelSize], [ParcelValue], [ParcelZoningDist], [ParcelTaxAcre], [ParcelDeedAcre]) VALUES (@ParcelID, @ParcelAddress, @ParacelCity, @ParacelState, @ParacelZip, @ParcelDeedBook, @ParcelDeedPage, @ParcelLotNum, @ParcelSize, @ParcelValue, @ParcelZoningDist, @ParcelTaxAcre, @ParcelDeedAcre);
-SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDeedBook, ParcelDeedPage, ParcelLotNum, ParcelSize, ParcelValue, ParcelZoningDist, ParcelTaxAcre, ParcelDeedAcre FROM Parcel WHERE (ParcelID = @ParcelID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Parcel] ([ParcelID], [ParcelAddress], [ParacelCity], [ParacelState], [ParacelZip], [ParcelDeedBook], [ParcelDeedPage], [ParcelLotNum], [ParcelSize], [ParcelValue], [ParcelZoningDist], [ParcelTaxAcre], [ParcelDeedAcre], [ContactID]) VALUES (@ParcelID, @ParcelAddress, @ParacelCity, @ParacelState, @ParacelZip, @ParcelDeedBook, @ParcelDeedPage, @ParcelLotNum, @ParcelSize, @ParcelValue, @ParcelZoningDist, @ParcelTaxAcre, @ParcelDeedAcre, @ContactID);
+SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDeedBook, ParcelDeedPage, ParcelLotNum, ParcelSize, ParcelValue, ParcelZoningDist, ParcelTaxAcre, ParcelDeedAcre, ContactID FROM Parcel WHERE (ParcelID = @ParcelID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -17154,6 +17418,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelZoningDist", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelZoningDist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelTaxAcre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelTaxAcre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelDeedAcre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelDeedAcre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Parcel] SET [ParcelID] = @ParcelID, [ParcelAddress] = @ParcelAddres" +
@@ -17161,27 +17426,28 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
                 "@ParacelZip, [ParcelDeedBook] = @ParcelDeedBook, [ParcelDeedPage] = @ParcelDeedP" +
                 "age, [ParcelLotNum] = @ParcelLotNum, [ParcelSize] = @ParcelSize, [ParcelValue] =" +
                 " @ParcelValue, [ParcelZoningDist] = @ParcelZoningDist, [ParcelTaxAcre] = @Parcel" +
-                "TaxAcre, [ParcelDeedAcre] = @ParcelDeedAcre WHERE (([ParcelID] = @Original_Parce" +
-                "lID) AND ((@IsNull_ParcelAddress = 1 AND [ParcelAddress] IS NULL) OR ([ParcelAdd" +
-                "ress] = @Original_ParcelAddress)) AND ((@IsNull_ParacelCity = 1 AND [ParacelCity" +
-                "] IS NULL) OR ([ParacelCity] = @Original_ParacelCity)) AND ((@IsNull_ParacelStat" +
-                "e = 1 AND [ParacelState] IS NULL) OR ([ParacelState] = @Original_ParacelState)) " +
-                "AND ((@IsNull_ParacelZip = 1 AND [ParacelZip] IS NULL) OR ([ParacelZip] = @Origi" +
-                "nal_ParacelZip)) AND ((@IsNull_ParcelDeedBook = 1 AND [ParcelDeedBook] IS NULL) " +
-                "OR ([ParcelDeedBook] = @Original_ParcelDeedBook)) AND ((@IsNull_ParcelDeedPage =" +
-                " 1 AND [ParcelDeedPage] IS NULL) OR ([ParcelDeedPage] = @Original_ParcelDeedPage" +
-                ")) AND ((@IsNull_ParcelLotNum = 1 AND [ParcelLotNum] IS NULL) OR ([ParcelLotNum]" +
-                " = @Original_ParcelLotNum)) AND ((@IsNull_ParcelSize = 1 AND [ParcelSize] IS NUL" +
-                "L) OR ([ParcelSize] = @Original_ParcelSize)) AND ((@IsNull_ParcelValue = 1 AND [" +
-                "ParcelValue] IS NULL) OR ([ParcelValue] = @Original_ParcelValue)) AND ((@IsNull_" +
-                "ParcelZoningDist = 1 AND [ParcelZoningDist] IS NULL) OR ([ParcelZoningDist] = @O" +
-                "riginal_ParcelZoningDist)) AND ((@IsNull_ParcelTaxAcre = 1 AND [ParcelTaxAcre] I" +
-                "S NULL) OR ([ParcelTaxAcre] = @Original_ParcelTaxAcre)) AND ((@IsNull_ParcelDeed" +
-                "Acre = 1 AND [ParcelDeedAcre] IS NULL) OR ([ParcelDeedAcre] = @Original_ParcelDe" +
-                "edAcre)));\r\nSELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZi" +
-                "p, ParcelDeedBook, ParcelDeedPage, ParcelLotNum, ParcelSize, ParcelValue, Parcel" +
-                "ZoningDist, ParcelTaxAcre, ParcelDeedAcre FROM Parcel WHERE (ParcelID = @ParcelI" +
-                "D)";
+                "TaxAcre, [ParcelDeedAcre] = @ParcelDeedAcre, [ContactID] = @ContactID WHERE (([P" +
+                "arcelID] = @Original_ParcelID) AND ((@IsNull_ParcelAddress = 1 AND [ParcelAddres" +
+                "s] IS NULL) OR ([ParcelAddress] = @Original_ParcelAddress)) AND ((@IsNull_Parace" +
+                "lCity = 1 AND [ParacelCity] IS NULL) OR ([ParacelCity] = @Original_ParacelCity))" +
+                " AND ((@IsNull_ParacelState = 1 AND [ParacelState] IS NULL) OR ([ParacelState] =" +
+                " @Original_ParacelState)) AND ((@IsNull_ParacelZip = 1 AND [ParacelZip] IS NULL)" +
+                " OR ([ParacelZip] = @Original_ParacelZip)) AND ((@IsNull_ParcelDeedBook = 1 AND " +
+                "[ParcelDeedBook] IS NULL) OR ([ParcelDeedBook] = @Original_ParcelDeedBook)) AND " +
+                "((@IsNull_ParcelDeedPage = 1 AND [ParcelDeedPage] IS NULL) OR ([ParcelDeedPage] " +
+                "= @Original_ParcelDeedPage)) AND ((@IsNull_ParcelLotNum = 1 AND [ParcelLotNum] I" +
+                "S NULL) OR ([ParcelLotNum] = @Original_ParcelLotNum)) AND ((@IsNull_ParcelSize =" +
+                " 1 AND [ParcelSize] IS NULL) OR ([ParcelSize] = @Original_ParcelSize)) AND ((@Is" +
+                "Null_ParcelValue = 1 AND [ParcelValue] IS NULL) OR ([ParcelValue] = @Original_Pa" +
+                "rcelValue)) AND ((@IsNull_ParcelZoningDist = 1 AND [ParcelZoningDist] IS NULL) O" +
+                "R ([ParcelZoningDist] = @Original_ParcelZoningDist)) AND ((@IsNull_ParcelTaxAcre" +
+                " = 1 AND [ParcelTaxAcre] IS NULL) OR ([ParcelTaxAcre] = @Original_ParcelTaxAcre)" +
+                ") AND ((@IsNull_ParcelDeedAcre = 1 AND [ParcelDeedAcre] IS NULL) OR ([ParcelDeed" +
+                "Acre] = @Original_ParcelDeedAcre)) AND ((@IsNull_ContactID = 1 AND [ContactID] I" +
+                "S NULL) OR ([ContactID] = @Original_ContactID)));\r\nSELECT ParcelID, ParcelAddres" +
+                "s, ParacelCity, ParacelState, ParacelZip, ParcelDeedBook, ParcelDeedPage, Parcel" +
+                "LotNum, ParcelSize, ParcelValue, ParcelZoningDist, ParcelTaxAcre, ParcelDeedAcre" +
+                ", ContactID FROM Parcel WHERE (ParcelID = @ParcelID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -17196,6 +17462,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelZoningDist", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelZoningDist", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelTaxAcre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelTaxAcre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelDeedAcre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelDeedAcre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ParcelAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -17221,13 +17488,15 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelTaxAcre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelTaxAcre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ParcelDeedAcre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelDeedAcre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ParcelDeedAcre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelDeedAcre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17238,7 +17507,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDeed" +
                 "Book, ParcelDeedPage, ParcelLotNum, ParcelSize, ParcelValue, ParcelZoningDist, P" +
-                "arcelTaxAcre, ParcelDeedAcre FROM dbo.Parcel";
+                "arcelTaxAcre, ParcelDeedAcre, ContactID FROM dbo.Parcel";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -17299,7 +17568,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ParcelID, string Original_ParcelAddress, string Original_ParacelCity, string Original_ParacelState, string Original_ParacelZip, string Original_ParcelDeedBook, string Original_ParcelDeedPage, global::System.Nullable<int> Original_ParcelLotNum, string Original_ParcelSize, global::System.Nullable<decimal> Original_ParcelValue, string Original_ParcelZoningDist, global::System.Nullable<int> Original_ParcelTaxAcre, string Original_ParcelDeedAcre) {
+        public virtual int Delete(string Original_ParcelID, string Original_ParcelAddress, string Original_ParacelCity, string Original_ParacelState, string Original_ParacelZip, string Original_ParcelDeedBook, string Original_ParcelDeedPage, global::System.Nullable<int> Original_ParcelLotNum, string Original_ParcelSize, global::System.Nullable<decimal> Original_ParcelValue, string Original_ParcelZoningDist, global::System.Nullable<int> Original_ParcelTaxAcre, string Original_ParcelDeedAcre, string Original_ContactID) {
             if ((Original_ParcelID == null)) {
                 throw new global::System.ArgumentNullException("Original_ParcelID");
             }
@@ -17402,6 +17671,14 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_ParcelDeedAcre));
             }
+            if ((Original_ContactID == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_ContactID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17422,7 +17699,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ParcelID, string ParcelAddress, string ParacelCity, string ParacelState, string ParacelZip, string ParcelDeedBook, string ParcelDeedPage, global::System.Nullable<int> ParcelLotNum, string ParcelSize, global::System.Nullable<decimal> ParcelValue, string ParcelZoningDist, global::System.Nullable<int> ParcelTaxAcre, string ParcelDeedAcre) {
+        public virtual int Insert(string ParcelID, string ParcelAddress, string ParacelCity, string ParacelState, string ParacelZip, string ParcelDeedBook, string ParcelDeedPage, global::System.Nullable<int> ParcelLotNum, string ParcelSize, global::System.Nullable<decimal> ParcelValue, string ParcelZoningDist, global::System.Nullable<int> ParcelTaxAcre, string ParcelDeedAcre, string ContactID) {
             if ((ParcelID == null)) {
                 throw new global::System.ArgumentNullException("ParcelID");
             }
@@ -17501,6 +17778,12 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = ((string)(ParcelDeedAcre));
             }
+            if ((ContactID == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(ContactID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17535,6 +17818,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
                     string ParcelZoningDist, 
                     global::System.Nullable<int> ParcelTaxAcre, 
                     string ParcelDeedAcre, 
+                    string ContactID, 
                     string Original_ParcelID, 
                     string Original_ParcelAddress, 
                     string Original_ParacelCity, 
@@ -17547,7 +17831,8 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
                     global::System.Nullable<decimal> Original_ParcelValue, 
                     string Original_ParcelZoningDist, 
                     global::System.Nullable<int> Original_ParcelTaxAcre, 
-                    string Original_ParcelDeedAcre) {
+                    string Original_ParcelDeedAcre, 
+                    string Original_ContactID) {
             if ((ParcelID == null)) {
                 throw new global::System.ArgumentNullException("ParcelID");
             }
@@ -17626,107 +17911,121 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(ParcelDeedAcre));
             }
+            if ((ContactID == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(ContactID));
+            }
             if ((Original_ParcelID == null)) {
                 throw new global::System.ArgumentNullException("Original_ParcelID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ParcelID));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_ParcelID));
             }
             if ((Original_ParcelAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_ParcelAddress));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_ParcelAddress));
             }
             if ((Original_ParacelCity == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_ParacelCity));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_ParacelCity));
             }
             if ((Original_ParacelState == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_ParacelState));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_ParacelState));
             }
             if ((Original_ParacelZip == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_ParacelZip));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ParacelZip));
             }
             if ((Original_ParcelDeedBook == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_ParcelDeedBook));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ParcelDeedBook));
             }
             if ((Original_ParcelDeedPage == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_ParcelDeedPage));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_ParcelDeedPage));
             }
             if ((Original_ParcelLotNum.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_ParcelLotNum.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_ParcelLotNum.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_ParcelSize == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_ParcelSize));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_ParcelSize));
             }
             if ((Original_ParcelValue.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(Original_ParcelValue.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original_ParcelValue.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             if ((Original_ParcelZoningDist == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_ParcelZoningDist));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_ParcelZoningDist));
             }
             if ((Original_ParcelTaxAcre.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_ParcelTaxAcre.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_ParcelTaxAcre.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             if ((Original_ParcelDeedAcre == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_ParcelDeedAcre));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_ParcelDeedAcre));
+            }
+            if ((Original_ContactID == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_ContactID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17761,6 +18060,7 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
                     string ParcelZoningDist, 
                     global::System.Nullable<int> ParcelTaxAcre, 
                     string ParcelDeedAcre, 
+                    string ContactID, 
                     string Original_ParcelID, 
                     string Original_ParcelAddress, 
                     string Original_ParacelCity, 
@@ -17773,8 +18073,9 @@ SELECT ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDee
                     global::System.Nullable<decimal> Original_ParcelValue, 
                     string Original_ParcelZoningDist, 
                     global::System.Nullable<int> Original_ParcelTaxAcre, 
-                    string Original_ParcelDeedAcre) {
-            return this.Update(Original_ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDeedBook, ParcelDeedPage, ParcelLotNum, ParcelSize, ParcelValue, ParcelZoningDist, ParcelTaxAcre, ParcelDeedAcre, Original_ParcelID, Original_ParcelAddress, Original_ParacelCity, Original_ParacelState, Original_ParacelZip, Original_ParcelDeedBook, Original_ParcelDeedPage, Original_ParcelLotNum, Original_ParcelSize, Original_ParcelValue, Original_ParcelZoningDist, Original_ParcelTaxAcre, Original_ParcelDeedAcre);
+                    string Original_ParcelDeedAcre, 
+                    string Original_ContactID) {
+            return this.Update(Original_ParcelID, ParcelAddress, ParacelCity, ParacelState, ParacelZip, ParcelDeedBook, ParcelDeedPage, ParcelLotNum, ParcelSize, ParcelValue, ParcelZoningDist, ParcelTaxAcre, ParcelDeedAcre, ContactID, Original_ParcelID, Original_ParcelAddress, Original_ParacelCity, Original_ParacelState, Original_ParacelZip, Original_ParcelDeedBook, Original_ParcelDeedPage, Original_ParcelLotNum, Original_ParcelSize, Original_ParcelValue, Original_ParcelZoningDist, Original_ParcelTaxAcre, Original_ParcelDeedAcre, Original_ContactID);
         }
     }
     
@@ -17940,7 +18241,7 @@ SELECT UserName, hashPassword, currTime, acctType, SSMA_TimeStamp FROM password 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18278,10 +18579,11 @@ SELECT UserName, hashPassword, currTime, acctType, SSMA_TimeStamp FROM password 
             tableMapping.ColumnMappings.Add("ParcelID", "ParcelID");
             tableMapping.ColumnMappings.Add("FeeTotal", "FeeTotal");
             tableMapping.ColumnMappings.Add("ContactID", "ContactID");
+            tableMapping.ColumnMappings.Add("BuildingID", "BuildingID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Permit] WHERE (([PermitID] = @Original_PermitID) AND ((@IsNull_PermitDate = 1 AND [PermitDate] IS NULL) OR ([PermitDate] = @Original_PermitDate)) AND ((@IsNull_InpsectorID = 1 AND [InpsectorID] IS NULL) OR ([InpsectorID] = @Original_InpsectorID)) AND ((@IsNull_ParcelID = 1 AND [ParcelID] IS NULL) OR ([ParcelID] = @Original_ParcelID)) AND ((@IsNull_FeeTotal = 1 AND [FeeTotal] IS NULL) OR ([FeeTotal] = @Original_FeeTotal)) AND ((@IsNull_ContactID = 1 AND [ContactID] IS NULL) OR ([ContactID] = @Original_ContactID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Permit] WHERE (([PermitID] = @Original_PermitID) AND ((@IsNull_PermitDate = 1 AND [PermitDate] IS NULL) OR ([PermitDate] = @Original_PermitDate)) AND ((@IsNull_InpsectorID = 1 AND [InpsectorID] IS NULL) OR ([InpsectorID] = @Original_InpsectorID)) AND ((@IsNull_ParcelID = 1 AND [ParcelID] IS NULL) OR ([ParcelID] = @Original_ParcelID)) AND ((@IsNull_FeeTotal = 1 AND [FeeTotal] IS NULL) OR ([FeeTotal] = @Original_FeeTotal)) AND ((@IsNull_ContactID = 1 AND [ContactID] IS NULL) OR ([ContactID] = @Original_ContactID)) AND ((@IsNull_BuildingID = 1 AND [BuildingID] IS NULL) OR ([BuildingID] = @Original_BuildingID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PermitDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -18294,10 +18596,12 @@ SELECT UserName, hashPassword, currTime, acctType, SSMA_TimeStamp FROM password 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BuildingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BuildingID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BuildingID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BuildingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Permit] ([PermitID], [PermitDate], [InpsectorID], [ParcelID], [FeeTotal], [ContactID]) VALUES (@PermitID, @PermitDate, @InpsectorID, @ParcelID, @FeeTotal, @ContactID);
-SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Permit WHERE (PermitID = @PermitID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Permit] ([PermitID], [PermitDate], [InpsectorID], [ParcelID], [FeeTotal], [ContactID], [BuildingID]) VALUES (@PermitID, @PermitDate, @InpsectorID, @ParcelID, @FeeTotal, @ContactID, @BuildingID);
+SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID, BuildingID FROM Permit WHERE (PermitID = @PermitID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PermitDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -18305,10 +18609,11 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BuildingID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BuildingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Permit] SET [PermitID] = @PermitID, [PermitDate] = @PermitDate, [InpsectorID] = @InpsectorID, [ParcelID] = @ParcelID, [FeeTotal] = @FeeTotal, [ContactID] = @ContactID WHERE (([PermitID] = @Original_PermitID) AND ((@IsNull_PermitDate = 1 AND [PermitDate] IS NULL) OR ([PermitDate] = @Original_PermitDate)) AND ((@IsNull_InpsectorID = 1 AND [InpsectorID] IS NULL) OR ([InpsectorID] = @Original_InpsectorID)) AND ((@IsNull_ParcelID = 1 AND [ParcelID] IS NULL) OR ([ParcelID] = @Original_ParcelID)) AND ((@IsNull_FeeTotal = 1 AND [FeeTotal] IS NULL) OR ([FeeTotal] = @Original_FeeTotal)) AND ((@IsNull_ContactID = 1 AND [ContactID] IS NULL) OR ([ContactID] = @Original_ContactID)));
-SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Permit WHERE (PermitID = @PermitID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Permit] SET [PermitID] = @PermitID, [PermitDate] = @PermitDate, [InpsectorID] = @InpsectorID, [ParcelID] = @ParcelID, [FeeTotal] = @FeeTotal, [ContactID] = @ContactID, [BuildingID] = @BuildingID WHERE (([PermitID] = @Original_PermitID) AND ((@IsNull_PermitDate = 1 AND [PermitDate] IS NULL) OR ([PermitDate] = @Original_PermitDate)) AND ((@IsNull_InpsectorID = 1 AND [InpsectorID] IS NULL) OR ([InpsectorID] = @Original_InpsectorID)) AND ((@IsNull_ParcelID = 1 AND [ParcelID] IS NULL) OR ([ParcelID] = @Original_ParcelID)) AND ((@IsNull_FeeTotal = 1 AND [FeeTotal] IS NULL) OR ([FeeTotal] = @Original_FeeTotal)) AND ((@IsNull_ContactID = 1 AND [ContactID] IS NULL) OR ([ContactID] = @Original_ContactID)) AND ((@IsNull_BuildingID = 1 AND [BuildingID] IS NULL) OR ([BuildingID] = @Original_BuildingID)));
+SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID, BuildingID FROM Permit WHERE (PermitID = @PermitID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PermitDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -18316,6 +18621,7 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParcelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParcelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FeeTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BuildingID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BuildingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PermitID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PermitDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PermitDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PermitDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -18327,13 +18633,15 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FeeTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FeeTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BuildingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BuildingID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BuildingID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BuildingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18342,8 +18650,8 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM dbo." +
-                "Permit";
+            this._commandCollection[0].CommandText = "SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID, Building" +
+                "ID FROM dbo.Permit";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18404,7 +18712,7 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_PermitID, global::System.Nullable<global::System.DateTime> Original_PermitDate, string Original_InpsectorID, string Original_ParcelID, global::System.Nullable<int> Original_FeeTotal, string Original_ContactID) {
+        public virtual int Delete(string Original_PermitID, global::System.Nullable<global::System.DateTime> Original_PermitDate, string Original_InpsectorID, string Original_ParcelID, global::System.Nullable<int> Original_FeeTotal, string Original_ContactID, string Original_BuildingID) {
             if ((Original_PermitID == null)) {
                 throw new global::System.ArgumentNullException("Original_PermitID");
             }
@@ -18451,6 +18759,14 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_ContactID));
             }
+            if ((Original_BuildingID == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_BuildingID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18471,7 +18787,7 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string PermitID, global::System.Nullable<global::System.DateTime> PermitDate, string InpsectorID, string ParcelID, global::System.Nullable<int> FeeTotal, string ContactID) {
+        public virtual int Insert(string PermitID, global::System.Nullable<global::System.DateTime> PermitDate, string InpsectorID, string ParcelID, global::System.Nullable<int> FeeTotal, string ContactID, string BuildingID) {
             if ((PermitID == null)) {
                 throw new global::System.ArgumentNullException("PermitID");
             }
@@ -18508,6 +18824,12 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ContactID));
             }
+            if ((BuildingID == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(BuildingID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18528,7 +18850,7 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string PermitID, global::System.Nullable<global::System.DateTime> PermitDate, string InpsectorID, string ParcelID, global::System.Nullable<int> FeeTotal, string ContactID, string Original_PermitID, global::System.Nullable<global::System.DateTime> Original_PermitDate, string Original_InpsectorID, string Original_ParcelID, global::System.Nullable<int> Original_FeeTotal, string Original_ContactID) {
+        public virtual int Update(string PermitID, global::System.Nullable<global::System.DateTime> PermitDate, string InpsectorID, string ParcelID, global::System.Nullable<int> FeeTotal, string ContactID, string BuildingID, string Original_PermitID, global::System.Nullable<global::System.DateTime> Original_PermitDate, string Original_InpsectorID, string Original_ParcelID, global::System.Nullable<int> Original_FeeTotal, string Original_ContactID, string Original_BuildingID) {
             if ((PermitID == null)) {
                 throw new global::System.ArgumentNullException("PermitID");
             }
@@ -18565,51 +18887,65 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ContactID));
             }
+            if ((BuildingID == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(BuildingID));
+            }
             if ((Original_PermitID == null)) {
                 throw new global::System.ArgumentNullException("Original_PermitID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_PermitID));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_PermitID));
             }
             if ((Original_PermitDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_PermitDate.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_PermitDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Original_InpsectorID == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_InpsectorID));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_InpsectorID));
             }
             if ((Original_ParcelID == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ParcelID));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ParcelID));
             }
             if ((Original_FeeTotal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_FeeTotal.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_FeeTotal.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_ContactID == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_ContactID));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_ContactID));
+            }
+            if ((Original_BuildingID == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_BuildingID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -18631,8 +18967,8 @@ SELECT PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID FROM Per
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> PermitDate, string InpsectorID, string ParcelID, global::System.Nullable<int> FeeTotal, string ContactID, string Original_PermitID, global::System.Nullable<global::System.DateTime> Original_PermitDate, string Original_InpsectorID, string Original_ParcelID, global::System.Nullable<int> Original_FeeTotal, string Original_ContactID) {
-            return this.Update(Original_PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID, Original_PermitID, Original_PermitDate, Original_InpsectorID, Original_ParcelID, Original_FeeTotal, Original_ContactID);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> PermitDate, string InpsectorID, string ParcelID, global::System.Nullable<int> FeeTotal, string ContactID, string BuildingID, string Original_PermitID, global::System.Nullable<global::System.DateTime> Original_PermitDate, string Original_InpsectorID, string Original_ParcelID, global::System.Nullable<int> Original_FeeTotal, string Original_ContactID, string Original_BuildingID) {
+            return this.Update(Original_PermitID, PermitDate, InpsectorID, ParcelID, FeeTotal, ContactID, BuildingID, Original_PermitID, Original_PermitDate, Original_InpsectorID, Original_ParcelID, Original_FeeTotal, Original_ContactID, Original_BuildingID);
         }
     }
     
@@ -18823,7 +19159,7 @@ SELECT PlumbingID, TotNumFixtures, TotNumBathrooms, NumSinks, NumWaterCloset, Nu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19314,7 +19650,7 @@ SELECT ReceivablesID, PermitID, FeeID, CheckNumber, AmountPaid FROM Receivables 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19748,7 +20084,7 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20147,7 +20483,7 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20314,7 +20650,7 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20481,7 +20817,7 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString1;
+            this._connection.ConnectionString = global::BuildingPermit.Properties.Settings.Default.AberdeenPermittingConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20957,6 +21293,15 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(AberdeenPermittingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._contactTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Contact.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._contactTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._parcelTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Parcel.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -20975,12 +21320,12 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._contactTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Contact.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._buildingTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._contactTableAdapter.Update(updatedRows));
+                    result = (result + this._buildingTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -20993,12 +21338,12 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._feesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Fees.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._receivablesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Receivables.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._feesTableAdapter.Update(updatedRows));
+                    result = (result + this._receivablesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21020,21 +21365,12 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._buildingTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._plumbingTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Plumbing.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._buildingTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._receivablesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Receivables.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._receivablesTableAdapter.Update(updatedRows));
+                    result = (result + this._plumbingTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21047,12 +21383,12 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._plumbingTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Plumbing.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._feesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Fees.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._plumbingTableAdapter.Update(updatedRows));
+                    result = (result + this._feesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21074,15 +21410,6 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._inspectionRequestTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.InspectionRequest.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._inspectionRequestTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._passwordTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.password.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -21101,6 +21428,15 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._inspectionRequestTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.InspectionRequest.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._inspectionRequestTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -21111,6 +21447,14 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(AberdeenPermittingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._contactTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Contact.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._contactTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._parcelTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Parcel.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -21127,11 +21471,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._contactTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Contact.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._buildingTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._contactTableAdapter.Update(addedRows));
+                    result = (result + this._buildingTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21143,11 +21487,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._feesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Fees.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._receivablesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Receivables.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._feesTableAdapter.Update(addedRows));
+                    result = (result + this._receivablesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21167,19 +21511,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._buildingTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._plumbingTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Plumbing.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._buildingTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._receivablesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Receivables.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._receivablesTableAdapter.Update(addedRows));
+                    result = (result + this._plumbingTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21191,11 +21527,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._plumbingTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Plumbing.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._feesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Fees.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._plumbingTableAdapter.Update(addedRows));
+                    result = (result + this._feesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21215,14 +21551,6 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._inspectionRequestTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.InspectionRequest.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._inspectionRequestTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._passwordTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.password.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -21239,6 +21567,14 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._inspectionRequestTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.InspectionRequest.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._inspectionRequestTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -21249,6 +21585,14 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(AberdeenPermittingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._inspectionRequestTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.InspectionRequest.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._inspectionRequestTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._mechanicalTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Mechanical.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -21262,14 +21606,6 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._passwordTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._inspectionRequestTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.InspectionRequest.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._inspectionRequestTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21289,11 +21625,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._plumbingTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Plumbing.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._feesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Fees.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._plumbingTableAdapter.Update(deletedRows));
+                    result = (result + this._feesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21305,19 +21641,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._receivablesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Receivables.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._plumbingTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Plumbing.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._receivablesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._buildingTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._buildingTableAdapter.Update(deletedRows));
+                    result = (result + this._plumbingTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21337,11 +21665,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._feesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Fees.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._receivablesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Receivables.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._feesTableAdapter.Update(deletedRows));
+                    result = (result + this._receivablesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21353,11 +21681,11 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._contactTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Contact.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._buildingTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._contactTableAdapter.Update(deletedRows));
+                    result = (result + this._buildingTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21374,6 +21702,14 @@ SELECT BannerID, Address, City, State, Zip FROM SubBanAddy WHERE (Address = @Add
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._parcelTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._contactTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Contact.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._contactTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

@@ -56,6 +56,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtOwner = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnOwnerContact = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txtCell = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -87,8 +88,6 @@
             this.Contractors = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cmboNumAmps = new System.Windows.Forms.ComboBox();
-            this.numberAmpsFeesQueryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aberdeenPermittingDataSet = new BuildingPermit.AberdeenPermittingDataSet();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.cboxTempPole = new System.Windows.Forms.CheckBox();
@@ -200,8 +199,9 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
+            this.aberdeenPermittingDataSet = new BuildingPermit.AberdeenPermittingDataSet();
+            this.numberAmpsFeesQueryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.number_Amps_Fees_QueryTableAdapter = new BuildingPermit.AberdeenPermittingDataSetTableAdapters.Number_Amps_Fees_QueryTableAdapter();
-            this.btnOwnerContact = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -211,8 +211,6 @@
             this.groupBox12.SuspendLayout();
             this.Contractors.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numberAmpsFeesQueryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aberdeenPermittingDataSet)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -228,6 +226,8 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aberdeenPermittingDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberAmpsFeesQueryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -492,6 +492,16 @@
             this.label13.Size = new System.Drawing.Size(43, 13);
             this.label13.TabIndex = 176;
             this.label13.Text = "Owner";
+            // 
+            // btnOwnerContact
+            // 
+            this.btnOwnerContact.Location = new System.Drawing.Point(454, 18);
+            this.btnOwnerContact.Name = "btnOwnerContact";
+            this.btnOwnerContact.Size = new System.Drawing.Size(27, 20);
+            this.btnOwnerContact.TabIndex = 103;
+            this.btnOwnerContact.Text = "...";
+            this.btnOwnerContact.UseVisualStyleBackColor = true;
+            this.btnOwnerContact.Click += new System.EventHandler(this.btnOwnerContact_Click);
             // 
             // groupBox13
             // 
@@ -794,7 +804,6 @@
             // 
             // cmboNumAmps
             // 
-            this.cmboNumAmps.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.numberAmpsFeesQueryBindingSource, "FeeName", true));
             this.cmboNumAmps.DataSource = this.numberAmpsFeesQueryBindingSource;
             this.cmboNumAmps.DisplayMember = "FeeName";
             this.cmboNumAmps.FormattingEnabled = true;
@@ -804,16 +813,6 @@
             this.cmboNumAmps.TabIndex = 0;
             this.cmboNumAmps.ValueMember = "FeeName";
             this.cmboNumAmps.Leave += new System.EventHandler(this.cmboNumAmps_Leave);
-            // 
-            // numberAmpsFeesQueryBindingSource
-            // 
-            this.numberAmpsFeesQueryBindingSource.DataMember = "Number Amps Fees Query";
-            this.numberAmpsFeesQueryBindingSource.DataSource = this.aberdeenPermittingDataSet;
-            // 
-            // aberdeenPermittingDataSet
-            // 
-            this.aberdeenPermittingDataSet.DataSetName = "AberdeenPermittingDataSet";
-            this.aberdeenPermittingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label16
             // 
@@ -1870,19 +1869,19 @@
             this.txtNotes.Size = new System.Drawing.Size(701, 294);
             this.txtNotes.TabIndex = 0;
             // 
+            // aberdeenPermittingDataSet
+            // 
+            this.aberdeenPermittingDataSet.DataSetName = "AberdeenPermittingDataSet";
+            this.aberdeenPermittingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // numberAmpsFeesQueryBindingSource
+            // 
+            this.numberAmpsFeesQueryBindingSource.DataMember = "Number Amps Fees Query";
+            this.numberAmpsFeesQueryBindingSource.DataSource = this.aberdeenPermittingDataSet;
+            // 
             // number_Amps_Fees_QueryTableAdapter
             // 
             this.number_Amps_Fees_QueryTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnOwnerContact
-            // 
-            this.btnOwnerContact.Location = new System.Drawing.Point(454, 18);
-            this.btnOwnerContact.Name = "btnOwnerContact";
-            this.btnOwnerContact.Size = new System.Drawing.Size(27, 20);
-            this.btnOwnerContact.TabIndex = 103;
-            this.btnOwnerContact.Text = "...";
-            this.btnOwnerContact.UseVisualStyleBackColor = true;
-            this.btnOwnerContact.Click += new System.EventHandler(this.btnOwnerContact_Click);
             // 
             // BuildingPermitTabs
             // 
@@ -1909,8 +1908,6 @@
             this.Contractors.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numberAmpsFeesQueryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aberdeenPermittingDataSet)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -1940,6 +1937,8 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aberdeenPermittingDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberAmpsFeesQueryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2115,10 +2114,10 @@
         private System.Windows.Forms.CheckBox cboxDuctwork;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOwnerContact;
         private AberdeenPermittingDataSet aberdeenPermittingDataSet;
         private System.Windows.Forms.BindingSource numberAmpsFeesQueryBindingSource;
         private AberdeenPermittingDataSetTableAdapters.Number_Amps_Fees_QueryTableAdapter number_Amps_Fees_QueryTableAdapter;
-        private System.Windows.Forms.Button btnOwnerContact;
 
     }
 }
