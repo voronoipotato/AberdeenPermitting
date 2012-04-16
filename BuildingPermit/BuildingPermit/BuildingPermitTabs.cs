@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient; 
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Diagnostics; 
+using System.Diagnostics;
 
 namespace BuildingPermit
 {
     public partial class BuildingPermitTabs : Form
     {
-        public string connectionString; 
+        public string conStr;
 
         public static SqlDataReader queryDatabase(string queryString, string connectionString)
         {
@@ -40,7 +40,7 @@ namespace BuildingPermit
 
         }
 
-               private void btnNext3_Click(object sender, EventArgs e)
+        private void btnNext3_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 3;
         }
@@ -72,14 +72,13 @@ namespace BuildingPermit
 
         private void BuildingPermitTabs_Load(object sender, EventArgs e)
         {
+           
+
             // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
-           // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
-            connectionString = @"Data Source=JOHNREASOR-LT\SQLEXPRESS;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
-            SqlDataReader dataReader = queryDatabase("SELECT * FROM Contact", connectionString);
-            while (dataReader.Read()) {
-                    Debug.WriteLine((string)dataReader["ContactFname"]);
-            }
-            dataReader.Close();
+            // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
+            conStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
+
+            FillComboBox(conStr);
 
         }
 
@@ -250,63 +249,38 @@ namespace BuildingPermit
             utilities.numAmps = cmboNumAmps.Text;
         }
 
-        private void btnNext2_Click(object sender, EventArgs e)
-        {
-            
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"Building.xml");
-            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(building.GetType());
-            x.Serialize(file, building);
-            file.Close();
-
-
-            if (cboxDuctwork.Checked)
-            {
-                utilities.ductWork = true;
-            }
-            else
-            {
-                utilities.ductWork = false;
-            }
-
-            if (cboxGasLine.Checked)
-            {
-                utilities.gasLine = true;
-            }
-            else
-            {
-                utilities.gasLine = false;
-            }
-
-            if (cboxTempPole.Checked)
-            {
-                utilities.tempPole = true;
-            }
-            else
-            {
-                utilities.tempPole = false;
-            }
-
-            System.IO.StreamWriter fileUtilities = new System.IO.StreamWriter(@"Utilities.xml");
-            System.Xml.Serialization.XmlSerializer y = new System.Xml.Serialization.XmlSerializer(utilities.GetType());
-            y.Serialize(fileUtilities, utilities);
-            fileUtilities.Close();
-
-
-            if (holdTab == false)
-            {
-                tabControl1.SelectedIndex = 2;
-            }
-
-        }
-
         private void txtProperty_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void FillComboBox(string conStr)
         {
+            string query = "select FeeName FROM fees WHERE (FeeName LIKE 'Electrical%');";
+            using (SqlConnection connection = new SqlConnection(conStr))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader sqlReader = command.ExecuteReader();
+                try
+                {
+                    foreach (var item in sqlReader)
+                    {
+                        cmboNumAmps.Items.Add(item);
+                    }
 
+                    cmboNumAmps.Text = "--Choose Number of Amps--";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    sqlReader.Close();
+                }
+            }
         }
+
     }
 }
