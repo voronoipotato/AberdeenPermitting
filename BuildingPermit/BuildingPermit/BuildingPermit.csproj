@@ -61,16 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AberdeenPermittingDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AberdeenPermittingDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AberdeenPermittingDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AberdeenPermittingDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Building.cs" />
     <Compile Include="BuildingPermitTabs.cs">
       <SubType>Form</SubType>
@@ -134,28 +124,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
-    <None Include="AberdeenPermittingDataSet.xsc">
-      <DependentUpon>AberdeenPermittingDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AberdeenPermittingDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AberdeenPermittingDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AberdeenPermittingDataSet.xss">
-      <DependentUpon>AberdeenPermittingDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AberdeenPermittingDataSet1.xsc">
-      <DependentUpon>AberdeenPermittingDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="AberdeenPermittingDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AberdeenPermittingDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AberdeenPermittingDataSet1.xss">
-      <DependentUpon>AberdeenPermittingDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

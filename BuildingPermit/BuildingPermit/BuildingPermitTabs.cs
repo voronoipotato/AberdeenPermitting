@@ -76,7 +76,7 @@ namespace BuildingPermit
 
             // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
             // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
-            conStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
+            conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
 
             FillComboBox(conStr);
 

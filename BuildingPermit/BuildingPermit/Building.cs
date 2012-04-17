@@ -27,7 +27,7 @@ public class Building
     private string myBasementSF;
 
     /// <summary>
-    /// Basmeent Sf Property
+    /// Basement Sf Property
     /// </summary>
     public string basementSF
     {
