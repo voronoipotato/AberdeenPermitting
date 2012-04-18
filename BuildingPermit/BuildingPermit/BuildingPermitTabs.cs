@@ -11,9 +11,13 @@ using System.Diagnostics;
 
 namespace BuildingPermit
 {
+    
+     
+
     public partial class BuildingPermitTabs : Form
     {
-        public string conStr;
+        public string conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
+         
 
         public static SqlDataReader queryDatabase(string queryString, string connectionString)
         {
@@ -74,9 +78,7 @@ namespace BuildingPermit
         {
            
 
-            // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
-            // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
-            conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
+           
 
             FillComboBox(conStr);
 
