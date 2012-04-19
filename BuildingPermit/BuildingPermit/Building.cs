@@ -325,7 +325,13 @@ public class Building
     private string myGarageSF; garageSF
     private string myBasementSF; Basement
          */
-        string query = String.Format("Insert Into Building (TypeOfConst, estCostOfConst, Dimensions, TotalSF, heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, Basement) Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}); ", this.myBuildingType, this.myEstimatedCost, this.myDimensions, this.myTotalSF, this.myHeatedSF, this.myPorchSF, this.myNumStories, this.myDeckSF, this.myGarageSF, this.myBasementSF);
+        string query = String.Format("Insert Into Building " + 
+            " (TypeOfConst, estCostOfConst, Dimensions, TotalSF," + 
+            " heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, Basement)" + 
+            " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}); ",
+            this.myBuildingType, this.myEstimatedCost, this.myDimensions, this.myTotalSF, 
+            this.myHeatedSF, this.myPorchSF, this.myNumStories, this.myDeckSF, this.myGarageSF, this.myBasementSF);
+
         using (SqlConnection connection = new SqlConnection(conStr))
         {
             SqlCommand command = new SqlCommand(query, connection);

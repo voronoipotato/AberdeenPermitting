@@ -16,7 +16,7 @@ namespace BuildingPermit
 
     public partial class BuildingPermitTabs : Form
     {
-        public string conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
+        public const string conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
          
 
         public static SqlDataReader queryDatabase(string queryString, string connectionString)
