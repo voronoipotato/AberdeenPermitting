@@ -11,13 +11,9 @@ using System.Diagnostics;
 
 namespace BuildingPermit
 {
-    
-     
-
     public partial class BuildingPermitTabs : Form
     {
-        public const string conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
-         
+        public string conStr;
 
         public static SqlDataReader queryDatabase(string queryString, string connectionString)
         {
@@ -78,7 +74,9 @@ namespace BuildingPermit
         {
            
 
-           
+            // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
+            // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
+            conStr = @"Data Source=.\sqlexpress;Initial Catalog=AberdeenPermitting;User Id=Capstone;Password=Capstone2012;";
 
             FillComboBox(conStr);
 
@@ -283,6 +281,159 @@ namespace BuildingPermit
                 }
             }
         }
+
+        private void btnContractorContact_Click(object sender, EventArgs e)
+        
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnElectricalContact_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnPlumbingContact_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnMechanicalContact_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btngasContact_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnIrrigationContact_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnSearchApplicant_Click(object sender, EventArgs e)
+        {
+            Form frmNameLookup = new NameLookup();
+            frmNameLookup.Show();
+        }
+
+        private void btnAddApplicant_Click(object sender, EventArgs e)
+        {
+            Form frmContactInfo = new ContactInfo();
+            frmContactInfo.Show();
+        }
+
+        private void btnSearchProperty_Click(object sender, EventArgs e)
+        {
+            Form frmPropertyLookup = new frmPropertyLookup();
+            frmPropertyLookup.Show();
+        }
+
+        private void btnAddProperty_Click(object sender, EventArgs e)
+        {
+            Form frmPropertyAdd = new PropertyAdd();
+            frmPropertyAdd.Show();
+        }
+
+        private void btnSearchOwner_Click(object sender, EventArgs e)
+        {
+            Form frmNameLookup = new NameLookup();
+            frmNameLookup.Show();
+        }
+
+        private void btnAddOwner_Click(object sender, EventArgs e)
+        {
+            Form frmContactInfo = new ContactInfo();
+            frmContactInfo.Show();
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContractorSearch_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnElecSubSearch_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnPlumSubSearch_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnMecSubSearch_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnGasSubSearch_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnIrriSubSearch_Click(object sender, EventArgs e)
+        {
+            Form frmContractorLookup = new ContractorLookup();
+            frmContractorLookup.Show();
+        }
+
+        private void btnContractorAdd_Click(object sender, EventArgs e)
+        {
+            Form frmContractorAdd = new ContractorAdd();
+            frmContractorAdd.Show();
+        }
+
+        private void btnElecSubAdd_Click(object sender, EventArgs e)
+        {
+            Form frmContractorAdd = new ContractorAdd();
+            frmContractorAdd.Show();
+        }
+
+        private void btnPlumSubAdd_Click(object sender, EventArgs e)
+        {
+            Form frmContractorAdd = new ContractorAdd();
+            frmContractorAdd.Show();
+        }
+
+        private void btnMecSubAdd_Click(object sender, EventArgs e)
+        {
+            Form frmContractorAdd = new ContractorAdd();
+            frmContractorAdd.Show();
+        }
+
+        private void btnGasSubAdd_Click(object sender, EventArgs e)
+        {
+            Form frmContractorAdd = new ContractorAdd();
+            frmContractorAdd.Show();
+        }
+
+        private void btnIrriSubAdd_Click(object sender, EventArgs e)
+        {
+            Form frmContractorAdd = new ContractorAdd();
+            frmContractorAdd.Show();
+        }
+
+
+        
 
     }
 }

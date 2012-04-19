@@ -69,6 +69,12 @@
       <DependentUpon>BuildingPermitTabs.cs</DependentUpon>
     </Compile>
     <Compile Include="Contact.cs" />
+    <Compile Include="ContractorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractorAdd.Designer.cs">
+      <DependentUpon>ContractorAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="FirstPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,24 @@
     <Compile Include="Fees.Designer.cs">
       <DependentUpon>Fees.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContractorLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractorLookup.Designer.cs">
+      <DependentUpon>ContractorLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyAdd.Designer.cs">
+      <DependentUpon>PropertyAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPropertyLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPropertyLookup.Designer.cs">
+      <DependentUpon>FrmPropertyLookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="NameLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +125,9 @@
       <DependentUpon>BuildingPermitTabs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CertificateOfOccupancyReport.rdlc" />
+    <EmbeddedResource Include="ContractorAdd.resx">
+      <DependentUpon>ContractorAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FirstPage.resx">
       <DependentUpon>FirstPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fees.resx">
       <DependentUpon>Fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractorLookup.resx">
+      <DependentUpon>ContractorLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPropertyLookup.resx">
+      <DependentUpon>FrmPropertyLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InspectionRequestReport.rdlc" />
     <EmbeddedResource Include="NameLookup.resx">
@@ -123,6 +156,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PropertyAdd.resx">
+      <DependentUpon>PropertyAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report2.rdlc" />
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />

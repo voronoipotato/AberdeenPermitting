@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuildingPermitTabs));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearchAppNum = new System.Windows.Forms.Button();
+            this.btnSearchPermitNum = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.dtIssueDate = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
@@ -49,22 +50,26 @@
             this.txtBalance = new System.Windows.Forms.TextBox();
             this.btnFees = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.btnSearchOwner = new System.Windows.Forms.Button();
+            this.btnAddOwner = new System.Windows.Forms.Button();
             this.txtOwnerCell = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtOwnerPhone = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtOwner = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnOwnerContact = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.btnSearchApplicant = new System.Windows.Forms.Button();
+            this.btnAddApplicant = new System.Windows.Forms.Button();
             this.txtCell = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtApplicantPhone = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtApplicant = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnApplicantContact = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btnSearchProperty = new System.Windows.Forms.Button();
+            this.btnAddProperty = new System.Windows.Forms.Button();
             this.cmboProposedUse = new System.Windows.Forms.ComboBox();
             this.cmboCurrentUse = new System.Windows.Forms.ComboBox();
             this.cmboOccupancyType = new System.Windows.Forms.ComboBox();
@@ -80,7 +85,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtLotNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnPropertyContact = new System.Windows.Forms.Button();
             this.txtProperty = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
@@ -144,35 +148,40 @@
             this.label115 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btnIrriSubSearch = new System.Windows.Forms.Button();
+            this.btnIrriSubAdd = new System.Windows.Forms.Button();
             this.txtIrrigationPhone = new System.Windows.Forms.MaskedTextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.btnIrrigationContact = new System.Windows.Forms.Button();
             this.txtIrrigationLisenceNumber = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.txtIrrigationName = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnGasSubSearch = new System.Windows.Forms.Button();
+            this.btnGasSubAdd = new System.Windows.Forms.Button();
             this.txtGasPhone = new System.Windows.Forms.MaskedTextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.btngasContact = new System.Windows.Forms.Button();
             this.txtGasLisenceNumber = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.txtGasName = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnMecSubSearch = new System.Windows.Forms.Button();
+            this.btnMecSubAdd = new System.Windows.Forms.Button();
             this.txtMechanicalPhone = new System.Windows.Forms.MaskedTextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.btnMechanicalContact = new System.Windows.Forms.Button();
             this.txtMechanicalLisenceNumber = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.txtMechanicalName = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnPlumSubSearch = new System.Windows.Forms.Button();
+            this.btnPlumSubAdd = new System.Windows.Forms.Button();
             this.txtPlumbingPhone = new System.Windows.Forms.MaskedTextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.btnPlumbingContact = new System.Windows.Forms.Button();
             this.txtPlumbingLisenceNumber = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txtPlumbingName = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnContractorContact = new System.Windows.Forms.Button();
+            this.btnContractorSearch = new System.Windows.Forms.Button();
+            this.btnContractorAdd = new System.Windows.Forms.Button();
             this.txtContractorEmail = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.txtSiteManagerPhone = new System.Windows.Forms.MaskedTextBox();
@@ -186,9 +195,10 @@
             this.label106 = new System.Windows.Forms.Label();
             this.txtContractorName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnElecSubSearch = new System.Windows.Forms.Button();
+            this.btnElecSubAdd = new System.Windows.Forms.Button();
             this.txtElectricalPhone = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.btnElectricalContact = new System.Windows.Forms.Button();
             this.txtElectricalLisenceNumber = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
             this.txtElectricalName = new System.Windows.Forms.TextBox();
@@ -254,8 +264,8 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.button2);
-            this.groupBox19.Controls.Add(this.button1);
+            this.groupBox19.Controls.Add(this.btnSearchAppNum);
+            this.groupBox19.Controls.Add(this.btnSearchPermitNum);
             this.groupBox19.Controls.Add(this.label24);
             this.groupBox19.Controls.Add(this.dtIssueDate);
             this.groupBox19.Controls.Add(this.label23);
@@ -270,32 +280,36 @@
             this.groupBox19.Controls.Add(this.label19);
             this.groupBox19.Location = new System.Drawing.Point(535, 38);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(202, 177);
+            this.groupBox19.Size = new System.Drawing.Size(202, 212);
             this.groupBox19.TabIndex = 203;
             this.groupBox19.TabStop = false;
             // 
-            // button2
+            // btnSearchAppNum
             // 
-            this.button2.Location = new System.Drawing.Point(169, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 20);
-            this.button2.TabIndex = 105;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSearchAppNum.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchAppNum.BackgroundImage")));
+            this.btnSearchAppNum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchAppNum.Location = new System.Drawing.Point(169, 52);
+            this.btnSearchAppNum.Name = "btnSearchAppNum";
+            this.btnSearchAppNum.Size = new System.Drawing.Size(27, 28);
+            this.btnSearchAppNum.TabIndex = 202;
+            this.btnSearchAppNum.Text = "...";
+            this.btnSearchAppNum.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSearchPermitNum
             // 
-            this.button1.Location = new System.Drawing.Point(169, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 20);
-            this.button1.TabIndex = 104;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearchPermitNum.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchPermitNum.BackgroundImage")));
+            this.btnSearchPermitNum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchPermitNum.Location = new System.Drawing.Point(169, 12);
+            this.btnSearchPermitNum.Name = "btnSearchPermitNum";
+            this.btnSearchPermitNum.Size = new System.Drawing.Size(27, 28);
+            this.btnSearchPermitNum.TabIndex = 201;
+            this.btnSearchPermitNum.Text = "...";
+            this.btnSearchPermitNum.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(17, 151);
+            this.label24.Location = new System.Drawing.Point(17, 182);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(56, 13);
             this.label24.TabIndex = 182;
@@ -304,7 +318,7 @@
             // dtIssueDate
             // 
             this.dtIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtIssueDate.Location = new System.Drawing.Point(79, 145);
+            this.dtIssueDate.Location = new System.Drawing.Point(79, 176);
             this.dtIssueDate.Name = "dtIssueDate";
             this.dtIssueDate.Size = new System.Drawing.Size(84, 20);
             this.dtIssueDate.TabIndex = 5;
@@ -312,7 +326,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(24, 125);
+            this.label23.Location = new System.Drawing.Point(24, 156);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(50, 13);
             this.label23.TabIndex = 180;
@@ -321,7 +335,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(20, 99);
+            this.label22.Location = new System.Drawing.Point(20, 130);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 179;
@@ -330,7 +344,7 @@
             // dtEndDate
             // 
             this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEndDate.Location = new System.Drawing.Point(79, 119);
+            this.dtEndDate.Location = new System.Drawing.Point(79, 150);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(84, 20);
             this.dtEndDate.TabIndex = 4;
@@ -338,7 +352,7 @@
             // dtStartDate
             // 
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStartDate.Location = new System.Drawing.Point(79, 93);
+            this.dtStartDate.Location = new System.Drawing.Point(79, 124);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(84, 20);
             this.dtStartDate.TabIndex = 3;
@@ -346,7 +360,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(36, 69);
+            this.label21.Location = new System.Drawing.Point(36, 100);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(37, 13);
             this.label21.TabIndex = 176;
@@ -355,14 +369,14 @@
             // cmboStatus
             // 
             this.cmboStatus.FormattingEnabled = true;
-            this.cmboStatus.Location = new System.Drawing.Point(79, 66);
+            this.cmboStatus.Location = new System.Drawing.Point(79, 97);
             this.cmboStatus.Name = "cmboStatus";
             this.cmboStatus.Size = new System.Drawing.Size(84, 21);
             this.cmboStatus.TabIndex = 2;
             // 
             // txtApplicationNumber
             // 
-            this.txtApplicationNumber.Location = new System.Drawing.Point(79, 40);
+            this.txtApplicationNumber.Location = new System.Drawing.Point(79, 56);
             this.txtApplicationNumber.Name = "txtApplicationNumber";
             this.txtApplicationNumber.Size = new System.Drawing.Size(84, 20);
             this.txtApplicationNumber.TabIndex = 1;
@@ -370,7 +384,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(5, 43);
+            this.label20.Location = new System.Drawing.Point(5, 59);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(69, 13);
             this.label20.TabIndex = 173;
@@ -378,7 +392,7 @@
             // 
             // txtPermitNumber
             // 
-            this.txtPermitNumber.Location = new System.Drawing.Point(79, 14);
+            this.txtPermitNumber.Location = new System.Drawing.Point(79, 16);
             this.txtPermitNumber.Name = "txtPermitNumber";
             this.txtPermitNumber.Size = new System.Drawing.Size(84, 20);
             this.txtPermitNumber.TabIndex = 0;
@@ -386,7 +400,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(27, 17);
+            this.label19.Location = new System.Drawing.Point(27, 19);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(46, 13);
             this.label19.TabIndex = 171;
@@ -396,7 +410,7 @@
             // 
             this.groupBox18.Controls.Add(this.txtBalance);
             this.groupBox18.Controls.Add(this.btnFees);
-            this.groupBox18.Location = new System.Drawing.Point(535, 226);
+            this.groupBox18.Location = new System.Drawing.Point(535, 256);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(202, 65);
             this.groupBox18.TabIndex = 202;
@@ -422,19 +436,44 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.btnSearchOwner);
+            this.groupBox14.Controls.Add(this.btnAddOwner);
             this.groupBox14.Controls.Add(this.txtOwnerCell);
             this.groupBox14.Controls.Add(this.label1);
             this.groupBox14.Controls.Add(this.txtOwnerPhone);
             this.groupBox14.Controls.Add(this.label12);
             this.groupBox14.Controls.Add(this.txtOwner);
             this.groupBox14.Controls.Add(this.label13);
-            this.groupBox14.Controls.Add(this.btnOwnerContact);
             this.groupBox14.Location = new System.Drawing.Point(20, 340);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(493, 100);
             this.groupBox14.TabIndex = 199;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Owner Information";
+            // 
+            // btnSearchOwner
+            // 
+            this.btnSearchOwner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchOwner.BackgroundImage")));
+            this.btnSearchOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchOwner.Location = new System.Drawing.Point(454, 18);
+            this.btnSearchOwner.Name = "btnSearchOwner";
+            this.btnSearchOwner.Size = new System.Drawing.Size(27, 28);
+            this.btnSearchOwner.TabIndex = 202;
+            this.btnSearchOwner.Text = "...";
+            this.btnSearchOwner.UseVisualStyleBackColor = true;
+            this.btnSearchOwner.Click += new System.EventHandler(this.btnSearchOwner_Click);
+            // 
+            // btnAddOwner
+            // 
+            this.btnAddOwner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddOwner.BackgroundImage")));
+            this.btnAddOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddOwner.Location = new System.Drawing.Point(454, 55);
+            this.btnAddOwner.Name = "btnAddOwner";
+            this.btnAddOwner.Size = new System.Drawing.Size(27, 28);
+            this.btnAddOwner.TabIndex = 201;
+            this.btnAddOwner.Text = "...";
+            this.btnAddOwner.UseVisualStyleBackColor = true;
+            this.btnAddOwner.Click += new System.EventHandler(this.btnAddOwner_Click);
             // 
             // txtOwnerCell
             // 
@@ -487,31 +526,46 @@
             this.label13.TabIndex = 176;
             this.label13.Text = "Owner";
             // 
-            // btnOwnerContact
-            // 
-            this.btnOwnerContact.Location = new System.Drawing.Point(454, 18);
-            this.btnOwnerContact.Name = "btnOwnerContact";
-            this.btnOwnerContact.Size = new System.Drawing.Size(27, 20);
-            this.btnOwnerContact.TabIndex = 103;
-            this.btnOwnerContact.Text = "...";
-            this.btnOwnerContact.UseVisualStyleBackColor = true;
-            this.btnOwnerContact.Click += new System.EventHandler(this.btnOwnerContact_Click);
-            // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.btnSearchApplicant);
+            this.groupBox13.Controls.Add(this.btnAddApplicant);
             this.groupBox13.Controls.Add(this.txtCell);
             this.groupBox13.Controls.Add(this.label11);
             this.groupBox13.Controls.Add(this.txtApplicantPhone);
             this.groupBox13.Controls.Add(this.label10);
             this.groupBox13.Controls.Add(this.txtApplicant);
             this.groupBox13.Controls.Add(this.label2);
-            this.groupBox13.Controls.Add(this.btnApplicantContact);
             this.groupBox13.Location = new System.Drawing.Point(20, 38);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(493, 100);
             this.groupBox13.TabIndex = 192;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Applicant Information";
+            // 
+            // btnSearchApplicant
+            // 
+            this.btnSearchApplicant.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchApplicant.BackgroundImage")));
+            this.btnSearchApplicant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchApplicant.Location = new System.Drawing.Point(454, 19);
+            this.btnSearchApplicant.Name = "btnSearchApplicant";
+            this.btnSearchApplicant.Size = new System.Drawing.Size(27, 28);
+            this.btnSearchApplicant.TabIndex = 200;
+            this.btnSearchApplicant.Text = "...";
+            this.btnSearchApplicant.UseVisualStyleBackColor = true;
+            this.btnSearchApplicant.Click += new System.EventHandler(this.btnSearchApplicant_Click);
+            // 
+            // btnAddApplicant
+            // 
+            this.btnAddApplicant.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddApplicant.BackgroundImage")));
+            this.btnAddApplicant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddApplicant.Location = new System.Drawing.Point(454, 56);
+            this.btnAddApplicant.Name = "btnAddApplicant";
+            this.btnAddApplicant.Size = new System.Drawing.Size(27, 28);
+            this.btnAddApplicant.TabIndex = 199;
+            this.btnAddApplicant.Text = "...";
+            this.btnAddApplicant.UseVisualStyleBackColor = true;
+            this.btnAddApplicant.Click += new System.EventHandler(this.btnAddApplicant_Click);
             // 
             // txtCell
             // 
@@ -564,18 +618,10 @@
             this.label2.TabIndex = 176;
             this.label2.Text = "Applicant";
             // 
-            // btnApplicantContact
-            // 
-            this.btnApplicantContact.Location = new System.Drawing.Point(454, 18);
-            this.btnApplicantContact.Name = "btnApplicantContact";
-            this.btnApplicantContact.Size = new System.Drawing.Size(27, 20);
-            this.btnApplicantContact.TabIndex = 101;
-            this.btnApplicantContact.Text = "...";
-            this.btnApplicantContact.UseVisualStyleBackColor = true;
-            this.btnApplicantContact.Click += new System.EventHandler(this.btnApplicantContact_Click);
-            // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.btnSearchProperty);
+            this.groupBox12.Controls.Add(this.btnAddProperty);
             this.groupBox12.Controls.Add(this.cmboProposedUse);
             this.groupBox12.Controls.Add(this.cmboCurrentUse);
             this.groupBox12.Controls.Add(this.cmboOccupancyType);
@@ -591,7 +637,6 @@
             this.groupBox12.Controls.Add(this.label4);
             this.groupBox12.Controls.Add(this.txtLotNumber);
             this.groupBox12.Controls.Add(this.label3);
-            this.groupBox12.Controls.Add(this.btnPropertyContact);
             this.groupBox12.Controls.Add(this.txtProperty);
             this.groupBox12.Controls.Add(this.label9);
             this.groupBox12.Location = new System.Drawing.Point(20, 147);
@@ -600,6 +645,30 @@
             this.groupBox12.TabIndex = 191;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Property Information";
+            // 
+            // btnSearchProperty
+            // 
+            this.btnSearchProperty.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchProperty.BackgroundImage")));
+            this.btnSearchProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchProperty.Location = new System.Drawing.Point(453, 21);
+            this.btnSearchProperty.Name = "btnSearchProperty";
+            this.btnSearchProperty.Size = new System.Drawing.Size(27, 28);
+            this.btnSearchProperty.TabIndex = 212;
+            this.btnSearchProperty.Text = "...";
+            this.btnSearchProperty.UseVisualStyleBackColor = true;
+            this.btnSearchProperty.Click += new System.EventHandler(this.btnSearchProperty_Click);
+            // 
+            // btnAddProperty
+            // 
+            this.btnAddProperty.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddProperty.BackgroundImage")));
+            this.btnAddProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddProperty.Location = new System.Drawing.Point(453, 58);
+            this.btnAddProperty.Name = "btnAddProperty";
+            this.btnAddProperty.Size = new System.Drawing.Size(27, 28);
+            this.btnAddProperty.TabIndex = 211;
+            this.btnAddProperty.Text = "...";
+            this.btnAddProperty.UseVisualStyleBackColor = true;
+            this.btnAddProperty.Click += new System.EventHandler(this.btnAddProperty_Click);
             // 
             // cmboProposedUse
             // 
@@ -729,16 +798,6 @@
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 194;
             this.label3.Text = "Lot #";
-            // 
-            // btnPropertyContact
-            // 
-            this.btnPropertyContact.Location = new System.Drawing.Point(454, 22);
-            this.btnPropertyContact.Name = "btnPropertyContact";
-            this.btnPropertyContact.Size = new System.Drawing.Size(27, 20);
-            this.btnPropertyContact.TabIndex = 102;
-            this.btnPropertyContact.Text = "...";
-            this.btnPropertyContact.UseVisualStyleBackColor = true;
-            this.btnPropertyContact.Click += new System.EventHandler(this.btnPropertyContact_Click);
             // 
             // txtProperty
             // 
@@ -1354,21 +1413,47 @@
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Contractors";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.btnIrriSubSearch);
+            this.groupBox11.Controls.Add(this.btnIrriSubAdd);
             this.groupBox11.Controls.Add(this.txtIrrigationPhone);
             this.groupBox11.Controls.Add(this.label37);
-            this.groupBox11.Controls.Add(this.btnIrrigationContact);
             this.groupBox11.Controls.Add(this.txtIrrigationLisenceNumber);
             this.groupBox11.Controls.Add(this.label38);
             this.groupBox11.Controls.Add(this.txtIrrigationName);
-            this.groupBox11.Location = new System.Drawing.Point(20, 321);
+            this.groupBox11.Location = new System.Drawing.Point(20, 338);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(713, 41);
             this.groupBox11.TabIndex = 195;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Irrigation Sub";
+            // 
+            // btnIrriSubSearch
+            // 
+            this.btnIrriSubSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIrriSubSearch.BackgroundImage")));
+            this.btnIrriSubSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIrriSubSearch.Location = new System.Drawing.Point(641, 10);
+            this.btnIrriSubSearch.Name = "btnIrriSubSearch";
+            this.btnIrriSubSearch.Size = new System.Drawing.Size(27, 28);
+            this.btnIrriSubSearch.TabIndex = 206;
+            this.btnIrriSubSearch.Text = "...";
+            this.btnIrriSubSearch.UseVisualStyleBackColor = true;
+            this.btnIrriSubSearch.Click += new System.EventHandler(this.btnIrriSubSearch_Click);
+            // 
+            // btnIrriSubAdd
+            // 
+            this.btnIrriSubAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIrriSubAdd.BackgroundImage")));
+            this.btnIrriSubAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIrriSubAdd.Location = new System.Drawing.Point(674, 10);
+            this.btnIrriSubAdd.Name = "btnIrriSubAdd";
+            this.btnIrriSubAdd.Size = new System.Drawing.Size(27, 28);
+            this.btnIrriSubAdd.TabIndex = 205;
+            this.btnIrriSubAdd.Text = "...";
+            this.btnIrriSubAdd.UseVisualStyleBackColor = true;
+            this.btnIrriSubAdd.Click += new System.EventHandler(this.btnIrriSubAdd_Click);
             // 
             // txtIrrigationPhone
             // 
@@ -1386,15 +1471,6 @@
             this.label37.Size = new System.Drawing.Size(48, 13);
             this.label37.TabIndex = 193;
             this.label37.Text = "Phone #";
-            // 
-            // btnIrrigationContact
-            // 
-            this.btnIrrigationContact.Location = new System.Drawing.Point(657, 15);
-            this.btnIrrigationContact.Name = "btnIrrigationContact";
-            this.btnIrrigationContact.Size = new System.Drawing.Size(27, 20);
-            this.btnIrrigationContact.TabIndex = 192;
-            this.btnIrrigationContact.Text = "...";
-            this.btnIrrigationContact.UseVisualStyleBackColor = true;
             // 
             // txtIrrigationLisenceNumber
             // 
@@ -1421,18 +1497,43 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnGasSubSearch);
+            this.groupBox5.Controls.Add(this.btnGasSubAdd);
             this.groupBox5.Controls.Add(this.txtGasPhone);
             this.groupBox5.Controls.Add(this.label35);
-            this.groupBox5.Controls.Add(this.btngasContact);
             this.groupBox5.Controls.Add(this.txtGasLisenceNumber);
             this.groupBox5.Controls.Add(this.label36);
             this.groupBox5.Controls.Add(this.txtGasName);
-            this.groupBox5.Location = new System.Drawing.Point(20, 274);
+            this.groupBox5.Location = new System.Drawing.Point(20, 291);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(713, 41);
             this.groupBox5.TabIndex = 193;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Gas Line Sub";
+            // 
+            // btnGasSubSearch
+            // 
+            this.btnGasSubSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGasSubSearch.BackgroundImage")));
+            this.btnGasSubSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGasSubSearch.Location = new System.Drawing.Point(641, 10);
+            this.btnGasSubSearch.Name = "btnGasSubSearch";
+            this.btnGasSubSearch.Size = new System.Drawing.Size(27, 28);
+            this.btnGasSubSearch.TabIndex = 206;
+            this.btnGasSubSearch.Text = "...";
+            this.btnGasSubSearch.UseVisualStyleBackColor = true;
+            this.btnGasSubSearch.Click += new System.EventHandler(this.btnGasSubSearch_Click);
+            // 
+            // btnGasSubAdd
+            // 
+            this.btnGasSubAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGasSubAdd.BackgroundImage")));
+            this.btnGasSubAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGasSubAdd.Location = new System.Drawing.Point(674, 10);
+            this.btnGasSubAdd.Name = "btnGasSubAdd";
+            this.btnGasSubAdd.Size = new System.Drawing.Size(27, 28);
+            this.btnGasSubAdd.TabIndex = 205;
+            this.btnGasSubAdd.Text = "...";
+            this.btnGasSubAdd.UseVisualStyleBackColor = true;
+            this.btnGasSubAdd.Click += new System.EventHandler(this.btnGasSubAdd_Click);
             // 
             // txtGasPhone
             // 
@@ -1450,15 +1551,6 @@
             this.label35.Size = new System.Drawing.Size(48, 13);
             this.label35.TabIndex = 193;
             this.label35.Text = "Phone #";
-            // 
-            // btngasContact
-            // 
-            this.btngasContact.Location = new System.Drawing.Point(657, 15);
-            this.btngasContact.Name = "btngasContact";
-            this.btngasContact.Size = new System.Drawing.Size(27, 20);
-            this.btngasContact.TabIndex = 192;
-            this.btngasContact.Text = "...";
-            this.btngasContact.UseVisualStyleBackColor = true;
             // 
             // txtGasLisenceNumber
             // 
@@ -1485,18 +1577,43 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnMecSubSearch);
+            this.groupBox4.Controls.Add(this.btnMecSubAdd);
             this.groupBox4.Controls.Add(this.txtMechanicalPhone);
             this.groupBox4.Controls.Add(this.label33);
-            this.groupBox4.Controls.Add(this.btnMechanicalContact);
             this.groupBox4.Controls.Add(this.txtMechanicalLisenceNumber);
             this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.txtMechanicalName);
-            this.groupBox4.Location = new System.Drawing.Point(20, 227);
+            this.groupBox4.Location = new System.Drawing.Point(20, 244);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(713, 41);
             this.groupBox4.TabIndex = 192;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mechanical Sub";
+            // 
+            // btnMecSubSearch
+            // 
+            this.btnMecSubSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMecSubSearch.BackgroundImage")));
+            this.btnMecSubSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMecSubSearch.Location = new System.Drawing.Point(641, 10);
+            this.btnMecSubSearch.Name = "btnMecSubSearch";
+            this.btnMecSubSearch.Size = new System.Drawing.Size(27, 28);
+            this.btnMecSubSearch.TabIndex = 206;
+            this.btnMecSubSearch.Text = "...";
+            this.btnMecSubSearch.UseVisualStyleBackColor = true;
+            this.btnMecSubSearch.Click += new System.EventHandler(this.btnMecSubSearch_Click);
+            // 
+            // btnMecSubAdd
+            // 
+            this.btnMecSubAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMecSubAdd.BackgroundImage")));
+            this.btnMecSubAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMecSubAdd.Location = new System.Drawing.Point(674, 10);
+            this.btnMecSubAdd.Name = "btnMecSubAdd";
+            this.btnMecSubAdd.Size = new System.Drawing.Size(27, 28);
+            this.btnMecSubAdd.TabIndex = 205;
+            this.btnMecSubAdd.Text = "...";
+            this.btnMecSubAdd.UseVisualStyleBackColor = true;
+            this.btnMecSubAdd.Click += new System.EventHandler(this.btnMecSubAdd_Click);
             // 
             // txtMechanicalPhone
             // 
@@ -1514,15 +1631,6 @@
             this.label33.Size = new System.Drawing.Size(48, 13);
             this.label33.TabIndex = 193;
             this.label33.Text = "Phone #";
-            // 
-            // btnMechanicalContact
-            // 
-            this.btnMechanicalContact.Location = new System.Drawing.Point(657, 15);
-            this.btnMechanicalContact.Name = "btnMechanicalContact";
-            this.btnMechanicalContact.Size = new System.Drawing.Size(27, 20);
-            this.btnMechanicalContact.TabIndex = 192;
-            this.btnMechanicalContact.Text = "...";
-            this.btnMechanicalContact.UseVisualStyleBackColor = true;
             // 
             // txtMechanicalLisenceNumber
             // 
@@ -1549,18 +1657,43 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnPlumSubSearch);
+            this.groupBox3.Controls.Add(this.btnPlumSubAdd);
             this.groupBox3.Controls.Add(this.txtPlumbingPhone);
             this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.btnPlumbingContact);
             this.groupBox3.Controls.Add(this.txtPlumbingLisenceNumber);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.txtPlumbingName);
-            this.groupBox3.Location = new System.Drawing.Point(20, 180);
+            this.groupBox3.Location = new System.Drawing.Point(20, 197);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(713, 41);
             this.groupBox3.TabIndex = 191;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Plumbing Sub";
+            // 
+            // btnPlumSubSearch
+            // 
+            this.btnPlumSubSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlumSubSearch.BackgroundImage")));
+            this.btnPlumSubSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlumSubSearch.Location = new System.Drawing.Point(641, 9);
+            this.btnPlumSubSearch.Name = "btnPlumSubSearch";
+            this.btnPlumSubSearch.Size = new System.Drawing.Size(27, 28);
+            this.btnPlumSubSearch.TabIndex = 206;
+            this.btnPlumSubSearch.Text = "...";
+            this.btnPlumSubSearch.UseVisualStyleBackColor = true;
+            this.btnPlumSubSearch.Click += new System.EventHandler(this.btnPlumSubSearch_Click);
+            // 
+            // btnPlumSubAdd
+            // 
+            this.btnPlumSubAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlumSubAdd.BackgroundImage")));
+            this.btnPlumSubAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlumSubAdd.Location = new System.Drawing.Point(674, 9);
+            this.btnPlumSubAdd.Name = "btnPlumSubAdd";
+            this.btnPlumSubAdd.Size = new System.Drawing.Size(27, 28);
+            this.btnPlumSubAdd.TabIndex = 205;
+            this.btnPlumSubAdd.Text = "...";
+            this.btnPlumSubAdd.UseVisualStyleBackColor = true;
+            this.btnPlumSubAdd.Click += new System.EventHandler(this.btnPlumSubAdd_Click);
             // 
             // txtPlumbingPhone
             // 
@@ -1578,15 +1711,6 @@
             this.label31.Size = new System.Drawing.Size(48, 13);
             this.label31.TabIndex = 193;
             this.label31.Text = "Phone #";
-            // 
-            // btnPlumbingContact
-            // 
-            this.btnPlumbingContact.Location = new System.Drawing.Point(657, 15);
-            this.btnPlumbingContact.Name = "btnPlumbingContact";
-            this.btnPlumbingContact.Size = new System.Drawing.Size(27, 20);
-            this.btnPlumbingContact.TabIndex = 192;
-            this.btnPlumbingContact.Text = "...";
-            this.btnPlumbingContact.UseVisualStyleBackColor = true;
             // 
             // txtPlumbingLisenceNumber
             // 
@@ -1613,7 +1737,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnContractorContact);
+            this.groupBox2.Controls.Add(this.btnContractorSearch);
+            this.groupBox2.Controls.Add(this.btnContractorAdd);
             this.groupBox2.Controls.Add(this.txtContractorEmail);
             this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Controls.Add(this.txtSiteManagerPhone);
@@ -1628,19 +1753,34 @@
             this.groupBox2.Controls.Add(this.txtContractorName);
             this.groupBox2.Location = new System.Drawing.Point(20, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(713, 99);
+            this.groupBox2.Size = new System.Drawing.Size(713, 109);
             this.groupBox2.TabIndex = 190;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "General Contractor";
             // 
-            // btnContractorContact
+            // btnContractorSearch
             // 
-            this.btnContractorContact.Location = new System.Drawing.Point(657, 73);
-            this.btnContractorContact.Name = "btnContractorContact";
-            this.btnContractorContact.Size = new System.Drawing.Size(27, 20);
-            this.btnContractorContact.TabIndex = 202;
-            this.btnContractorContact.Text = "...";
-            this.btnContractorContact.UseVisualStyleBackColor = true;
+            this.btnContractorSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnContractorSearch.BackgroundImage")));
+            this.btnContractorSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnContractorSearch.Location = new System.Drawing.Point(641, 73);
+            this.btnContractorSearch.Name = "btnContractorSearch";
+            this.btnContractorSearch.Size = new System.Drawing.Size(27, 28);
+            this.btnContractorSearch.TabIndex = 204;
+            this.btnContractorSearch.Text = "...";
+            this.btnContractorSearch.UseVisualStyleBackColor = true;
+            this.btnContractorSearch.Click += new System.EventHandler(this.btnContractorSearch_Click);
+            // 
+            // btnContractorAdd
+            // 
+            this.btnContractorAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnContractorAdd.BackgroundImage")));
+            this.btnContractorAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnContractorAdd.Location = new System.Drawing.Point(674, 73);
+            this.btnContractorAdd.Name = "btnContractorAdd";
+            this.btnContractorAdd.Size = new System.Drawing.Size(27, 28);
+            this.btnContractorAdd.TabIndex = 203;
+            this.btnContractorAdd.Text = "...";
+            this.btnContractorAdd.UseVisualStyleBackColor = true;
+            this.btnContractorAdd.Click += new System.EventHandler(this.btnContractorAdd_Click);
             // 
             // txtContractorEmail
             // 
@@ -1742,18 +1882,43 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnElecSubSearch);
+            this.groupBox1.Controls.Add(this.btnElecSubAdd);
             this.groupBox1.Controls.Add(this.txtElectricalPhone);
             this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.btnElectricalContact);
             this.groupBox1.Controls.Add(this.txtElectricalLisenceNumber);
             this.groupBox1.Controls.Add(this.label95);
             this.groupBox1.Controls.Add(this.txtElectricalName);
-            this.groupBox1.Location = new System.Drawing.Point(20, 133);
+            this.groupBox1.Location = new System.Drawing.Point(20, 150);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(713, 41);
             this.groupBox1.TabIndex = 189;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Electrical Sub";
+            // 
+            // btnElecSubSearch
+            // 
+            this.btnElecSubSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnElecSubSearch.BackgroundImage")));
+            this.btnElecSubSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnElecSubSearch.Location = new System.Drawing.Point(641, 9);
+            this.btnElecSubSearch.Name = "btnElecSubSearch";
+            this.btnElecSubSearch.Size = new System.Drawing.Size(27, 28);
+            this.btnElecSubSearch.TabIndex = 206;
+            this.btnElecSubSearch.Text = "...";
+            this.btnElecSubSearch.UseVisualStyleBackColor = true;
+            this.btnElecSubSearch.Click += new System.EventHandler(this.btnElecSubSearch_Click);
+            // 
+            // btnElecSubAdd
+            // 
+            this.btnElecSubAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnElecSubAdd.BackgroundImage")));
+            this.btnElecSubAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnElecSubAdd.Location = new System.Drawing.Point(674, 9);
+            this.btnElecSubAdd.Name = "btnElecSubAdd";
+            this.btnElecSubAdd.Size = new System.Drawing.Size(27, 28);
+            this.btnElecSubAdd.TabIndex = 205;
+            this.btnElecSubAdd.Text = "...";
+            this.btnElecSubAdd.UseVisualStyleBackColor = true;
+            this.btnElecSubAdd.Click += new System.EventHandler(this.btnElecSubAdd_Click);
             // 
             // txtElectricalPhone
             // 
@@ -1771,15 +1936,6 @@
             this.label26.Size = new System.Drawing.Size(48, 13);
             this.label26.TabIndex = 193;
             this.label26.Text = "Phone #";
-            // 
-            // btnElectricalContact
-            // 
-            this.btnElectricalContact.Location = new System.Drawing.Point(657, 15);
-            this.btnElectricalContact.Name = "btnElectricalContact";
-            this.btnElectricalContact.Size = new System.Drawing.Size(27, 20);
-            this.btnElectricalContact.TabIndex = 192;
-            this.btnElectricalContact.Text = "...";
-            this.btnElectricalContact.UseVisualStyleBackColor = true;
             // 
             // txtElectricalLisenceNumber
             // 
@@ -1942,7 +2098,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtElectricalPhone;
         internal System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button btnElectricalContact;
         internal System.Windows.Forms.TextBox txtElectricalLisenceNumber;
         internal System.Windows.Forms.Label label95;
         internal System.Windows.Forms.TextBox txtElectricalName;
@@ -1958,7 +2113,6 @@
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.TextBox txtApplicant;
         internal System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnApplicantContact;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.ComboBox cmboProposedUse;
         private System.Windows.Forms.ComboBox cmboCurrentUse;
@@ -1975,39 +2129,33 @@
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox txtLotNumber;
         internal System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnPropertyContact;
         internal System.Windows.Forms.TextBox txtProperty;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Label Title;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.MaskedTextBox txtIrrigationPhone;
         internal System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button btnIrrigationContact;
         internal System.Windows.Forms.TextBox txtIrrigationLisenceNumber;
         internal System.Windows.Forms.Label label38;
         internal System.Windows.Forms.TextBox txtIrrigationName;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.MaskedTextBox txtGasPhone;
         internal System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button btngasContact;
         internal System.Windows.Forms.TextBox txtGasLisenceNumber;
         internal System.Windows.Forms.Label label36;
         internal System.Windows.Forms.TextBox txtGasName;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.MaskedTextBox txtMechanicalPhone;
         internal System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Button btnMechanicalContact;
         internal System.Windows.Forms.TextBox txtMechanicalLisenceNumber;
         internal System.Windows.Forms.Label label34;
         internal System.Windows.Forms.TextBox txtMechanicalName;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MaskedTextBox txtPlumbingPhone;
         internal System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button btnPlumbingContact;
         internal System.Windows.Forms.TextBox txtPlumbingLisenceNumber;
         internal System.Windows.Forms.Label label32;
         internal System.Windows.Forms.TextBox txtPlumbingName;
-        private System.Windows.Forms.Button btnContractorContact;
         internal System.Windows.Forms.TextBox txtContractorEmail;
         internal System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBox14;
@@ -2090,9 +2238,26 @@
         private System.Windows.Forms.CheckBox cboxTempPole;
         private System.Windows.Forms.CheckBox cboxGasLine;
         private System.Windows.Forms.CheckBox cboxDuctwork;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnOwnerContact;
+        private System.Windows.Forms.Button btnAddApplicant;
+        private System.Windows.Forms.Button btnSearchApplicant;
+        private System.Windows.Forms.Button btnSearchAppNum;
+        private System.Windows.Forms.Button btnSearchPermitNum;
+        private System.Windows.Forms.Button btnSearchOwner;
+        private System.Windows.Forms.Button btnAddOwner;
+        private System.Windows.Forms.Button btnSearchProperty;
+        private System.Windows.Forms.Button btnAddProperty;
+        private System.Windows.Forms.Button btnIrriSubSearch;
+        private System.Windows.Forms.Button btnIrriSubAdd;
+        private System.Windows.Forms.Button btnGasSubSearch;
+        private System.Windows.Forms.Button btnGasSubAdd;
+        private System.Windows.Forms.Button btnMecSubSearch;
+        private System.Windows.Forms.Button btnMecSubAdd;
+        private System.Windows.Forms.Button btnPlumSubSearch;
+        private System.Windows.Forms.Button btnPlumSubAdd;
+        private System.Windows.Forms.Button btnContractorSearch;
+        private System.Windows.Forms.Button btnContractorAdd;
+        private System.Windows.Forms.Button btnElecSubSearch;
+        private System.Windows.Forms.Button btnElecSubAdd;
 
     }
 }

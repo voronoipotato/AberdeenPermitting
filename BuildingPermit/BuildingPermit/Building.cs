@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 
 public class Building
@@ -20,7 +19,6 @@ public class Building
     private string myBuildingType;
     private string myEstimatedCost;
     private string myTotalSF;
-    private string myDimensions; 
     private string myHeatedSF;
     private string myPorchSF;
     private string myNumStories;
@@ -47,7 +45,7 @@ public class Building
                 if (isInt(value))
                 {
                     myBasementSF = value.Trim();
-
+                    
                 }
                 else
                 {
@@ -56,10 +54,7 @@ public class Building
             }
         }
     }
-    public string dimensions {
-        get { return myDimensions; }
-        set { myDimensions = value; }
-    }
+
     /// <summary>
     /// Garage Sf Property
     /// </summary>
@@ -207,11 +202,11 @@ public class Building
             if (value == null || value == "")
             {
                 MessageBox.Show("Total Square Feet is a required field.");
-
+                
             }
             else
             {
-
+               
                 if (isInt(value))
                 {
                     myTotalSF = value;
@@ -220,9 +215,9 @@ public class Building
                 else
                 {
                     MessageBox.Show("Total Square Feet and must be a number");
-                }
-            }
-
+                } 
+            } 
+            
         }
     }
 
@@ -292,64 +287,6 @@ public class Building
         double Num;
 
         return double.TryParse(value, out Num);
-    }
-
-    public void save(string conStr) {
-        /*
-         *TypeOfConst         nvarchar(50)
-         * XXXXProposedUse       nvarchar(50)
-         * Dimensions        nvarchar(75)
-         * heatedsf          int
-         * numberOfstories   int
-         * garageSF          int
-         * Basement          bit
-         * PorchSF           int
-         * DeckSF              int
-         * installinsulation bit
-         * estCostOfConst    money
-         * privateWell       bit
-         * townSewer         bit
-         * Townwater         bit
-         * septicImprovePemit bit
-         * 
-         *     
-         * 
-    private string myBuildingType; TypeOfConst
-    private string myEstimatedCost; estCostOfConst
-    private string myDimensions; Dimensions
-    private string myTotalSF; TotalSF
-    private string myHeatedSF; heatedsf
-    private string myPorchSF; PorchSF
-    private string myNumStories; numberOfstories
-    private string myDeckSF; DeckSF
-    private string myGarageSF; garageSF
-    private string myBasementSF; Basement
-         */
-        string query = String.Format("Insert Into Building " + 
-            " (TypeOfConst, estCostOfConst, Dimensions, TotalSF," + 
-            " heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, Basement)" + 
-            " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}); ",
-            this.myBuildingType, this.myEstimatedCost, this.myDimensions, this.myTotalSF, 
-            this.myHeatedSF, this.myPorchSF, this.myNumStories, this.myDeckSF, this.myGarageSF, 
-            this.myBasementSF);
-
-        using (SqlConnection connection = new SqlConnection(conStr))
-        {
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader sqlReader = command.ExecuteReader();
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                sqlReader.Close();
-            }
-        }
     }
 
 }
