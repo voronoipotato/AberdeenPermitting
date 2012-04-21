@@ -31,11 +31,11 @@ namespace BuildingPermit
             contact.firstName = txtFName.Text;
             contact.middleName = txtMName.Text;
             contact.lastName = txtLName.Text;
-            contact.liscence = txtLicense.Text;
+            contact.liscense = txtLicense.Text;
             contact.phone = txtPhone.Text;
             contact.cell = txtCell.Text;
             contact.email = txtEmail.Text;
-            contact.buildingLiscence = txtBuildingLicense.Text;
+            contact.buildingLicense = txtBuildingLicense.Text;
             contact.streetNumber = txtStreetNumber.Text; 
             contact.streetName = txtStreetName.Text;
             contact.type = txtType.Text;

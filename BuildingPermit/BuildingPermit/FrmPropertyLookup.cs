@@ -15,5 +15,15 @@ namespace BuildingPermit
         {
             InitializeComponent();
         }
+
+        private void btnLookUp_Click(object sender, EventArgs e)
+        {
+            string strLRK, strPropDesc, strPropOwner;
+
+            strLRK = txtLRK.Text;
+            strPropDesc = txtPropertyDescription.Text;
+            strPropOwner = txtPropertyOwner.Text;
+
+        }
     }
 }

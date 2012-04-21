@@ -30,7 +30,7 @@
         {
             this.btnPropertyAccept = new System.Windows.Forms.Button();
             this.cmbPropertyResults = new System.Windows.Forms.ComboBox();
-            this.textPropertyDescription = new System.Windows.Forms.TextBox();
+            this.txtPropertyDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLookUp = new System.Windows.Forms.Button();
             this.txtLRK = new System.Windows.Forms.TextBox();
@@ -58,12 +58,12 @@
             this.cmbPropertyResults.Size = new System.Drawing.Size(399, 21);
             this.cmbPropertyResults.TabIndex = 220;
             // 
-            // textPropertyDescription
+            // txtPropertyDescription
             // 
-            this.textPropertyDescription.Location = new System.Drawing.Point(282, 17);
-            this.textPropertyDescription.Name = "textPropertyDescription";
-            this.textPropertyDescription.Size = new System.Drawing.Size(233, 20);
-            this.textPropertyDescription.TabIndex = 219;
+            this.txtPropertyDescription.Location = new System.Drawing.Point(282, 17);
+            this.txtPropertyDescription.Name = "txtPropertyDescription";
+            this.txtPropertyDescription.Size = new System.Drawing.Size(233, 20);
+            this.txtPropertyDescription.TabIndex = 219;
             // 
             // label1
             // 
@@ -82,6 +82,7 @@
             this.btnLookUp.TabIndex = 217;
             this.btnLookUp.Text = "Look Up";
             this.btnLookUp.UseVisualStyleBackColor = true;
+            this.btnLookUp.Click += new System.EventHandler(this.btnLookUp_Click);
             // 
             // txtLRK
             // 
@@ -124,7 +125,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPropertyAccept);
             this.Controls.Add(this.cmbPropertyResults);
-            this.Controls.Add(this.textPropertyDescription);
+            this.Controls.Add(this.txtPropertyDescription);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLookUp);
             this.Controls.Add(this.txtLRK);
@@ -140,7 +141,7 @@
 
         private System.Windows.Forms.Button btnPropertyAccept;
         private System.Windows.Forms.ComboBox cmbPropertyResults;
-        internal System.Windows.Forms.TextBox textPropertyDescription;
+        internal System.Windows.Forms.TextBox txtPropertyDescription;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLookUp;
         internal System.Windows.Forms.TextBox txtLRK;
