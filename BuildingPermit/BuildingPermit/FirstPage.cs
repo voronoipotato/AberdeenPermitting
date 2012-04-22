@@ -11,7 +11,7 @@ namespace BuildingPermit
 {
     public partial class FirstPage : Form
     {
-
+        public string conStr;
 
         public FirstPage()
         {
@@ -27,6 +27,11 @@ namespace BuildingPermit
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void FirstPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

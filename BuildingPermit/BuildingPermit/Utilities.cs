@@ -291,63 +291,64 @@ public class Utilities
             this.myTotNumBathrooms, this.myNumSinks,this.myNumWaterClosets, this.myNumShowers, this.myNumTubs,
             this.myNumClothesWasher, this.myNumWetBar,this.myNumSpa, this.myNumWaterHeater,this.myIsIrrigated, this.myBuildingID);
 
-        using (SqlConnection connection = new SqlConnection(conStr))
-        {
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader sqlReader = command.ExecuteReader();
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                sqlReader.Close();
-            }
+         using (SqlConnection connection = new SqlConnection(conStr))
+         {
+             SqlCommand command = new SqlCommand(query, connection);
+             connection.Open();
+             SqlDataReader sqlReader = command.ExecuteReader();
+             try
+             {
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+             finally
+             {
+                 sqlReader.Close();
+             }
 
-            query = String.Format("Insert Into electrical " +
-            " (eletricalid,numamps, numdiscon, temppole, buildid" +
-            " Values ({0}, {1}, {2}, {3}, {4}, {5},  ); ", this.myEletricalID,this.myNumAmps,
-            this.myNumDiscon, this.myTempPole, this.myBuildingID);
+             query = String.Format("Insert Into electrical " +
+             " (eletricalid,numamps, numdiscon, temppole, buildid" +
+             " Values ({0}, {1}, {2}, {3}, {4}, {5},  ); ", this.myEletricalID, this.myNumAmps,
+             this.myNumDiscon, this.myTempPole, this.myBuildingID);
 
-       
-            command = new SqlCommand(query, connection);
-            connection.Open();
-            sqlReader = command.ExecuteReader();
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                sqlReader.Close();
-            }
 
-           query = String.Format("Insert Into mechanical " +
-            " (MechID,systemtype,  numsystems, tons, gasline,buildigid" +
-            " Values ({0}, {1}, {2}, {3}, {4}, {5} ); ",this.myMechID,this.mySystemType,
-            this.myNumSys,this.tons,this.myGasLine,this.buildingID);
-
-        
-            command = new SqlCommand(query, connection);
-            connection.Open();
+             command = new SqlCommand(query, connection);
+             connection.Open();
              sqlReader = command.ExecuteReader();
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                sqlReader.Close();
-            }
+             try
+             {
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+             finally
+             {
+                 sqlReader.Close();
+             }
+
+             query = String.Format("Insert Into mechanical " +
+              " (MechID,systemtype,  numsystems, tons, gasline,buildigid" +
+              " Values ({0}, {1}, {2}, {3}, {4}, {5} ); ", this.myMechID, this.mySystemType,
+              this.myNumSys, this.tons, this.myGasLine, this.buildingID);
+
+
+             command = new SqlCommand(query, connection);
+             connection.Open();
+             sqlReader = command.ExecuteReader();
+             try
+             {
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+             finally
+             {
+                 sqlReader.Close();
+             }
+         }
     }
 }

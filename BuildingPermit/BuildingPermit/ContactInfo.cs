@@ -33,7 +33,7 @@ namespace BuildingPermit
             contact.lastName = txtLName.Text;
             contact.liscense = txtLicense.Text;
             contact.phone = txtPhone.Text;
-            contact.cell = txtCell.Text;
+            contact.phone = txtCell.Text;
             contact.email = txtEmail.Text;
             contact.buildingLicense = txtBuildingLicense.Text;
             contact.streetNumber = txtStreetNumber.Text; 

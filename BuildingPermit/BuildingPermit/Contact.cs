@@ -14,19 +14,20 @@ public class Contact
 
     private Boolean myPropOwner;
     private DateTime myLicenseExpDate;
+    private string query;
 
     public DateTime licenseExpDate
     {
         get { return myLicenseExpDate; }
         set { myLicenseExpDate = value; }
     }
-    
+
     public Boolean property
     {
         get { return myPropOwner; }
         set { myPropOwner = value; }
     }
-    
+
     public string companyName
     {
         get { return myCompanyName; }
@@ -36,7 +37,7 @@ public class Contact
     public string companyName2
     {
         get { return myCompanyName2; }
-        set { myCompanyName2 = value; } 
+        set { myCompanyName2 = value; }
     }
     public string firstName
     {
@@ -119,7 +120,7 @@ public class Contact
 
     public void save(string conStr)
     {
-        string query; 
+        string query;
         /* myCompanyName, 
          * myCompanyName2,
           myFirstName,
@@ -137,31 +138,41 @@ public class Contact
          * myState, 
          * myZip;
           */
-        if (this.myType == "contact" ){
-         query = String.Format("Insert Into Contact " +
-            " (CompName, CompName2, Fname, Lname, " +
-            " FirstPhone, SecondPhone, Email, Address, City, State, Zip, propowner )" +
-            " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11} ); ",
-            this.myCompanyName, this.myCompanyName2, this.myFirstName, this.myLastName,  
-            this.myPhone, this.myPhone2, this.myEmail, 
-            this.myStreetName,  this.myCity, this.myState, this.myZip, this.myPropOwner );
-         }
-        if (this.myType == "General Contractor" || this.myType == "HVAC" ||
-            this.myType == "Plumbing" || this.myType == "Electrical")
-        {
-            query = String.Format("Insert Into Contractors " +
-               " (CompName, CompName2, Fname, Lname, " +
-               " PhoneNumber, SecondPhone, Email, Address, City, State, Zip, type. licenseExoDate )" +
-               " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12} ); ",
-               this.myCompanyName, this.myCompanyName2, this.myFirstName, this.myLastName,
-               this.myPhone, this.myPhone2, this.myEmail,
-               this.myStreetName, this.myCity, this.myState, this.myZip, this.type, this.licenseExpDate);
-        }
         using (SqlConnection connection = new SqlConnection(conStr))
         {
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader sqlReader = command.ExecuteReader();
+            SqlDataReader sqlReader;
+
+            if (this.myType == "contact")
+            {
+                query = String.Format("Insert Into Contact " +
+              " (CompName, CompName2, Fname, Lname, " +
+              " FirstPhone, SecondPhone, Email, Address, City, State, Zip, propowner )" +
+              " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11} ); ",
+              this.myCompanyName, this.myCompanyName2, this.myFirstName, this.myLastName,
+              this.myPhone, this.myPhone2, this.myEmail,
+              this.myStreetName, this.myCity, this.myState, this.myZip, this.myPropOwner);
+
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                sqlReader = command.ExecuteReader();
+            }
+            if (this.myType == "General Contractor" || this.myType == "HVAC" ||
+                this.myType == "Plumbing" || this.myType == "Electrical")
+            {
+                query = String.Format("Insert Into Contractors " +
+                   " (CompName, CompName2, Fname, Lname, " +
+                   " PhoneNumber, SecondPhone, Email, Address, City, State, Zip, type. licenseExoDate )" +
+                   " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12} ); ",
+                   this.myCompanyName, this.myCompanyName2, this.myFirstName, this.myLastName,
+                   this.myPhone, this.myPhone2, this.myEmail,
+                   this.myStreetName, this.myCity, this.myState, this.myZip, this.type, this.licenseExpDate);
+
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                sqlReader = command.ExecuteReader();
+            }
+
+           
             try
             {
             }
@@ -169,12 +180,12 @@ public class Contact
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                sqlReader.Close();
-            }
+           
+                
         }
 
+       
+           
 
     }
 }

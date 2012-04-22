@@ -142,6 +142,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FirstPage";
             this.Text = "FirstPage";
+            this.Load += new System.EventHandler(this.FirstPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
