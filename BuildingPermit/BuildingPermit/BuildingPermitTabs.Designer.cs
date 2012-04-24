@@ -305,6 +305,7 @@
             this.btnSearchPermitNum.TabIndex = 201;
             this.btnSearchPermitNum.Text = "...";
             this.btnSearchPermitNum.UseVisualStyleBackColor = true;
+            this.btnSearchPermitNum.Click += new System.EventHandler(this.btnSearchPermitNum_Click);
             // 
             // label24
             // 

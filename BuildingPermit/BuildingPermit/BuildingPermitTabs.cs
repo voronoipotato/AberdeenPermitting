@@ -432,6 +432,26 @@ namespace BuildingPermit
             frmContractorAdd.Show();
         }
 
+        private void btnSearchPermitNum_Click(object sender, EventArgs e)
+        {
+            Building building = new Building();
+
+            building.load(conStr,"PermitID =" + txtPermitNumber.Text);
+
+            txtSquareFeet.Text = building.totalSF;
+            txtHeatedSF.Text = building.heatedSF;
+            txtEstimatedCost.Text = building.estimatedCost;
+            cmboConstructionType.Text = building.buildingType;
+            txtPorchSF.Text = building.porchSF;
+            txtNumStories.Text = building.numStories;
+            txtDeck.Text = building.deckSF;
+            txtGarageSF.Text = building.garageSF;
+            txtBasement.Text = building.basementSF;
+           
+
+
+        }
+
 
         
 

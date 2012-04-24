@@ -310,8 +310,8 @@ public class Building
         return double.TryParse(value, out Num);
     }
 
-    public void load(string conStr) {
-        string query = "Select from Building TypeOfConst, estCostOfConst, Dimensions, TotalSF,  heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, BasementSF, basement, permitID";
+    public void load(string conStr, string where) {
+        string query = "Select TypeOfConst, estCostOfConst, Dimensions, TotalSF,  heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, BasementSF, basement from Building WHERE " + where;
         using (SqlConnection connection = new SqlConnection(conStr))
         {
             SqlCommand command = new SqlCommand(query, connection);
