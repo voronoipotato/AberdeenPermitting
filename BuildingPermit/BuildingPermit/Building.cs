@@ -310,6 +310,45 @@ public class Building
         return double.TryParse(value, out Num);
     }
 
+    public void load(string conStr) {
+        string query = "Select from Building TypeOfConst, estCostOfConst, Dimensions, TotalSF,  heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, BasementSF, basement, permitID";
+        using (SqlConnection connection = new SqlConnection(conStr))
+        {
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataReader RDR = command.ExecuteReader();
+            try
+            {
+                if (RDR.HasRows) {
+                    while (RDR.Read())
+                    {
+                        this.myBuildingType = (string)RDR["TypeOfConst"];
+                        this.myEstimatedCost = (string)RDR["estCostOfConst"];
+                        this.myDimensions = (string)RDR["Dimensions"];
+                        this.myTotalSF = (string)RDR["TotalSF"];
+                        this.myHeatedSF = (string)RDR["heatedsf"];
+                        this.myPorchSF = (string)RDR["PorchSF"];
+                        this.myNumStories = (string)RDR["numberOfstories"];
+                        this.myDeckSF = (string)RDR["DeckSF"];
+                        this.myGarageSF = (string)RDR["garageSF"];
+                        this.myBasementSF = (string)RDR["BasementSF"];
+                        this.myBasementBool = (bool)RDR["basement"]; 
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                RDR.Close();
+            }
+        }
+    }
+
     public void save(string conStr)
     {
         /*
@@ -344,7 +383,7 @@ public class Building
          */
         string query = String.Format("Insert Into Building " +
             " (TypeOfConst, estCostOfConst, Dimensions, TotalSF," +
-            " heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, BasementSF,basement permitID)" +
+            " heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, BasementSF,basement, permitID)" +
             " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10},{11} ); ",
             this.myBuildingType, this.myEstimatedCost, this.myDimensions, Convert.ToInt16(this.myTotalSF),
             Convert.ToInt16(this.myHeatedSF), this.myPorchSF, this.myNumStories, this.myDeckSF, this.myGarageSF,

@@ -132,7 +132,6 @@
             this.Controls.Add(this.label9);
             this.Name = "frmPropertyLookup";
             this.Text = "Property";
-            this.Load += new System.EventHandler(this.frmPropertyLookup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
