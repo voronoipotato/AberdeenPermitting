@@ -33,5 +33,11 @@ namespace BuildingPermit
         {
 
         }
+
+        private void lookupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "http://www.nclbgc.org/";
+            System.Diagnostics.Process.Start(url);
+        }
     }
 }
