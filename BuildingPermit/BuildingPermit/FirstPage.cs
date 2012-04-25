@@ -21,17 +21,23 @@ namespace BuildingPermit
         private void permittingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmBuildingPermitTabs = new BuildingPermitTabs();
-            frmBuildingPermitTabs.Show(); 
+            frmBuildingPermitTabs.Show();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
         }
 
         private void FirstPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buildingPermitReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmBuildingPermitReport = new BuildingPermitReport();
+            frmBuildingPermitReport.Show();
         }
     }
 }
