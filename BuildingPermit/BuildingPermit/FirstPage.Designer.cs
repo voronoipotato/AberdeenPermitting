@@ -40,7 +40,11 @@
             this.documentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             this.buildingPermitReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
+            this.lookupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +102,8 @@
             // 
             // licenseToolStripMenuItem
             // 
+            this.licenseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lookupToolStripMenuItem});
             this.licenseToolStripMenuItem.Name = "licenseToolStripMenuItem";
             this.licenseToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.licenseToolStripMenuItem.Text = "&License";
@@ -134,12 +140,21 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+
             // buildingPermitReportToolStripMenuItem
             // 
             this.buildingPermitReportToolStripMenuItem.Name = "buildingPermitReportToolStripMenuItem";
             this.buildingPermitReportToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.buildingPermitReportToolStripMenuItem.Text = "Building Permit &Report";
             this.buildingPermitReportToolStripMenuItem.Click += new System.EventHandler(this.buildingPermitReportToolStripMenuItem_Click);
+
+            // lookupToolStripMenuItem
+            // 
+            this.lookupToolStripMenuItem.Name = "lookupToolStripMenuItem";
+            this.lookupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lookupToolStripMenuItem.Text = "Lookup";
+            this.lookupToolStripMenuItem.Click += new System.EventHandler(this.lookupToolStripMenuItem_Click);
+
             // 
             // FirstPage
             // 
@@ -174,6 +189,10 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+
         private System.Windows.Forms.ToolStripMenuItem buildingPermitReportToolStripMenuItem;
+
+        private System.Windows.Forms.ToolStripMenuItem lookupToolStripMenuItem;
+
     }
 }

@@ -118,15 +118,6 @@
             this.label72 = new System.Windows.Forms.Label();
             this.txtNumFixtures = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.cboxGasLine = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.txtNumSystems = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.cmboConstructionType = new System.Windows.Forms.ComboBox();
             this.txtEstimatedCost = new System.Windows.Forms.TextBox();
@@ -208,6 +199,18 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.txtSystemTons = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmboSystemType = new System.Windows.Forms.ComboBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.cboxGasLine = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.txtNumSystems = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -219,9 +222,6 @@
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -232,6 +232,9 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -830,9 +833,9 @@
             // 
             // Contractors
             // 
+            this.Contractors.Controls.Add(this.groupBox17);
             this.Contractors.Controls.Add(this.groupBox6);
             this.Contractors.Controls.Add(this.groupBox8);
-            this.Contractors.Controls.Add(this.groupBox17);
             this.Contractors.Controls.Add(this.groupBox10);
             this.Contractors.Controls.Add(this.groupBox15);
             this.Contractors.Location = new System.Drawing.Point(4, 22);
@@ -848,7 +851,7 @@
             this.groupBox6.Controls.Add(this.cmboNumAmps);
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Location = new System.Drawing.Point(39, 383);
+            this.groupBox6.Location = new System.Drawing.Point(39, 399);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(581, 62);
             this.groupBox6.TabIndex = 222;
@@ -931,9 +934,9 @@
             this.groupBox8.Controls.Add(this.label72);
             this.groupBox8.Controls.Add(this.txtNumFixtures);
             this.groupBox8.Controls.Add(this.label73);
-            this.groupBox8.Location = new System.Drawing.Point(39, 252);
+            this.groupBox8.Location = new System.Drawing.Point(39, 261);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(581, 125);
+            this.groupBox8.Size = new System.Drawing.Size(581, 132);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Plumbing";
@@ -1125,92 +1128,6 @@
             this.label73.TabIndex = 217;
             this.label73.Text = "Total # of Fixtures";
             // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.groupBox16);
-            this.groupBox17.Controls.Add(this.groupBox9);
-            this.groupBox17.Controls.Add(this.txtNumSystems);
-            this.groupBox17.Controls.Add(this.label78);
-            this.groupBox17.Location = new System.Drawing.Point(37, 168);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(583, 77);
-            this.groupBox17.TabIndex = 0;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Heating/Air Conditioning/Mechanical";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.cboxGasLine);
-            this.groupBox16.Controls.Add(this.label14);
-            this.groupBox16.Location = new System.Drawing.Point(213, 20);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(89, 37);
-            this.groupBox16.TabIndex = 190;
-            this.groupBox16.TabStop = false;
-            // 
-            // cboxGasLine
-            // 
-            this.cboxGasLine.AutoSize = true;
-            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
-            this.cboxGasLine.Name = "cboxGasLine";
-            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
-            this.cboxGasLine.TabIndex = 0;
-            this.cboxGasLine.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Gas Line";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.cboxDuctwork);
-            this.groupBox9.Controls.Add(this.label75);
-            this.groupBox9.Location = new System.Drawing.Point(355, 20);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(195, 37);
-            this.groupBox9.TabIndex = 1;
-            this.groupBox9.TabStop = false;
-            // 
-            // cboxDuctwork
-            // 
-            this.cboxDuctwork.AutoSize = true;
-            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
-            this.cboxDuctwork.Name = "cboxDuctwork";
-            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
-            this.cboxDuctwork.TabIndex = 0;
-            this.cboxDuctwork.UseVisualStyleBackColor = true;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(6, 16);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(145, 13);
-            this.label75.TabIndex = 1;
-            this.label75.Text = "Duct Work for Alteration Only";
-            // 
-            // txtNumSystems
-            // 
-            this.txtNumSystems.Location = new System.Drawing.Point(113, 29);
-            this.txtNumSystems.Name = "txtNumSystems";
-            this.txtNumSystems.Size = new System.Drawing.Size(56, 20);
-            this.txtNumSystems.TabIndex = 0;
-            this.txtNumSystems.Leave += new System.EventHandler(this.txtNumSystems_Leave);
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(9, 32);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(98, 13);
-            this.label78.TabIndex = 187;
-            this.label78.Text = "Number of Systems";
-            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.cmboConstructionType);
@@ -1220,7 +1137,7 @@
             this.groupBox10.Controls.Add(this.label39);
             this.groupBox10.Location = new System.Drawing.Point(35, 6);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(703, 58);
+            this.groupBox10.Size = new System.Drawing.Size(703, 47);
             this.groupBox10.TabIndex = 219;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "General";
@@ -1290,14 +1207,14 @@
             this.groupBox15.Controls.Add(this.label115);
             this.groupBox15.Location = new System.Drawing.Point(35, 70);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(703, 91);
+            this.groupBox15.Size = new System.Drawing.Size(703, 80);
             this.groupBox15.TabIndex = 218;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Building";
             // 
             // txtDeck
             // 
-            this.txtDeck.Location = new System.Drawing.Point(109, 58);
+            this.txtDeck.Location = new System.Drawing.Point(113, 45);
             this.txtDeck.Name = "txtDeck";
             this.txtDeck.Size = new System.Drawing.Size(104, 20);
             this.txtDeck.TabIndex = 3;
@@ -1306,7 +1223,7 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(66, 62);
+            this.label109.Location = new System.Drawing.Point(70, 49);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(33, 13);
             this.label109.TabIndex = 181;
@@ -1314,7 +1231,7 @@
             // 
             // txtPorchSF
             // 
-            this.txtPorchSF.Location = new System.Drawing.Point(320, 21);
+            this.txtPorchSF.Location = new System.Drawing.Point(324, 19);
             this.txtPorchSF.Name = "txtPorchSF";
             this.txtPorchSF.Size = new System.Drawing.Size(122, 20);
             this.txtPorchSF.TabIndex = 1;
@@ -1323,7 +1240,7 @@
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(263, 24);
+            this.label110.Location = new System.Drawing.Point(267, 22);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(51, 13);
             this.label110.TabIndex = 177;
@@ -1331,7 +1248,7 @@
             // 
             // txtBasement
             // 
-            this.txtBasement.Location = new System.Drawing.Point(530, 58);
+            this.txtBasement.Location = new System.Drawing.Point(534, 45);
             this.txtBasement.Name = "txtBasement";
             this.txtBasement.Size = new System.Drawing.Size(133, 20);
             this.txtBasement.TabIndex = 5;
@@ -1340,7 +1257,7 @@
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(470, 61);
+            this.label112.Location = new System.Drawing.Point(474, 48);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(54, 13);
             this.label112.TabIndex = 180;
@@ -1348,7 +1265,7 @@
             // 
             // txtGarageSF
             // 
-            this.txtGarageSF.Location = new System.Drawing.Point(320, 58);
+            this.txtGarageSF.Location = new System.Drawing.Point(324, 45);
             this.txtGarageSF.Name = "txtGarageSF";
             this.txtGarageSF.Size = new System.Drawing.Size(122, 20);
             this.txtGarageSF.TabIndex = 4;
@@ -1357,7 +1274,7 @@
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(256, 61);
+            this.label113.Location = new System.Drawing.Point(260, 48);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(58, 13);
             this.label113.TabIndex = 179;
@@ -1365,7 +1282,7 @@
             // 
             // txtNumStories
             // 
-            this.txtNumStories.Location = new System.Drawing.Point(552, 21);
+            this.txtNumStories.Location = new System.Drawing.Point(556, 19);
             this.txtNumStories.Name = "txtNumStories";
             this.txtNumStories.Size = new System.Drawing.Size(111, 20);
             this.txtNumStories.TabIndex = 2;
@@ -1375,7 +1292,7 @@
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(465, 21);
+            this.label114.Location = new System.Drawing.Point(469, 19);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(61, 13);
             this.label114.TabIndex = 178;
@@ -1383,7 +1300,7 @@
             // 
             // txtHeatedSF
             // 
-            this.txtHeatedSF.Location = new System.Drawing.Point(109, 21);
+            this.txtHeatedSF.Location = new System.Drawing.Point(113, 19);
             this.txtHeatedSF.Name = "txtHeatedSF";
             this.txtHeatedSF.Size = new System.Drawing.Size(104, 20);
             this.txtHeatedSF.TabIndex = 0;
@@ -1393,7 +1310,7 @@
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(41, 24);
+            this.label115.Location = new System.Drawing.Point(45, 22);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(58, 13);
             this.label115.TabIndex = 176;
@@ -2020,6 +1937,122 @@
             this.txtNotes.Size = new System.Drawing.Size(701, 294);
             this.txtNotes.TabIndex = 0;
             // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.txtSystemTons);
+            this.groupBox17.Controls.Add(this.label17);
+            this.groupBox17.Controls.Add(this.cmboSystemType);
+            this.groupBox17.Controls.Add(this.groupBox16);
+            this.groupBox17.Controls.Add(this.groupBox9);
+            this.groupBox17.Controls.Add(this.txtNumSystems);
+            this.groupBox17.Controls.Add(this.label78);
+            this.groupBox17.Location = new System.Drawing.Point(35, 159);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(583, 96);
+            this.groupBox17.TabIndex = 223;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Heating/Air Conditioning/Mechanical";
+            // 
+            // txtSystemTons
+            // 
+            this.txtSystemTons.Location = new System.Drawing.Point(113, 58);
+            this.txtSystemTons.Name = "txtSystemTons";
+            this.txtSystemTons.Size = new System.Drawing.Size(78, 20);
+            this.txtSystemTons.TabIndex = 192;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(68, 13);
+            this.label17.TabIndex = 193;
+            this.label17.Text = "System Tons";
+            // 
+            // cmboSystemType
+            // 
+            this.cmboSystemType.FormattingEnabled = true;
+            this.cmboSystemType.Items.AddRange(new object[] {
+            "Residential",
+            "Commercial"});
+            this.cmboSystemType.Location = new System.Drawing.Point(220, 61);
+            this.cmboSystemType.Name = "cmboSystemType";
+            this.cmboSystemType.Size = new System.Drawing.Size(195, 21);
+            this.cmboSystemType.TabIndex = 191;
+            this.cmboSystemType.Text = "System Type";
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.cboxGasLine);
+            this.groupBox16.Controls.Add(this.label14);
+            this.groupBox16.Location = new System.Drawing.Point(435, 13);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(89, 37);
+            this.groupBox16.TabIndex = 190;
+            this.groupBox16.TabStop = false;
+            // 
+            // cboxGasLine
+            // 
+            this.cboxGasLine.AutoSize = true;
+            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
+            this.cboxGasLine.Name = "cboxGasLine";
+            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
+            this.cboxGasLine.TabIndex = 0;
+            this.cboxGasLine.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Gas Line";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.cboxDuctwork);
+            this.groupBox9.Controls.Add(this.label75);
+            this.groupBox9.Location = new System.Drawing.Point(220, 13);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(195, 37);
+            this.groupBox9.TabIndex = 1;
+            this.groupBox9.TabStop = false;
+            // 
+            // cboxDuctwork
+            // 
+            this.cboxDuctwork.AutoSize = true;
+            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
+            this.cboxDuctwork.Name = "cboxDuctwork";
+            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
+            this.cboxDuctwork.TabIndex = 0;
+            this.cboxDuctwork.UseVisualStyleBackColor = true;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(6, 16);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(145, 13);
+            this.label75.TabIndex = 1;
+            this.label75.Text = "Duct Work for Alteration Only";
+            // 
+            // txtNumSystems
+            // 
+            this.txtNumSystems.Location = new System.Drawing.Point(113, 22);
+            this.txtNumSystems.Name = "txtNumSystems";
+            this.txtNumSystems.Size = new System.Drawing.Size(78, 20);
+            this.txtNumSystems.TabIndex = 0;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(9, 25);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(98, 13);
+            this.label78.TabIndex = 187;
+            this.label78.Text = "Number of Systems";
+            // 
             // BuildingPermitTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2049,12 +2082,6 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -2074,6 +2101,12 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2193,13 +2226,6 @@
         internal System.Windows.Forms.Label label72;
         internal System.Windows.Forms.TextBox txtNumFixtures;
         internal System.Windows.Forms.Label label73;
-        private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label75;
-        internal System.Windows.Forms.TextBox txtNumSystems;
-        internal System.Windows.Forms.Label label78;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.ComboBox cmboConstructionType;
         internal System.Windows.Forms.TextBox txtEstimatedCost;
@@ -2237,8 +2263,6 @@
         private System.Windows.Forms.Button btnFees;
         private System.Windows.Forms.ComboBox cmboNumAmps;
         private System.Windows.Forms.CheckBox cboxTempPole;
-        private System.Windows.Forms.CheckBox cboxGasLine;
-        private System.Windows.Forms.CheckBox cboxDuctwork;
         private System.Windows.Forms.Button btnAddApplicant;
         private System.Windows.Forms.Button btnSearchApplicant;
         private System.Windows.Forms.Button btnSearchAppNum;
@@ -2259,6 +2283,18 @@
         private System.Windows.Forms.Button btnContractorAdd;
         private System.Windows.Forms.Button btnElecSubSearch;
         private System.Windows.Forms.Button btnElecSubAdd;
+        private System.Windows.Forms.GroupBox groupBox17;
+        internal System.Windows.Forms.TextBox txtSystemTons;
+        internal System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmboSystemType;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.CheckBox cboxGasLine;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox cboxDuctwork;
+        private System.Windows.Forms.Label label75;
+        internal System.Windows.Forms.TextBox txtNumSystems;
+        internal System.Windows.Forms.Label label78;
 
     }
 }

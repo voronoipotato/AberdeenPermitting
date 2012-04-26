@@ -34,10 +34,17 @@ namespace BuildingPermit
 
         }
 
+
         private void buildingPermitReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmBuildingPermitReport = new BuildingPermitReport();
             frmBuildingPermitReport.Show();
+	}
+
+        private void lookupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "http://www.nclbgc.org/";
+            System.Diagnostics.Process.Start(url);
         }
     }
 }
