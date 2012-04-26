@@ -118,6 +118,54 @@ public class Contact
     {
     }
 
+
+    public void load(string conStr, string where)
+    {
+        string query = "Select CompanyName, CompanyName2, Dimensions, TotalSF,  heatedsf, PorchSF, numberOfstories, DeckSF, garageSF, BasementSF, basement from Building WHERE " + where;
+        using (SqlConnection connection = new SqlConnection(conStr))
+        {
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            SqlDataReader RDR = command.ExecuteReader();
+            try
+            {
+                if (RDR.HasRows)
+                {
+                    while (RDR.Read())
+                    {
+                        //This is not complete, please include corresponding variables from the db. 
+                        this.myCompanyName = (string)RDR["CompanyName"];
+                        this.myCompanyName2 = (string)RDR["CompanyName2"];
+                        this.myFirstName = (string)RDR["TypeOfConst"];
+                        this.myMiddleName = (string)RDR["TypeOfConst"];
+                        this.myLastName = (string)RDR["TypeOfConst"];
+                        this.myLicense = (string)RDR["TypeOfConst"];
+                        this.myPhone = (string)RDR["TypeOfConst"];
+                        this.myPhone2 = (string)RDR["TypeOfConst"];
+                        this.myEmail = (string)RDR["TypeOfConst"];
+                        this.myBuildingLicense = (string)RDR["TypeOfConst"];
+                        this.myStreetNumber = (string)RDR["TypeOfConst"];
+                        this.myStreetName = (string)RDR["TypeOfConst"];
+                        this.myType = (string)RDR["TypeOfConst"]; 
+                        this.myStreetName2 = (string)RDR["TypeOfConst"]; 
+                        this.myCity = (string)RDR["TypeOfConst"];
+                        this.myState =(string)RDR["TypeOfConst"];
+                        this.myZip = (string)RDR["TypeOfConst"];
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                RDR.Close();
+            }
+        }
+    }
+
     public void save(string conStr)
     {
         string query;
