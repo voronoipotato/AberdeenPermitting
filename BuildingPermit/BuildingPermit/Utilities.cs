@@ -286,7 +286,7 @@ public class Utilities
     {
          string query = String.Format("Insert Into plumbing " +
             " (totnumfixtures,totnumbathrooms,numsinks,numwatercloset,numshowers" +
-            "numtubs, numclothswashers, numwetbars, numspas, numwaterheater, irrigation, buildingID" +
+            "numtubs, numclotheswashers, numwetbars, numspas, numwaterheater, irrigation, buildingID" +
             " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10},{11}, {12} ); ", this.myTotNumFixtures,
             this.myTotNumBathrooms, this.myNumSinks,this.myNumWaterClosets, this.myNumShowers, this.myNumTubs,
             this.myNumClothesWasher, this.myNumWetBar,this.myNumSpa, this.myNumWaterHeater,this.myIsIrrigated, this.myBuildingID);
@@ -309,7 +309,7 @@ public class Utilities
              }
 
              query = String.Format("Insert Into electrical " +
-             " (eletricalid,numamps, numdiscon, temppole, buildid" +
+             " (eletricalid,numamps, numdiscon, temppole, buildingid" +
              " Values ({0}, {1}, {2}, {3}, {4}, {5},  ); ", this.myEletricalID, this.myNumAmps,
              this.myNumDiscon, this.myTempPole, this.myBuildingID);
 
@@ -330,7 +330,7 @@ public class Utilities
              }
 
              query = String.Format("Insert Into mechanical " +
-              " (MechID,systemtype,  numsystems, tons, gasline,buildigid" +
+              " (MechID,systemtype,  numsystems, tons, gasline,buildingid" +
               " Values ({0}, {1}, {2}, {3}, {4}, {5} ); ", this.myMechID, this.mySystemType,
               this.myNumSys, this.tons, this.myGasLine, this.buildingID);
 

@@ -209,7 +209,7 @@ public class Contact
             {
                 query = String.Format("Insert Into Contractors " +
                    " (CompName, CompName2, Fname, Lname, " +
-                   " PhoneNumber, SecondPhone, Email, Address, City, State, Zip, type. licenseExoDate )" +
+                   " PhoneNumber, SecondPhone, Email, Address, City, State, Zip, type. licenseExpDate )" +
                    " Values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12} ); ",
                    this.myCompanyName, this.myCompanyName2, this.myFirstName, this.myLastName,
                    this.myPhone, this.myPhone2, this.myEmail,

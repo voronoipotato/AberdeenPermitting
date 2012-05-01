@@ -50,7 +50,7 @@ namespace BuildingPermit
 
                         spCmd = new SqlCommand("getParcelBasedonLRK", con);
                         spCmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter parm1 = spCmd.Parameters.Add("@%in_LRK%", SqlDbType.VarChar);
+                        SqlParameter parm1 = spCmd.Parameters.Add("@in_LRK", SqlDbType.VarChar);
                         spCmd.Prepare();
 
                         parm1.Value = txtLRK.Text;
@@ -65,7 +65,7 @@ namespace BuildingPermit
                         {
                             while (RDR.Read())
                             {
-                                cmbPropertyResults.Items.Add(RDR.GetString(i));
+                                cmbPropertyResults.Items.Add((string)RDR[i]);
                                 i++;
 
                             }
