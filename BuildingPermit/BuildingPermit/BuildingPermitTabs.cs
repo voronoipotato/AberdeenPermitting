@@ -72,7 +72,7 @@ namespace BuildingPermit
 
         private void BuildingPermitTabs_Load(object sender, EventArgs e)
         {
-           
+
 
             // TODO: This line of code loads data into the 'aberdeenPermittingDataSet.Number_Amps_Fees_Query' table. You can move, or remove it, as needed.
             // this.number_Amps_Fees_QueryTableAdapter.Fill(this.aberdeenPermittingDataSet.Number_Amps_Fees_Query);
@@ -256,34 +256,43 @@ namespace BuildingPermit
 
         private void FillComboBox(string conStr)
         {
-            string query = "select FeeName FROM fees WHERE (FeeName LIKE 'Electrical%');";
-            using (SqlConnection connection = new SqlConnection(conStr))
+
+            using (SqlConnection con = new SqlConnection(conStr))
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-                SqlDataReader sqlReader = command.ExecuteReader();
+                String procedure = "getNumAmps";
+
                 try
                 {
-                    foreach (var item in sqlReader)
+
+                    con.Open();
+                    SqlCommand spCmd;
+
+                    spCmd = new SqlCommand(procedure, con);
+                    spCmd.CommandType = CommandType.StoredProcedure;
+
+
+                    SqlDataReader RDR = spCmd.ExecuteReader();
+
+                    foreach (var item in RDR)
                     {
                         cmboNumAmps.Items.Add(item);
                     }
 
                     cmboNumAmps.Text = "--Choose Number of Amps--";
+
+                    RDR.Close();
+                    con.Close();
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                finally
-                {
-                    sqlReader.Close();
-                }
+
             }
         }
 
         private void btnContractorContact_Click(object sender, EventArgs e)
-        
         {
             Form frmContractorLookup = new ContractorLookup();
             frmContractorLookup.Show();
@@ -436,7 +445,7 @@ namespace BuildingPermit
         {
             Building building = new Building();
 
-            building.load(conStr,"PermitID =" + txtPermitNumber.Text);
+            building.load(conStr, "PermitID =" + txtPermitNumber.Text);
 
             txtSquareFeet.Text = building.totalSF;
             txtHeatedSF.Text = building.heatedSF;
@@ -447,13 +456,13 @@ namespace BuildingPermit
             txtDeck.Text = building.deckSF;
             txtGarageSF.Text = building.garageSF;
             txtBasement.Text = building.basementSF;
-           
+
 
 
         }
 
 
-        
+
 
     }
 }

@@ -89,6 +89,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.Contractors = new System.Windows.Forms.TabPage();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.txtSystemTons = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmboSystemType = new System.Windows.Forms.ComboBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.cboxGasLine = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.txtNumSystems = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cmboNumAmps = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -199,18 +211,6 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.txtSystemTons = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cmboSystemType = new System.Windows.Forms.ComboBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.cboxGasLine = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.cboxDuctwork = new System.Windows.Forms.CheckBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.txtNumSystems = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -219,6 +219,9 @@
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.Contractors.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -232,9 +235,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -845,6 +845,122 @@
             this.Contractors.TabIndex = 2;
             this.Contractors.Text = "Construction Info";
             this.Contractors.UseVisualStyleBackColor = true;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.txtSystemTons);
+            this.groupBox17.Controls.Add(this.label17);
+            this.groupBox17.Controls.Add(this.cmboSystemType);
+            this.groupBox17.Controls.Add(this.groupBox16);
+            this.groupBox17.Controls.Add(this.groupBox9);
+            this.groupBox17.Controls.Add(this.txtNumSystems);
+            this.groupBox17.Controls.Add(this.label78);
+            this.groupBox17.Location = new System.Drawing.Point(35, 159);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(583, 96);
+            this.groupBox17.TabIndex = 223;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Heating/Air Conditioning/Mechanical";
+            // 
+            // txtSystemTons
+            // 
+            this.txtSystemTons.Location = new System.Drawing.Point(113, 58);
+            this.txtSystemTons.Name = "txtSystemTons";
+            this.txtSystemTons.Size = new System.Drawing.Size(78, 20);
+            this.txtSystemTons.TabIndex = 192;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(68, 13);
+            this.label17.TabIndex = 193;
+            this.label17.Text = "System Tons";
+            // 
+            // cmboSystemType
+            // 
+            this.cmboSystemType.FormattingEnabled = true;
+            this.cmboSystemType.Items.AddRange(new object[] {
+            "Residential",
+            "Commercial"});
+            this.cmboSystemType.Location = new System.Drawing.Point(220, 61);
+            this.cmboSystemType.Name = "cmboSystemType";
+            this.cmboSystemType.Size = new System.Drawing.Size(195, 21);
+            this.cmboSystemType.TabIndex = 191;
+            this.cmboSystemType.Text = "System Type";
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.cboxGasLine);
+            this.groupBox16.Controls.Add(this.label14);
+            this.groupBox16.Location = new System.Drawing.Point(435, 13);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(89, 37);
+            this.groupBox16.TabIndex = 190;
+            this.groupBox16.TabStop = false;
+            // 
+            // cboxGasLine
+            // 
+            this.cboxGasLine.AutoSize = true;
+            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
+            this.cboxGasLine.Name = "cboxGasLine";
+            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
+            this.cboxGasLine.TabIndex = 0;
+            this.cboxGasLine.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Gas Line";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.cboxDuctwork);
+            this.groupBox9.Controls.Add(this.label75);
+            this.groupBox9.Location = new System.Drawing.Point(220, 13);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(195, 37);
+            this.groupBox9.TabIndex = 1;
+            this.groupBox9.TabStop = false;
+            // 
+            // cboxDuctwork
+            // 
+            this.cboxDuctwork.AutoSize = true;
+            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
+            this.cboxDuctwork.Name = "cboxDuctwork";
+            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
+            this.cboxDuctwork.TabIndex = 0;
+            this.cboxDuctwork.UseVisualStyleBackColor = true;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(6, 16);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(145, 13);
+            this.label75.TabIndex = 1;
+            this.label75.Text = "Duct Work for Alteration Only";
+            // 
+            // txtNumSystems
+            // 
+            this.txtNumSystems.Location = new System.Drawing.Point(113, 22);
+            this.txtNumSystems.Name = "txtNumSystems";
+            this.txtNumSystems.Size = new System.Drawing.Size(78, 20);
+            this.txtNumSystems.TabIndex = 0;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(9, 25);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(98, 13);
+            this.label78.TabIndex = 187;
+            this.label78.Text = "Number of Systems";
             // 
             // groupBox6
             // 
@@ -1890,7 +2006,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(754, 467);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Additonal Info";
+            this.tabPage2.Text = "Additional Info";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnCancelNotes
@@ -1937,122 +2053,6 @@
             this.txtNotes.Size = new System.Drawing.Size(701, 294);
             this.txtNotes.TabIndex = 0;
             // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.txtSystemTons);
-            this.groupBox17.Controls.Add(this.label17);
-            this.groupBox17.Controls.Add(this.cmboSystemType);
-            this.groupBox17.Controls.Add(this.groupBox16);
-            this.groupBox17.Controls.Add(this.groupBox9);
-            this.groupBox17.Controls.Add(this.txtNumSystems);
-            this.groupBox17.Controls.Add(this.label78);
-            this.groupBox17.Location = new System.Drawing.Point(35, 159);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(583, 96);
-            this.groupBox17.TabIndex = 223;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Heating/Air Conditioning/Mechanical";
-            // 
-            // txtSystemTons
-            // 
-            this.txtSystemTons.Location = new System.Drawing.Point(113, 58);
-            this.txtSystemTons.Name = "txtSystemTons";
-            this.txtSystemTons.Size = new System.Drawing.Size(78, 20);
-            this.txtSystemTons.TabIndex = 192;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(9, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 13);
-            this.label17.TabIndex = 193;
-            this.label17.Text = "System Tons";
-            // 
-            // cmboSystemType
-            // 
-            this.cmboSystemType.FormattingEnabled = true;
-            this.cmboSystemType.Items.AddRange(new object[] {
-            "Residential",
-            "Commercial"});
-            this.cmboSystemType.Location = new System.Drawing.Point(220, 61);
-            this.cmboSystemType.Name = "cmboSystemType";
-            this.cmboSystemType.Size = new System.Drawing.Size(195, 21);
-            this.cmboSystemType.TabIndex = 191;
-            this.cmboSystemType.Text = "System Type";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.cboxGasLine);
-            this.groupBox16.Controls.Add(this.label14);
-            this.groupBox16.Location = new System.Drawing.Point(435, 13);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(89, 37);
-            this.groupBox16.TabIndex = 190;
-            this.groupBox16.TabStop = false;
-            // 
-            // cboxGasLine
-            // 
-            this.cboxGasLine.AutoSize = true;
-            this.cboxGasLine.Location = new System.Drawing.Point(62, 15);
-            this.cboxGasLine.Name = "cboxGasLine";
-            this.cboxGasLine.Size = new System.Drawing.Size(15, 14);
-            this.cboxGasLine.TabIndex = 0;
-            this.cboxGasLine.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Gas Line";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.cboxDuctwork);
-            this.groupBox9.Controls.Add(this.label75);
-            this.groupBox9.Location = new System.Drawing.Point(220, 13);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(195, 37);
-            this.groupBox9.TabIndex = 1;
-            this.groupBox9.TabStop = false;
-            // 
-            // cboxDuctwork
-            // 
-            this.cboxDuctwork.AutoSize = true;
-            this.cboxDuctwork.Location = new System.Drawing.Point(164, 14);
-            this.cboxDuctwork.Name = "cboxDuctwork";
-            this.cboxDuctwork.Size = new System.Drawing.Size(15, 14);
-            this.cboxDuctwork.TabIndex = 0;
-            this.cboxDuctwork.UseVisualStyleBackColor = true;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(6, 16);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(145, 13);
-            this.label75.TabIndex = 1;
-            this.label75.Text = "Duct Work for Alteration Only";
-            // 
-            // txtNumSystems
-            // 
-            this.txtNumSystems.Location = new System.Drawing.Point(113, 22);
-            this.txtNumSystems.Name = "txtNumSystems";
-            this.txtNumSystems.Size = new System.Drawing.Size(78, 20);
-            this.txtNumSystems.TabIndex = 0;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(9, 25);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(98, 13);
-            this.label78.TabIndex = 187;
-            this.label78.Text = "Number of Systems";
-            // 
             // BuildingPermitTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2076,6 +2076,12 @@
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.Contractors.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -2101,12 +2107,6 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
